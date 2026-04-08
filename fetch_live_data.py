@@ -431,7 +431,7 @@ MIROFISH_BULLISH = {
     "BTC": 83,     "ETH": 75,  "DXY": 48,  "DOW": 55,
 }
 
-def generate_trading_signals(prices, headlines, poly_markets):
+def generate_trading_signals(prices, headlines, poly_markets, mirofish_debates=None):
     """
     Generate trading signals for each tradable instrument.
     Uses: current price, news sentiment, Polymarket divergence, ATR-based targets.
@@ -445,6 +445,13 @@ def generate_trading_signals(prices, headlines, poly_markets):
       - reasons: list of contributing factors
     """
     signals = []
+
+    # Override MiroFish probabilities with latest debate consensus if available
+    effective_mirofish = dict(MIROFISH_BULLISH)
+    if mirofish_debates and "debates" in mirofish_debates:
+        for inst_key, debate in mirofish_debates["debates"].items():
+            if "consensus_bullish_pct" in debate:
+                effective_mirofish[inst_key] = debate["consensus_bullish_pct"]
 
     for inst, cfg in TRADABLE.items():
         p = prices.get(inst)
@@ -468,7 +475,7 @@ def generate_trading_signals(prices, headlines, poly_markets):
                 reasons.append(f"News sentiment {direction_word} ({bull_count}B/{bear_count}S)")
 
         # ── 2) Polymarket divergence
-        miro_base = MIROFISH_BULLISH.get(inst, 50) / 100.0
+        miro_base = effective_mirofish.get(inst, 50) / 100.0
         poly_score = 0
         poly_prob = None
         poly_url = None
@@ -573,10 +580,26 @@ def generate_trading_signals(prices, headlines, poly_markets):
             "polymarket_prob":   poly_prob,
             "polymarket_url":    poly_url,
             "polymarket_question": poly_question,
-            "mirofish_base":     MIROFISH_BULLISH.get(inst),
+            "mirofish_base":     effective_mirofish.get(inst),
+            "mirofish_debate":   None,  # Will be populated below
             "day_change_pct":    p["day_change_pct"],
             "timestamp":         datetime.now(timezone.utc).isoformat(),
         })
+
+        # Attach MiroFish debate context if available
+        if mirofish_debates and "debates" in mirofish_debates:
+            inst_debate = mirofish_debates["debates"].get(inst)
+            if inst_debate:
+                signals[-1]["mirofish_debate"] = {
+                    "consensus_pct":    inst_debate.get("consensus_bullish_pct"),
+                    "agents_bullish":   inst_debate.get("agents_bullish"),
+                    "agents_bearish":   inst_debate.get("agents_bearish"),
+                    "agents_neutral":   inst_debate.get("agents_neutral"),
+                    "top_narrative":    inst_debate.get("top_narrative"),
+                    "skeptic_counter":  inst_debate.get("skeptic_counter"),
+                    "sentiment_by_round": inst_debate.get("sentiment_by_round"),
+                    "timestamp":        mirofish_debates.get("timestamp"),
+                }
 
     # Sort by absolute score (strongest signals first)
     signals.sort(key=lambda s: abs(s["score"]), reverse=True)
@@ -600,7 +623,7 @@ MIROFISH_INSTRUMENT_MAP = {
     "north korea": 0.55, "election": 0.50, "senate": 0.47,
 }
 
-def score_polymarket_signals(markets):
+def score_polymarket_signals(markets, mirofish_debates=None):
     """Score Polymarket markets against MiroFish probabilities."""
     signals = []
 
@@ -636,6 +659,28 @@ def score_polymarket_signals(markets):
 
         confidence = "HIGH" if divergence >= 25 else ("MEDIUM" if divergence >= 15 else "LOW")
 
+        # Check if any debate has relevant context for this market
+        poly_debate_context = None
+        if mirofish_debates and "debates" in mirofish_debates:
+            q_lower = m["question"].lower()
+            for inst_key, debate in mirofish_debates["debates"].items():
+                inst_kws = {
+                    "XAUUSD": ["gold", "bullion"],
+                    "WTI": ["oil", "crude", "wti", "brent"],
+                    "SPX": ["s&p", "spx", "stock"],
+                    "NASDAQ": ["nasdaq", "tech"],
+                    "BTC": ["bitcoin", "btc", "crypto"],
+                    "ETH": ["ethereum", "eth"],
+                }
+                if any(kw in q_lower for kw in inst_kws.get(inst_key, [])):
+                    poly_debate_context = {
+                        "instrument": inst_key,
+                        "consensus_pct": debate.get("consensus_bullish_pct"),
+                        "top_narrative": debate.get("top_narrative"),
+                        "skeptic_counter": debate.get("skeptic_counter"),
+                    }
+                    break
+
         signals.append({
             "question":        m["question"][:120],
             "polymarket_prob": round(poly_yes * 100, 1),
@@ -646,6 +691,7 @@ def score_polymarket_signals(markets):
             "volume":          m.get("volume", 0),
             "url":             m["url"],
             "endDate":         m.get("endDate", ""),
+            "mirofish_debate": poly_debate_context,
         })
 
     return sorted(signals, key=lambda x: x["divergence"], reverse=True)
@@ -655,7 +701,7 @@ def score_polymarket_signals(markets):
 # CHART DATA
 # ═════════════════════════════════════════════════════════════════════════════
 
-def build_chart_data(prices, markets):
+def build_chart_data(prices, markets, mirofish_debates=None):
     """Build chart datasets for dashboard visualization."""
     cat_map = {
         "XAUUSD":  ["gold", "xauusd", "bullion"],
@@ -680,7 +726,12 @@ def build_chart_data(prices, markets):
                 poly_probs[label] = round(m["prices"][0] * 100, 1)
 
     instruments = list(cat_map.keys())
-    miro_arr = [MIROFISH_BULLISH.get(i, 50) for i in instruments]
+    effective_mirofish = dict(MIROFISH_BULLISH)
+    if mirofish_debates and "debates" in mirofish_debates:
+        for inst_key, debate in mirofish_debates["debates"].items():
+            if "consensus_bullish_pct" in debate:
+                effective_mirofish[inst_key] = debate["consensus_bullish_pct"]
+    miro_arr = [effective_mirofish.get(i, 50) for i in instruments]
     poly_arr = [poly_probs[i] for i in instruments]
 
     # Price cards for dashboard
@@ -714,10 +765,30 @@ def build_chart_data(prices, markets):
 
 
 # ═════════════════════════════════════════════════════════════════════════════
+# MIROFISH DEBATES
+# ═════════════════════════════════════════════════════════════════════════════
+
+def load_mirofish_debates():
+    """Load the latest MiroFish agent debate data if available."""
+    debate_file = os.path.join(SCRIPT_DIR, "data", "mirofish_debates.json")
+    if os.path.exists(debate_file):
+        try:
+            with open(debate_file, "r", encoding="utf-8") as f:
+                debates = json.load(f)
+            print(f"    Loaded MiroFish debates from {debates.get('timestamp', 'unknown')}")
+            return debates
+        except Exception as e:
+            print(f"    [MiroFish] Error loading debates: {e}", file=sys.stderr)
+    else:
+        print("    [MiroFish] No debate file found — using static probabilities")
+    return None
+
+
+# ═════════════════════════════════════════════════════════════════════════════
 # OUTPUT
 # ═════════════════════════════════════════════════════════════════════════════
 
-def write_output(prices, gold_spot, markets, headlines, trading_signals, poly_signals, chart_data):
+def write_output(prices, gold_spot, markets, headlines, trading_signals, poly_signals, chart_data, mirofish_debates=None):
     now_utc     = datetime.now(timezone.utc).isoformat()
     now_display = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -731,6 +802,7 @@ def write_output(prices, gold_spot, markets, headlines, trading_signals, poly_si
         "tradingSignals":  trading_signals,
         "polySignals":     poly_signals,
         "chartData":       chart_data,
+        "mirofishDebates": mirofish_debates,
     }
 
     # Ensure data directory exists
@@ -778,22 +850,25 @@ def main():
     headlines = fetch_news_headlines()
     print(f"    Found {len(headlines)} filtered headlines")
 
+    print("\n🐟  Loading MiroFish debates...")
+    mirofish_debates = load_mirofish_debates()
+
     print("\n📊  Generating trading signals...")
-    trading_signals = generate_trading_signals(prices, headlines, markets)
+    trading_signals = generate_trading_signals(prices, headlines, markets, mirofish_debates)
     for s in trading_signals:
         arrow = "🟢" if s["direction"] == "BUY" else ("🔴" if s["direction"] == "SELL" else "⚪")
         print(f"    {arrow} {s['instrument']:<8} {s['direction']:<8} {s['confidence']:<6} "
               f"Entry: ${s['entry']:>10,.2f}  Move: {s['expected_move_pct']:+.2f}%  Vol: {s['volatility']}")
 
     print("\n🔮  Scoring Polymarket signals...")
-    poly_signals = score_polymarket_signals(markets)
+    poly_signals = score_polymarket_signals(markets, mirofish_debates)
     print(f"    Generated {len(poly_signals)} signals")
 
     print("\n📉  Building chart data...")
-    chart_data = build_chart_data(prices, markets)
+    chart_data = build_chart_data(prices, markets, mirofish_debates)
 
     print("\n💾  Writing output...")
-    write_output(prices, gold_spot, markets, headlines, trading_signals, poly_signals, chart_data)
+    write_output(prices, gold_spot, markets, headlines, trading_signals, poly_signals, chart_data, mirofish_debates)
 
     print("\n" + "=" * 60)
 

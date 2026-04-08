@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Run MiroFish simulation
+        run: python3 mirofish_sim.py
+
       - name: Run pipeline
         run: python3 fetch_live_data.py
 
@@ -33,7 +36,7 @@ jobs:
         run: |
           git config user.name "GODSEYE Pipeline"
           git config user.email "pipeline@godseye.bot"
-          git add data/live_data.json
+          git add data/live_data.json data/mirofish_debates.json
           # Only commit if data actually changed
           if git diff --cached --quiet; then
             echo "No data changes — skipping commit"

@@ -110,6 +110,42 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .news-title:hover{border-color:var(--text);}
 .news-tags{margin-top:3px;display:flex;flex-wrap:wrap;gap:3px;}
 
+/* ── MIROFISH DEBATE ── */
+.debate-card{background:linear-gradient(135deg,rgba(171,71,188,0.06),rgba(33,150,243,0.04));border:1px solid rgba(171,71,188,0.25);}
+.debate-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.debate-meta{font-size:9px;color:var(--muted);}
+.debate-fresh{font-size:8px;font-weight:800;color:var(--green);background:var(--green-t);padding:1px 6px;border-radius:3px;margin-left:6px;}
+.debate-inst-row{display:flex;gap:6px;align-items:center;padding:6px 0;border-bottom:1px solid var(--border2);}
+.debate-inst-row:last-child{border:none;}
+.debate-inst-sym{font-weight:800;font-size:11px;min-width:58px;color:var(--text);}
+.debate-consensus{font-size:18px;font-weight:800;min-width:44px;text-align:right;}
+.debate-bar-wrap{flex:1;height:6px;background:var(--bg4);border-radius:3px;overflow:hidden;margin:0 6px;}
+.debate-bar-fill{height:100%;border-radius:3px;transition:width .3s;}
+.debate-agents{font-size:9px;color:var(--muted);min-width:60px;text-align:right;}
+.debate-narrative{font-size:10px;color:var(--text2);line-height:1.4;margin-top:3px;}
+.debate-skeptic{font-size:10px;color:var(--red);line-height:1.4;margin-top:2px;font-style:italic;}
+.debate-expand{font-size:9px;color:var(--purple);cursor:pointer;margin-top:4px;text-decoration:underline;}
+.debate-expand:hover{color:var(--blue);}
+
+/* Debate Modal */
+.debate-modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.72);backdrop-filter:blur(5px);z-index:1001;justify-content:center;align-items:center;}
+.debate-modal-overlay.active{display:flex;}
+.debate-modal-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;width:640px;max-width:94vw;max-height:85vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.6);animation:modalIn .15s ease;}
+.debate-round{margin-bottom:12px;}
+.debate-round-title{font-size:10px;font-weight:800;color:var(--purple);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;}
+.debate-agent-row{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;margin-bottom:4px;background:var(--bg3);border-radius:6px;border-left:3px solid var(--muted);}
+.debate-agent-row.BULLISH{border-left-color:var(--green);}
+.debate-agent-row.BEARISH{border-left-color:var(--red);}
+.debate-agent-row.NEUTRAL{border-left-color:var(--yellow);}
+.debate-agent-name{font-size:10px;font-weight:700;min-width:90px;color:var(--text);}
+.debate-agent-pos{font-size:9px;font-weight:800;min-width:55px;}
+.debate-agent-arg{font-size:10px;color:var(--text2);line-height:1.4;flex:1;}
+
+/* Per-signal debate context badge */
+.sig-debate-ctx{margin-top:4px;padding:4px 8px;background:var(--purple-t);border-radius:5px;font-size:9px;line-height:1.5;}
+.sig-debate-ctx .debate-label{color:var(--purple);font-weight:700;}
+.sig-debate-ctx .debate-text{color:var(--text2);}
+
 /* ── INSIGHT ITEMS ── */
 .insight-item{display:flex;gap:8px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border2);}
 .insight-item:last-child{border:none;}
@@ -256,6 +292,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
           <span id="newsBadge" style="font-size:9px;color:var(--muted);font-weight:400"></span>
         </div>
         <div id="newsRows" style="flex:1;overflow-y:auto;"></div>
+      </div>
+
+      <!-- MiroFish Agent Debate -->
+      <div class="card debate-card" style="flex-shrink:0;">
+        <div class="card-title"><div class="dot" style="background:var(--purple)"></div> 🐟 Agent Debate <span class="debate-fresh" id="debateFreshBadge" style="display:none">FRESH</span></div>
+        <div class="debate-meta" id="debateTimestamp"></div>
+        <div id="debateContent"><div style="color:var(--muted);font-size:11px">No debate data — run MiroFish sim</div></div>
       </div>
 
       <!-- Actionable Insights -->
@@ -458,6 +501,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 </div>
 
+<!-- ═══ MIROFISH DEBATE MODAL ═══ -->
+<div class="debate-modal-overlay" id="debateModalOverlay">
+  <div class="debate-modal-box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div style="font-size:16px;font-weight:800;color:var(--text)">🐟 <span id="debateModalInst"></span> — Agent Debate</div>
+      <button class="modal-close" onclick="closeDebateModal()">✕</button>
+    </div>
+    <div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+      <div style="font-size:12px;font-weight:700;color:var(--text)">Consensus: <span id="debateModalConsensus"></span></div>
+      <div style="font-size:11px;color:var(--muted)" id="debateModalAgentCount"></div>
+    </div>
+    <div id="debateModalRounds"></div>
+  </div>
+</div>
+
 <!-- ═══ CHART MODAL ═══ -->
 <div class="chart-modal-overlay" id="chartModalOverlay" onclick="closeChartModal()">
   <div class="chart-modal-box" onclick="event.stopPropagation()">
@@ -563,6 +621,7 @@ function renderAll() {
   renderSignalBanner();
   renderInstrumentCards();
   renderNews();
+  renderDebateCard();
   renderActionableInsights();
   renderPolyGrid();
   renderTradingSignals();
@@ -658,6 +717,13 @@ function renderInstrumentCards() {
     var changeStr = change != null ? ((change > 0 ? '+' : '') + change.toFixed(2) + '%') : '—';
     var spark = renderMiniSpark(p.closes_5d, changeDir, 100, 30, true);
 
+    // Add debate context if available
+    var debateCtx = '';
+    var sigDebate = sig ? sig.mirofish_debate : null;
+    if (sigDebate) {
+      debateCtx = '<div class="sig-debate-ctx"><span class="debate-label">🐟 ' + sigDebate.consensus_pct + '% consensus</span> · <span class="debate-text">' + (sigDebate.top_narrative || '').substring(0, 60) + '...</span></div>';
+    }
+
     return '<div class="inst-card" onclick="openChartModal(\'' + p.name + '\')">' +
       '<div class="inst-card-top">' +
         '<span class="inst-sym">' + p.name + '</span>' +
@@ -668,6 +734,7 @@ function renderInstrumentCards() {
       '<div class="inst-change" style="color:' + changeColor + '">' + changeStr + '</div>' +
       '<div class="inst-spark">' + spark + '</div>' +
       '<div class="inst-click-hint">↗ expand</div>' +
+      debateCtx +
     '</div>';
   }).join('');
 }
@@ -873,7 +940,7 @@ function closeChartModal() {
 
 // Keyboard: Escape closes modal
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeChartModal();
+  if (e.key === 'Escape') { closeChartModal(); closeDebateModal(); }
 });
 
 // ── TRADING SIGNALS PAGE ────────────────────────────────────────────────────
@@ -922,6 +989,13 @@ function renderPolySignals() {
   if (!el) return;
   el.innerHTML = ps.map(function(s) {
     var dirColor = s.direction.includes('YES') ? 'var(--green)' : (s.direction.includes('NO') ? 'var(--red)' : 'var(--yellow)');
+
+    // Add debate context if available
+    var debateCtx = '';
+    if (s.mirofish_debate) {
+      debateCtx = '<div class="sig-debate-ctx" style="grid-column:1/-1;margin-top:6px;margin-bottom:-6px"><span class="debate-label">🐟 ' + s.mirofish_debate.consensus_pct + '% consensus</span> · <span class="debate-text">' + (s.mirofish_debate.top_narrative || '').substring(0, 60) + '...</span></div>';
+    }
+
     return '<div class="ps-row">' +
       '<div><a href="' + (s.url||'#') + '" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:600;font-size:11px;">' + (s.question||'').substring(0,80) + '</a></div>' +
       '<div style="font-weight:700">' + s.polymarket_prob + '%</div>' +
@@ -929,6 +1003,7 @@ function renderPolySignals() {
       '<div style="font-weight:700;color:' + dirColor + '">' + s.divergence + 'pt</div>' +
       '<div style="color:' + dirColor + ';font-weight:600;font-size:11px">' + s.direction + '</div>' +
       '<div><span class="ts-conf ' + s.confidence + '">' + s.confidence + '</span></div>' +
+      debateCtx +
     '</div>';
   }).join('');
 }
@@ -1029,6 +1104,106 @@ function renderSparklines() {
       '<span style="font-size:11px;color:var(--muted)">' + formatPrice(p.price, p.name) + '</span>' +
     '</div>';
   }).join('');
+}
+
+// ── MIROFISH DEBATE RENDERING ────────────────────────────────────────────────
+function renderDebateCard() {
+  var md = DATA.mirofishDebates;
+  if (!md || !md.debates) return;
+
+  var el = document.getElementById('debateContent');
+  if (!el) return;
+
+  // Show fresh badge
+  var badge = document.getElementById('debateFreshBadge');
+  if (badge) {
+    var debateAge = (Date.now() - new Date(md.timestamp).getTime()) / (1000 * 60 * 60);
+    badge.style.display = debateAge < 6 ? 'inline' : 'none';
+  }
+
+  // Timestamp
+  var tsEl = document.getElementById('debateTimestamp');
+  if (tsEl) {
+    var d = new Date(md.timestamp);
+    tsEl.textContent = 'Sim: ' + d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}) +
+      ' · ' + (md.sim_metadata ? md.sim_metadata.agents_per_instrument + ' agents × ' + md.sim_metadata.rounds + ' rounds' : '');
+  }
+
+  var html = '';
+  var instruments = ['XAUUSD','WTI','SPX','NASDAQ','BTC','ETH'];
+  instruments.forEach(function(inst) {
+    var debate = md.debates[inst];
+    if (!debate) return;
+
+    var pct = debate.consensus_bullish_pct || 50;
+    var color = pct >= 60 ? 'var(--green)' : (pct <= 40 ? 'var(--red)' : 'var(--yellow)');
+
+    html += '<div class="debate-inst-row">' +
+      '<div class="debate-inst-sym">' + inst + '</div>' +
+      '<div class="debate-bar-wrap"><div class="debate-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
+      '<div class="debate-consensus" style="color:' + color + '">' + pct + '%</div>' +
+      '<div class="debate-agents">' + (debate.agents_bullish||0) + '🟢 ' + (debate.agents_bearish||0) + '🔴 ' + (debate.agents_neutral||0) + '🟡</div>' +
+    '</div>' +
+    '<div class="debate-narrative">📣 ' + (debate.top_narrative || 'No narrative') + '</div>' +
+    (debate.skeptic_counter ? '<div class="debate-skeptic">⚠ ' + debate.skeptic_counter + '</div>' : '') +
+    '<div class="debate-expand" onclick="openDebateModal(\'' + inst + '\')">View full ' + (debate.label||inst) + ' debate →</div>';
+  });
+
+  el.innerHTML = html;
+}
+
+function openDebateModal(inst) {
+  var md = DATA.mirofishDebates;
+  if (!md || !md.debates || !md.debates[inst]) return;
+
+  var debate = md.debates[inst];
+  document.getElementById('debateModalInst').textContent = (debate.label || inst);
+
+  var pct = debate.consensus_bullish_pct || 50;
+  var color = pct >= 60 ? 'var(--green)' : (pct <= 40 ? 'var(--red)' : 'var(--yellow)');
+  document.getElementById('debateModalConsensus').innerHTML = '<span style="color:' + color + '">' + pct + '% bullish</span>';
+  document.getElementById('debateModalAgentCount').textContent =
+    debate.agents_bullish + ' bullish · ' + debate.agents_bearish + ' bearish · ' + debate.agents_neutral + ' neutral';
+
+  var agents = debate.agents || [];
+  var roundsHtml = '';
+
+  // Show rounds 1-3
+  for (var r = 1; r <= 3; r++) {
+    var roundLabel = r === 1 ? 'Round 1 — Opening Positions' : (r === 2 ? 'Round 2 — Cross-Examination' : 'Round 3 — Final Verdict');
+    roundsHtml += '<div class="debate-round"><div class="debate-round-title">' + roundLabel + '</div>';
+
+    agents.forEach(function(agent) {
+      var roundData = null;
+      if (agent.rounds) {
+        for (var i = 0; i < agent.rounds.length; i++) {
+          if (agent.rounds[i].round === r) { roundData = agent.rounds[i]; break; }
+        }
+      }
+      if (!roundData) return;
+
+      var posColor = roundData.position === 'BULLISH' ? 'var(--green)' : (roundData.position === 'BEARISH' ? 'var(--red)' : 'var(--yellow)');
+      roundsHtml += '<div class="debate-agent-row ' + roundData.position + '">' +
+        '<div class="debate-agent-name">' + agent.name + '</div>' +
+        '<div class="debate-agent-pos" style="color:' + posColor + '">' + roundData.position + '</div>' +
+        '<div class="debate-agent-arg">' + roundData.argument + '</div>' +
+      '</div>';
+    });
+
+    // Show sentiment by round
+    if (debate.sentiment_by_round && debate.sentiment_by_round[r-1] !== undefined) {
+      roundsHtml += '<div style="text-align:right;font-size:10px;color:var(--muted);margin-top:4px;">Panel sentiment: ' + debate.sentiment_by_round[r-1] + '% bullish</div>';
+    }
+
+    roundsHtml += '</div>';
+  }
+
+  document.getElementById('debateModalRounds').innerHTML = roundsHtml;
+  document.getElementById('debateModalOverlay').classList.add('active');
+}
+
+function closeDebateModal() {
+  document.getElementById('debateModalOverlay').classList.remove('active');
 }
 
 // ── SOURCES ─────────────────────────────────────────────────────────────────
