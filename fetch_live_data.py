@@ -179,12 +179,38 @@ def fetch_yahoo_price(name, symbol):
             day_change     = round(price - prev_close, 4)
             day_change_pct = round((day_change / prev_close) * 100, 2)
 
-        # Last 5 days closes for sparkline
+        # Last 5 days OHLC + closes for sparkline and future candle charts
         closes = []
+        ohlc = []
+        timestamps = []
         try:
             quotes = result[0].get("indicators", {}).get("quote", [{}])[0]
             raw_closes = quotes.get("close", [])
+            raw_opens  = quotes.get("open", [])
+            raw_highs  = quotes.get("high", [])
+            raw_lows   = quotes.get("low", [])
+            raw_ts     = result[0].get("timestamp", [])
+
             closes = [round(c, 4) for c in raw_closes if c is not None]
+
+            # Build OHLC array for candle charts (TradingView Lightweight Charts format)
+            for i in range(len(raw_closes)):
+                try:
+                    o = raw_opens[i] if i < len(raw_opens) else None
+                    h = raw_highs[i] if i < len(raw_highs) else None
+                    l = raw_lows[i]  if i < len(raw_lows)  else None
+                    c = raw_closes[i]
+                    t = raw_ts[i]    if i < len(raw_ts)    else None
+                    if all(v is not None for v in [o, h, l, c]):
+                        ohlc.append({
+                            "time":  t,
+                            "open":  round(o, 4),
+                            "high":  round(h, 4),
+                            "low":   round(l, 4),
+                            "close": round(c, 4),
+                        })
+                except Exception:
+                    pass
         except Exception:
             pass
 
@@ -204,6 +230,7 @@ def fetch_yahoo_price(name, symbol):
             "intraday_high":  round(intraday_high, 4) if intraday_high else None,
             "intraday_low":   round(intraday_low, 4) if intraday_low else None,
             "closes_5d":      closes,
+            "ohlc_5d":        ohlc,   # For future TradingView-style candle charts
             "fetchedAt":      datetime.now(timezone.utc).isoformat(),
         }
     except urllib.error.HTTPError as e:
