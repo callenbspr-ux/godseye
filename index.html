@@ -32,6 +32,19 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:13px;height:100vh;display:flex;flex-direction:column;overflow:hidden;transition:background .2s,color .2s;}
 
+/* ── DEV TOOLBAR ── */
+#devToolbar{display:none;background:#0d1117;border-bottom:2px solid #f9a825;padding:0 14px;height:36px;align-items:center;gap:10px;flex-shrink:0;font-size:11px;font-family:'SF Mono',monospace;}
+.dev-badge{background:#f9a825;color:#000;font-weight:800;font-size:9px;padding:2px 7px;border-radius:3px;letter-spacing:0.5px;}
+.dev-btn{background:#21262d;border:1px solid #30363d;color:#e6edf3;padding:4px 11px;border-radius:5px;cursor:pointer;font-size:10px;font-weight:600;transition:all .15s;}
+.dev-btn:hover{background:#388bfd22;border-color:#388bfd;color:#388bfd;}
+.dev-btn.green:hover{background:#238636aa;border-color:#3fb950;color:#3fb950;}
+.dev-btn.purple:hover{background:#8957e522;border-color:#8957e5;color:#8957e5;}
+.dev-btn:disabled{opacity:0.4;cursor:not-allowed;}
+.dev-status{font-size:10px;color:#8b949e;margin-left:4px;}
+.dev-spinner{display:inline-block;width:10px;height:10px;border:2px solid #f9a82544;border-top-color:#f9a825;border-radius:50%;animation:spin .6s linear infinite;margin-right:4px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+#devLog{font-size:9px;color:#8b949e;max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:auto;}
+
 /* ── TICKER ── */
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);height:26px;overflow:hidden;display:flex;align-items:center;flex-shrink:0;}
 .ticker-inner{display:flex;white-space:nowrap;will-change:transform;}
@@ -249,6 +262,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </style>
 </head>
 <body>
+
+<!-- ═══ DEV TOOLBAR (localhost only) ═══ -->
+<div id="devToolbar">
+  <span class="dev-badge">DEV</span>
+  <button class="dev-btn green" id="devBtnAll" onclick="devRunAll()">🚀 Run All</button>
+  <button class="dev-btn" id="devBtnPipeline" onclick="devRunPipeline()">🔄 Pipeline</button>
+  <button class="dev-btn purple" id="devBtnMiro" onclick="devRunMirofish()">🐟 MiroFish</button>
+  <span class="dev-status" id="devStatus">Ready</span>
+  <span id="devLog">localhost:8181</span>
+</div>
 
 <!-- ═══ TICKER ═══ -->
 <div class="ticker"><div class="ticker-inner" id="tickerInner">
@@ -1237,6 +1260,83 @@ function renderSources() {
   }
   if (DATA.polymarketMarkets && DATA.polymarketMarkets.length) parts.push('Polymarket');
   el.innerHTML = 'Source: <b>' + parts.join(' · ') + '</b>';
+}
+
+// ── DEV TOOLBAR (localhost only) ─────────────────────────────────────────────
+var DEV_MODE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+if (DEV_MODE) {
+  document.getElementById('devToolbar').style.display = 'flex';
+}
+
+var devPollInterval = null;
+
+function devSetStatus(msg, spinning) {
+  var s = document.getElementById('devStatus');
+  if (s) s.innerHTML = (spinning ? '<span class="dev-spinner"></span>' : '') + msg;
+}
+
+function devSetLog(msg) {
+  var el = document.getElementById('devLog');
+  if (el) el.textContent = msg;
+}
+
+function devSetBtnsDisabled(disabled) {
+  ['devBtnAll','devBtnPipeline','devBtnMiro'].forEach(function(id) {
+    var b = document.getElementById(id);
+    if (b) b.disabled = disabled;
+  });
+}
+
+function devPollUntilDone(checkFn, onDone) {
+  // Poll /api/status every 1.5s until not running
+  if (devPollInterval) clearInterval(devPollInterval);
+  devPollInterval = setInterval(function() {
+    fetch('/api/status').then(function(r){ return r.json(); }).then(function(s) {
+      devSetLog((s.last_output || '').split('\n').filter(Boolean).pop() || '');
+      if (checkFn(s)) {
+        clearInterval(devPollInterval);
+        devPollInterval = null;
+        devSetBtnsDisabled(false);
+        devSetStatus('✅ Done — refreshing data...');
+        // Reload data after a short pause
+        setTimeout(function() {
+          loadData();
+          devSetStatus('Ready');
+          onDone && onDone(s);
+        }, 800);
+      }
+    }).catch(function(){});
+  }, 1500);
+}
+
+function devRunAll() {
+  if (!DEV_MODE) return;
+  devSetBtnsDisabled(true);
+  devSetStatus('Running MiroFish + Pipeline...', true);
+  fetch('/api/run-all', {method:'POST'}).then(function(r){ return r.json(); }).then(function(res) {
+    if (!res.ok) { devSetStatus('⚠ ' + res.message); devSetBtnsDisabled(false); return; }
+    devPollUntilDone(function(s) { return !s.pipeline_running && !s.mirofish_running; });
+  });
+}
+
+function devRunPipeline() {
+  if (!DEV_MODE) return;
+  devSetBtnsDisabled(true);
+  devSetStatus('Running pipeline...', true);
+  fetch('/api/run-pipeline', {method:'POST'}).then(function(r){ return r.json(); }).then(function(res) {
+    if (!res.ok) { devSetStatus('⚠ ' + res.message); devSetBtnsDisabled(false); return; }
+    devPollUntilDone(function(s) { return !s.pipeline_running; });
+  });
+}
+
+function devRunMirofish() {
+  if (!DEV_MODE) return;
+  devSetBtnsDisabled(true);
+  devSetStatus('Running MiroFish sim...', true);
+  fetch('/api/run-mirofish', {method:'POST'}).then(function(r){ return r.json(); }).then(function(res) {
+    if (!res.ok) { devSetStatus('⚠ ' + res.message); devSetBtnsDisabled(false); return; }
+    devPollUntilDone(function(s) { return !s.mirofish_running; });
+  });
 }
 
 // ── PANEL RESIZE ─────────────────────────────────────────────────────────────
