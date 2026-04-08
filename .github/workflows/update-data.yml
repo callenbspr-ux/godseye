@@ -1,0 +1,44 @@
+name: Update GODSEYE Data
+
+on:
+  schedule:
+    # Every 30 minutes during market hours (Mon-Fri 13:00-21:00 UTC = 8am-4pm ET)
+    # Plus every 2 hours overnight/weekends for Polymarket + crypto
+    - cron: '*/30 13-21 * * 1-5'   # Market hours: every 30 min
+    - cron: '0 */2 * * 0,6'         # Weekends: every 2 hours
+    - cron: '0 0,2,4,6,8,10,22 * * 1-5'  # Off-hours weekdays: every 2 hours
+  workflow_dispatch:  # Manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run pipeline
+        run: python3 fetch_live_data.py
+
+      - name: Commit and push data
+        run: |
+          git config user.name "GODSEYE Pipeline"
+          git config user.email "pipeline@godseye.bot"
+          git add data/live_data.json
+          # Only commit if data actually changed
+          if git diff --cached --quiet; then
+            echo "No data changes — skipping commit"
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "📊 Data update: ${TIMESTAMP}"
+            git push
+          fi

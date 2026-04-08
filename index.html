@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GODSEYE — Global Market Intelligence Terminal</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* ── TOKENS ── */
+[data-theme="dark"] {
+  --bg:#131722; --bg2:#1e222d; --bg3:#2a2e39; --bg4:#363a45;
+  --border:#363a45; --border2:#252830;
+  --text:#d1d4dc; --text2:#9598a1; --muted:#787b86;
+  --card:#1e222d; --card-hover:#252830;
+  --green:#26a69a; --red:#ef5350; --yellow:#f9a825; --blue:#2196f3; --purple:#ab47bc; --orange:#ff7043;
+  --cyan:#00bcd4;
+  --green-t:rgba(38,166,154,0.12); --red-t:rgba(239,83,80,0.12);
+  --yellow-t:rgba(249,168,37,0.12); --blue-t:rgba(33,150,243,0.12);
+  --purple-t:rgba(171,71,188,0.12); --orange-t:rgba(255,112,67,0.12);
+  --cyan-t:rgba(0,188,212,0.12);
+  --shadow:0 2px 16px rgba(0,0,0,0.45);
+}
+[data-theme="light"] {
+  --bg:#f0f3fa; --bg2:#ffffff; --bg3:#e8ecf5; --bg4:#d0d6e8;
+  --border:#dde3f0; --border2:#eaeff8;
+  --text:#131722; --text2:#3d4460; --muted:#8892b0;
+  --card:#ffffff; --card-hover:#f5f7fd;
+  --green:#0d8c82; --red:#d32f2f; --yellow:#c67a00; --blue:#1565c0; --purple:#7b1fa2; --orange:#bf360c;
+  --cyan:#00838f;
+  --green-t:rgba(13,140,130,0.1); --red-t:rgba(211,47,47,0.1);
+  --yellow-t:rgba(198,122,0,0.1); --blue-t:rgba(21,101,192,0.1);
+  --purple-t:rgba(123,31,162,0.1); --orange-t:rgba(191,54,12,0.1);
+  --cyan-t:rgba(0,131,143,0.1);
+  --shadow:0 2px 16px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:13px;height:100vh;display:flex;flex-direction:column;overflow:hidden;transition:background .2s,color .2s;}
+
+/* ── TICKER ── */
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);height:28px;overflow:hidden;display:flex;align-items:center;flex-shrink:0;}
+.ticker-inner{display:flex;white-space:nowrap;will-change:transform;}
+.tick{display:inline-flex;align-items:center;gap:7px;padding:0 18px;border-right:1px solid var(--border);height:28px;font-size:11px;}
+.tick-sym{font-weight:700;color:var(--text);}
+.up{color:var(--green);} .dn{color:var(--red);} .fl{color:var(--yellow);}
+
+/* ── HEADER ── */
+.header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;height:46px;gap:10px;flex-shrink:0;box-shadow:var(--shadow);}
+.logo{font-size:15px;font-weight:800;color:var(--text);letter-spacing:-0.5px;white-space:nowrap;}
+.logo span{color:var(--blue);}
+.hdiv{width:1px;height:20px;background:var(--border);flex-shrink:0;}
+.header-title{font-size:11px;color:var(--muted);white-space:nowrap;}
+.page-nav{display:flex;gap:2px;background:var(--bg3);border-radius:8px;padding:3px;margin-left:12px;}
+.page-btn{padding:5px 12px;border-radius:6px;border:none;background:transparent;color:var(--muted);font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;}
+.page-btn:hover{color:var(--text);}
+.page-btn.active{background:var(--card);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,0.15);}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.theme-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:4px 10px;border-radius:6px;cursor:pointer;font-size:11px;}
+#dataStatusPill{font-size:10px;color:var(--muted);white-space:nowrap;}
+
+/* ── PAGES ── */
+.page{display:none;flex:1;overflow-y:auto;padding:16px 20px;}
+.page.active{display:block;}
+
+/* ── GRID ── */
+.grid{display:grid;gap:12px;}
+.grid-2{grid-template-columns:1fr 1fr;}
+.grid-3{grid-template-columns:1fr 1fr 1fr;}
+
+/* ── CARDS ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--shadow);transition:background .15s;}
+.card:hover{background:var(--card-hover);}
+.card-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.card-title .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+/* ── SIGNAL BANNER ── */
+.signal-banner{background:linear-gradient(135deg,var(--bg3),var(--bg2));border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:14px;display:flex;align-items:center;gap:14px;}
+.sb-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.sb-icon.buy{background:var(--green-t);color:var(--green);}
+.sb-icon.sell{background:var(--red-t);color:var(--red);}
+.sb-icon.neutral{background:var(--yellow-t);color:var(--yellow);}
+.sb-text{font-size:13px;font-weight:700;color:var(--text);}
+.sb-sub{font-size:10px;color:var(--muted);margin-top:2px;}
+
+/* ── PRICE CARDS ── */
+.price-card{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--bg3);border:1px solid var(--border);}
+.pc-name{font-weight:700;font-size:12px;min-width:60px;}
+.pc-price{font-size:14px;font-weight:700;font-family:'SF Mono',monospace;}
+.pc-change{font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;}
+.pc-change.up{background:var(--green-t);color:var(--green);}
+.pc-change.dn{background:var(--red-t);color:var(--red);}
+.pc-change.fl{background:var(--yellow-t);color:var(--yellow);}
+.pc-spark{margin-left:auto;}
+.barometer-badge{font-size:8px;padding:1px 4px;border-radius:3px;background:var(--purple-t);color:var(--purple);font-weight:600;margin-left:4px;}
+
+/* ── NEWS ── */
+.news-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border2);}
+.news-row:last-child{border:none;}
+.news-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.news-dot.bullish{background:var(--green);}
+.news-dot.bearish{background:var(--red);}
+.news-dot.neutral{background:var(--yellow);}
+.news-text{flex:1;font-size:12px;line-height:1.4;}
+.news-source{font-size:10px;color:var(--muted);font-weight:700;}
+.news-title{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
+.news-title:hover{border-color:var(--text);}
+.news-pill{font-size:9px;padding:2px 6px;border-radius:4px;font-weight:600;white-space:nowrap;}
+
+/* ── POLYMARKET ── */
+.poly-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border2);}
+.poly-row:last-child{border:none;}
+.poly-q{font-size:12px;font-weight:600;}
+.poly-q a{color:var(--text);text-decoration:none;border-bottom:1px dotted var(--border);}
+.poly-q a:hover{border-color:var(--text);}
+.poly-bar{height:4px;background:var(--bg3);border-radius:2px;margin-top:4px;overflow:hidden;}
+.poly-fill{height:100%;border-radius:2px;transition:width .3s;}
+.poly-prob{font-size:16px;font-weight:800;min-width:50px;text-align:right;}
+.poly-note{font-size:9px;color:var(--muted);margin-top:2px;}
+
+/* ── TRADING SIGNALS ── */
+.ts-row{display:grid;grid-template-columns:70px 1fr 100px 90px 80px 70px;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--border2);font-size:12px;}
+.ts-row:last-child{border:none;}
+.ts-header{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;}
+.ts-dir{font-weight:800;font-size:11px;padding:3px 8px;border-radius:4px;text-align:center;}
+.ts-dir.BUY{background:var(--green-t);color:var(--green);}
+.ts-dir.SELL{background:var(--red-t);color:var(--red);}
+.ts-dir.NEUTRAL{background:var(--yellow-t);color:var(--yellow);}
+.ts-inst{font-weight:700;}
+.ts-reasons{font-size:10px;color:var(--muted);margin-top:2px;}
+.ts-entry{font-family:'SF Mono',monospace;font-weight:600;}
+.ts-move{font-weight:700;}
+.ts-move.positive{color:var(--green);}
+.ts-move.negative{color:var(--red);}
+.ts-conf{font-size:10px;font-weight:600;padding:2px 6px;border-radius:4px;}
+.ts-conf.HIGH{background:var(--green-t);color:var(--green);}
+.ts-conf.MEDIUM{background:var(--yellow-t);color:var(--yellow);}
+.ts-conf.LOW{background:var(--bg3);color:var(--muted);}
+.ts-vol{font-size:10px;font-weight:600;}
+
+/* ── POLY SIGNALS ── */
+.ps-row{display:grid;grid-template-columns:1fr 70px 70px 60px 60px 70px;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--border2);font-size:12px;}
+.ps-row:last-child{border:none;}
+
+/* ── CHART ── */
+.chart-wrap{position:relative;height:280px;}
+
+/* ── STATUSBAR ── */
+.statusbar{background:var(--bg2);border-top:1px solid var(--border);height:24px;display:flex;align-items:center;padding:0 14px;font-size:10px;color:var(--muted);gap:14px;flex-shrink:0;}
+#sbCountdown{font-weight:600;color:var(--cyan);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+  .ts-row{grid-template-columns:60px 1fr 80px 70px;}
+  .ts-row .ts-conf,.ts-row .ts-vol{display:none;}
+  .ps-row{grid-template-columns:1fr 60px 60px 50px;}
+  .ps-row :nth-child(5),.ps-row :nth-child(6){display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker"><div class="ticker-inner" id="tickerInner">
+  <div class="tick"><span class="tick-sym">Loading...</span></div>
+</div></div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="logo">GODS<span>EYE</span></div>
+  <div class="hdiv"></div>
+  <div class="header-title">Global Market Intelligence</div>
+  <div class="page-nav">
+    <button class="page-btn active" onclick="showPage('home')">Home</button>
+    <button class="page-btn" onclick="showPage('trading')">Trading Signals</button>
+    <button class="page-btn" onclick="showPage('polymarket')">Polymarket</button>
+    <button class="page-btn" onclick="showPage('charts')">Charts</button>
+  </div>
+  <div class="header-right">
+    <span id="dataStatusPill">Loading...</span>
+    <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+  </div>
+</div>
+
+<!-- ═══════════ HOME PAGE ═══════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Signal Banner -->
+  <div class="signal-banner" id="signalBanner">
+    <div class="sb-icon neutral" id="sbIcon">⟳</div>
+    <div>
+      <div class="sb-text" id="sbText">Loading signals...</div>
+      <div class="sb-sub" id="sbSub">Waiting for pipeline data</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-bottom:14px;">
+    <!-- Price Cards -->
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--green)"></div> Live Prices</div>
+      <div id="priceCards">Loading...</div>
+    </div>
+
+    <!-- News Feed -->
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--cyan)"></div> News Feed <span id="newsBadge" style="font-size:9px;color:var(--muted)"></span></div>
+      <div id="newsRows" style="max-height:380px;overflow-y:auto;">Loading...</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <!-- Top Trading Signals (preview) -->
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--orange)"></div> Top Trading Signals</div>
+      <div id="topSignalsPreview">Loading...</div>
+    </div>
+
+    <!-- Polymarket Widget -->
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--purple)"></div> Polymarket Predictions</div>
+      <div id="polyWidget" style="max-height:380px;overflow-y:auto;">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ TRADING SIGNALS PAGE ═══════════ -->
+<div class="page" id="page-trading">
+  <div class="card">
+    <div class="card-title"><div class="dot" style="background:var(--orange)"></div> Trading Signals <span style="font-size:9px;color:var(--muted);margin-left:8px">DXY is barometer only (no trade signals)</span></div>
+    <div class="ts-row ts-header">
+      <div>Direction</div><div>Instrument</div><div>Entry</div><div>Exp. Move</div><div>Confidence</div><div>Volatility</div>
+    </div>
+    <div id="tradingSignalRows">Loading...</div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:14px;">
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--blue)"></div> Barometers (No Trade)</div>
+      <div id="barometerCards">Loading...</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--cyan)"></div> Signal Methodology</div>
+      <div style="font-size:11px;color:var(--text2);line-height:1.6;">
+        Signals combine <b>news sentiment</b> (30%), <b>Polymarket divergence vs MiroFish</b> (30%), <b>price momentum</b> (20%), <b>DXY inverse correlation</b> (10%), and <b>VIX risk gauge</b> (10%). Expected move is ATR-based, scaled by signal strength. Confidence thresholds: HIGH (&gt;0.40), MEDIUM (&gt;0.20), LOW.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ POLYMARKET PAGE ═══════════ -->
+<div class="page" id="page-polymarket">
+  <div class="card">
+    <div class="card-title"><div class="dot" style="background:var(--purple)"></div> Polymarket Signals (MiroFish Divergence)</div>
+    <div class="ps-row ts-header">
+      <div>Market</div><div>Poly %</div><div>MiroFish %</div><div>Gap</div><div>Signal</div><div>Confidence</div>
+    </div>
+    <div id="polySignalRows">Loading...</div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="card-title"><div class="dot" style="background:var(--purple)"></div> All Active Markets</div>
+    <div id="polyAllMarkets" style="max-height:500px;overflow-y:auto;">Loading...</div>
+  </div>
+</div>
+
+<!-- ═══════════ CHARTS PAGE ═══════════ -->
+<div class="page" id="page-charts">
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--blue)"></div> MiroFish vs Polymarket Implied (%)</div>
+      <div class="chart-wrap"><canvas id="chartDivergence"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><div class="dot" style="background:var(--green)"></div> 5-Day Price Sparklines</div>
+      <div id="sparkContainer"></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px;">
+    <div class="card-title"><div class="dot" style="background:var(--orange)"></div> Signal Strength Overview</div>
+    <div class="chart-wrap"><canvas id="chartSignalStrength"></canvas></div>
+  </div>
+</div>
+
+<!-- ═══ STATUSBAR ═══ -->
+<div class="statusbar">
+  <span id="sbLive">Loading...</span>
+  <span>|</span>
+  <span id="sbSource">Source: —</span>
+  <span style="margin-left:auto;">Next refresh: <span id="sbCountdown">—</span></span>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// GODSEYE Dashboard v3 — Live from GitHub Pages
+// ═══════════════════════════════════════════════════════════════════════════
+
+var DATA = null;
+var REFRESH_INTERVAL = 60;  // seconds between data refreshes
+var countdownVal = REFRESH_INTERVAL;
+var divergenceChart = null;
+var strengthChart = null;
+
+// ── PAGE NAV ────────────────────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.page-btn').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('page-' + id).classList.add('active');
+  event.target.classList.add('active');
+  if (id === 'charts' && DATA) renderCharts();
+}
+
+function toggleTheme() {
+  var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  if (DATA) renderCharts();
+}
+
+// ── FETCH DATA ──────────────────────────────────────────────────────────────
+async function fetchData() {
+  var pill = document.getElementById('dataStatusPill');
+  if (pill) pill.innerHTML = '<span style="color:var(--cyan)">Fetching...</span>';
+
+  try {
+    var resp = await fetch('data/live_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    DATA = await resp.json();
+
+    var age = Date.now() - new Date(DATA.fetchedAt).getTime();
+    var ageMins = Math.floor(age / 60000);
+    var fresh = age < 3600000;
+
+    if (pill) pill.innerHTML = (fresh ? '<span style="color:var(--green)">LIVE</span>' : '<span style="color:var(--yellow)">STALE</span>') + ' · ' + ageMins + 'm ago · ' + (DATA.fetchedDisplay || '');
+
+    var sbLive = document.getElementById('sbLive');
+    if (sbLive) sbLive.innerHTML = (fresh ? '<span style="color:var(--green)">● LIVE</span>' : '<span style="color:var(--yellow)">STALE</span>') + ' · ' + ageMins + 'm ago';
+
+    renderAll();
+    countdownVal = REFRESH_INTERVAL;
+  } catch(e) {
+    console.error('[GODSEYE] Fetch error:', e);
+    if (pill) pill.innerHTML = '<span style="color:var(--red)">Offline</span> · ' + e.message;
+  }
+}
+
+// ── RENDER ALL ──────────────────────────────────────────────────────────────
+function renderAll() {
+  if (!DATA) return;
+  renderTicker();
+  renderSignalBanner();
+  renderPriceCards();
+  renderNews();
+  renderPolyWidget();
+  renderTopSignalsPreview();
+  renderTradingSignals();
+  renderBarometers();
+  renderPolySignals();
+  renderPolyAllMarkets();
+  renderSources();
+}
+
+// ── TICKER ──────────────────────────────────────────────────────────────────
+function renderTicker() {
+  var cd = DATA.chartData;
+  if (!cd || !cd.price_cards) return;
+  var ti = document.getElementById('tickerInner');
+  var html = cd.price_cards.map(function(p) {
+    if (!p.price) return '';
+    var dir = (p.day_change_pct || 0) > 0 ? 'up' : ((p.day_change_pct || 0) < 0 ? 'dn' : 'fl');
+    var pct = p.day_change_pct != null ? ((p.day_change_pct > 0 ? '+' : '') + p.day_change_pct.toFixed(2) + '%') : '';
+    return '<div class="tick"><span class="tick-sym">' + p.name + '</span><span class="' + dir + '">' + formatPrice(p.price, p.name) + '</span>' + (pct ? '<span class="' + dir + '">' + pct + '</span>' : '') + '</div>';
+  }).join('');
+  ti.innerHTML = html + html;  // double for scrolling
+}
+
+function formatPrice(val, name) {
+  if (val == null) return '—';
+  if (name === '10Y') return val.toFixed(2) + '%';
+  if (name === 'VIX') return val.toFixed(1);
+  if (val > 10000) return val.toLocaleString(undefined, {maximumFractionDigits:0});
+  return val.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+// ── SIGNAL BANNER ───────────────────────────────────────────────────────────
+function renderSignalBanner() {
+  var ts = DATA.tradingSignals;
+  if (!ts || ts.length === 0) return;
+  var top = ts[0];
+  var icon = document.getElementById('sbIcon');
+  var text = document.getElementById('sbText');
+  var sub = document.getElementById('sbSub');
+
+  icon.className = 'sb-icon ' + top.direction.toLowerCase();
+  icon.textContent = top.direction === 'BUY' ? '▲' : (top.direction === 'SELL' ? '▼' : '●');
+  text.textContent = top.confidence + ' Signal: ' + top.direction + ' ' + top.instrument + ' · Entry $' + top.entry.toLocaleString(undefined,{maximumFractionDigits:2}) + ' · Expected ' + (top.expected_move_pct > 0 ? '+' : '') + top.expected_move_pct.toFixed(2) + '%';
+  sub.textContent = top.reasons.join(' · ');
+}
+
+// ── PRICE CARDS ─────────────────────────────────────────────────────────────
+function renderPriceCards() {
+  var cd = DATA.chartData;
+  if (!cd || !cd.price_cards) return;
+  var el = document.getElementById('priceCards');
+  el.innerHTML = cd.price_cards.map(function(p) {
+    if (!p.price) return '';
+    var dir = (p.day_change_pct || 0) > 0 ? 'up' : ((p.day_change_pct || 0) < 0 ? 'dn' : 'fl');
+    var pct = p.day_change_pct != null ? ((p.day_change_pct > 0 ? '+' : '') + p.day_change_pct.toFixed(2) + '%') : '';
+    var badge = p.barometer ? '<span class="barometer-badge">BAROMETER</span>' : '';
+    var spark = (p.closes_5d && p.closes_5d.length > 1) ? renderMiniSpark(p.closes_5d, dir) : '';
+    return '<div class="price-card" style="margin-bottom:6px;"><div class="pc-name">' + p.name + badge + '</div><div class="pc-price" style="color:var(--text)">' + formatPrice(p.price, p.name) + '</div><div class="pc-change ' + dir + '">' + pct + '</div><div class="pc-spark">' + spark + '</div></div>';
+  }).join('');
+}
+
+function renderMiniSpark(data, dir) {
+  if (!data || data.length < 2) return '';
+  var min = Math.min.apply(null, data);
+  var max = Math.max.apply(null, data);
+  var range = max - min || 1;
+  var w = 50, h = 18;
+  var pts = data.map(function(v, i) {
+    return (i * w / (data.length - 1)).toFixed(1) + ',' + (h - ((v - min) / range) * h).toFixed(1);
+  }).join(' ');
+  var color = dir === 'up' ? 'var(--green)' : (dir === 'dn' ? 'var(--red)' : 'var(--yellow)');
+  return '<svg width="' + w + '" height="' + h + '"><polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="1.5"/></svg>';
+}
+
+// ── NEWS ────────────────────────────────────────────────────────────────────
+function renderNews() {
+  var headlines = DATA.headlines;
+  if (!headlines || headlines.length === 0) return;
+  var badge = document.getElementById('newsBadge');
+  if (badge) badge.textContent = headlines.length + ' articles';
+
+  var el = document.getElementById('newsRows');
+  el.innerHTML = headlines.slice(0, 12).map(function(h) {
+    var dotClass = h.sentiment || 'neutral';
+    var pillBg = dotClass === 'bearish' ? 'var(--red-t)' : (dotClass === 'bullish' ? 'var(--green-t)' : 'var(--yellow-t)');
+    var pillFg = dotClass === 'bearish' ? 'var(--red)' : (dotClass === 'bullish' ? 'var(--green)' : 'var(--yellow)');
+    var safe = (h.title || '').replace(/</g, '&lt;');
+    var url = h.link || '#';
+    return '<div class="news-row"><div class="news-dot ' + dotClass + '"></div><div class="news-text"><span class="news-source">' + (h.source || '') + '</span> · <a href="' + url + '" target="_blank" rel="noopener" class="news-title">' + safe.substring(0, 90) + (safe.length > 90 ? '...' : '') + '</a></div><div class="news-pill" style="background:' + pillBg + ';color:' + pillFg + '">' + dotClass.charAt(0).toUpperCase() + dotClass.slice(1) + '</div></div>';
+  }).join('');
+}
+
+// ── POLYMARKET WIDGET ───────────────────────────────────────────────────────
+function renderPolyWidget() {
+  var markets = DATA.polymarketMarkets;
+  if (!markets || markets.length === 0) return;
+  var el = document.getElementById('polyWidget');
+  el.innerHTML = markets.slice(0, 8).map(function(m) {
+    var prices = m.prices || [];
+    var prob = prices.length > 0 ? (prices[0] * 100).toFixed(1) : '?';
+    var probNum = parseFloat(prob);
+    var color = probNum > 70 ? 'var(--green)' : (probNum > 40 ? 'var(--yellow)' : 'var(--red)');
+    var q = (m.question || '').replace(/</g, '&lt;');
+    var url = m.url || 'https://polymarket.com';
+    return '<div class="poly-row"><div style="flex:1"><div class="poly-q"><a href="' + url + '" target="_blank" rel="noopener">' + q + '</a></div><div class="poly-bar"><div class="poly-fill" style="width:' + probNum + '%;background:' + color + '"></div></div></div><div class="poly-prob" style="color:' + color + '">' + prob + '%</div></div>';
+  }).join('');
+}
+
+// ── TOP SIGNALS PREVIEW (HOME) ──────────────────────────────────────────────
+function renderTopSignalsPreview() {
+  var ts = DATA.tradingSignals;
+  if (!ts || ts.length === 0) return;
+  var el = document.getElementById('topSignalsPreview');
+  el.innerHTML = ts.slice(0, 4).map(function(s) {
+    var dirClass = s.direction;
+    var moveClass = s.expected_move_pct >= 0 ? 'positive' : 'negative';
+    return '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border2)"><span class="ts-dir ' + dirClass + '">' + s.direction + '</span><div style="flex:1"><div class="ts-inst">' + s.instrument + ' <span style="font-weight:400;color:var(--muted)">' + s.label + '</span></div><div class="ts-reasons">' + s.reasons.slice(0,2).join(' · ') + '</div></div><div style="text-align:right"><div class="ts-entry">$' + s.entry.toLocaleString(undefined,{maximumFractionDigits:2}) + '</div><div class="ts-move ' + moveClass + '">' + (s.expected_move_pct > 0 ? '+' : '') + s.expected_move_pct.toFixed(2) + '%</div></div></div>';
+  }).join('');
+}
+
+// ── TRADING SIGNALS PAGE ────────────────────────────────────────────────────
+function renderTradingSignals() {
+  var ts = DATA.tradingSignals;
+  if (!ts || ts.length === 0) return;
+  var el = document.getElementById('tradingSignalRows');
+  el.innerHTML = ts.map(function(s) {
+    var moveClass = s.expected_move_pct >= 0 ? 'positive' : 'negative';
+    return '<div class="ts-row">' +
+      '<div><span class="ts-dir ' + s.direction + '">' + s.direction + '</span></div>' +
+      '<div><div class="ts-inst">' + s.instrument + ' <span style="font-weight:400;color:var(--muted)">' + s.label + '</span></div><div class="ts-reasons">' + s.reasons.join(' · ') + '</div></div>' +
+      '<div class="ts-entry">$' + s.entry.toLocaleString(undefined,{maximumFractionDigits:2}) + '</div>' +
+      '<div class="ts-move ' + moveClass + '">' + (s.expected_move_pct > 0 ? '+' : '') + s.expected_move_pct.toFixed(2) + '%</div>' +
+      '<div><span class="ts-conf ' + s.confidence + '">' + s.confidence + '</span></div>' +
+      '<div class="ts-vol">' + s.volatility + '</div>' +
+      '</div>';
+  }).join('');
+}
+
+// ── BAROMETERS ──────────────────────────────────────────────────────────────
+function renderBarometers() {
+  var cd = DATA.chartData;
+  if (!cd || !cd.price_cards) return;
+  var barometers = cd.price_cards.filter(function(p){ return p.barometer; });
+  var el = document.getElementById('barometerCards');
+  el.innerHTML = barometers.map(function(p) {
+    if (!p.price) return '';
+    var dir = (p.day_change_pct || 0) > 0 ? 'up' : ((p.day_change_pct || 0) < 0 ? 'dn' : 'fl');
+    var pct = p.day_change_pct != null ? ((p.day_change_pct > 0 ? '+' : '') + p.day_change_pct.toFixed(2) + '%') : '';
+    var spark = (p.closes_5d && p.closes_5d.length > 1) ? renderMiniSpark(p.closes_5d, dir) : '';
+    return '<div class="price-card" style="margin-bottom:6px;"><div class="pc-name">' + p.name + ' <span class="barometer-badge">BAROMETER</span></div><div class="pc-price">' + formatPrice(p.price, p.name) + '</div><div class="pc-change ' + dir + '">' + pct + '</div><div class="pc-spark">' + spark + '</div></div>';
+  }).join('');
+}
+
+// ── POLYMARKET SIGNALS PAGE ─────────────────────────────────────────────────
+function renderPolySignals() {
+  var ps = DATA.polySignals;
+  if (!ps || ps.length === 0) return;
+  var el = document.getElementById('polySignalRows');
+  el.innerHTML = ps.map(function(s) {
+    var dirColor = s.direction.includes('YES') ? 'var(--green)' : (s.direction.includes('NO') ? 'var(--red)' : 'var(--yellow)');
+    return '<div class="ps-row">' +
+      '<div><a href="' + (s.url || '#') + '" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:600;font-size:11px;">' + (s.question || '').substring(0,80) + '</a></div>' +
+      '<div style="font-weight:700">' + s.polymarket_prob + '%</div>' +
+      '<div style="color:var(--muted)">' + s.mirofish_prob + '%</div>' +
+      '<div style="font-weight:700;color:' + dirColor + '">' + s.divergence + 'pt</div>' +
+      '<div style="color:' + dirColor + ';font-weight:600;font-size:11px">' + s.direction + '</div>' +
+      '<div><span class="ts-conf ' + s.confidence + '">' + s.confidence + '</span></div>' +
+      '</div>';
+  }).join('');
+}
+
+// ── ALL MARKETS ─────────────────────────────────────────────────────────────
+function renderPolyAllMarkets() {
+  var markets = DATA.polymarketMarkets;
+  if (!markets || markets.length === 0) return;
+  var el = document.getElementById('polyAllMarkets');
+  el.innerHTML = markets.map(function(m) {
+    var prices = m.prices || [];
+    var prob = prices.length > 0 ? (prices[0] * 100).toFixed(1) : '?';
+    var probNum = parseFloat(prob);
+    var color = probNum > 70 ? 'var(--green)' : (probNum > 40 ? 'var(--yellow)' : 'var(--red)');
+    var q = (m.question || '').replace(/</g, '&lt;');
+    var vol = m.volume ? '$' + Number(m.volume).toLocaleString(undefined,{maximumFractionDigits:0}) : '';
+    return '<div class="poly-row"><div style="flex:1"><div class="poly-q"><a href="' + (m.url || '#') + '" target="_blank" rel="noopener">' + q + '</a></div><div style="font-size:9px;color:var(--muted);margin-top:2px">Vol: ' + vol + (m.endDate ? ' · Ends: ' + m.endDate.substring(0,10) : '') + '</div><div class="poly-bar"><div class="poly-fill" style="width:' + probNum + '%;background:' + color + '"></div></div></div><div class="poly-prob" style="color:' + color + '">' + prob + '%</div></div>';
+  }).join('');
+}
+
+// ── SOURCES ─────────────────────────────────────────────────────────────────
+function renderSources() {
+  var el = document.getElementById('sbSource');
+  var parts = ['Pipeline'];
+  if (DATA.headlines && DATA.headlines.length) {
+    var sources = [];
+    DATA.headlines.slice(0,3).forEach(function(h){ if (h.source && sources.indexOf(h.source) === -1) sources.push(h.source); });
+    if (sources.length) parts.push(sources.join(', '));
+  }
+  if (DATA.polymarketMarkets && DATA.polymarketMarkets.length) parts.push('Polymarket');
+  el.innerHTML = 'Source: <b>' + parts.join(' · ') + '</b>';
+}
+
+// ── CHARTS ──────────────────────────────────────────────────────────────────
+function renderCharts() {
+  var cd = DATA.chartData;
+  if (!cd) return;
+
+  // Divergence chart: MiroFish vs Polymarket
+  var ctx1 = document.getElementById('chartDivergence');
+  if (divergenceChart) divergenceChart.destroy();
+
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+  var textColor = isDark ? '#9598a1' : '#8892b0';
+
+  divergenceChart = new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: cd.instruments,
+      datasets: [
+        { label: 'MiroFish %', data: cd.mirofish, backgroundColor: 'rgba(33,150,243,0.7)', borderRadius: 4 },
+        { label: 'Polymarket %', data: cd.polymarket.map(function(v){ return v || 0; }), backgroundColor: 'rgba(171,71,188,0.7)', borderRadius: 4 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { beginAtZero: true, max: 100, grid: { color: gridColor }, ticks: { color: textColor } },
+        x: { grid: { display: false }, ticks: { color: textColor } }
+      },
+      plugins: { legend: { labels: { color: textColor } } }
+    }
+  });
+
+  // Signal strength chart
+  var ts = DATA.tradingSignals;
+  if (ts && ts.length > 0) {
+    var ctx2 = document.getElementById('chartSignalStrength');
+    if (strengthChart) strengthChart.destroy();
+
+    strengthChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ts.map(function(s){ return s.instrument; }),
+        datasets: [{
+          label: 'Signal Score',
+          data: ts.map(function(s){ return s.score; }),
+          backgroundColor: ts.map(function(s){
+            return s.direction === 'BUY' ? 'rgba(38,166,154,0.7)' : (s.direction === 'SELL' ? 'rgba(239,83,80,0.7)' : 'rgba(249,168,37,0.7)');
+          }),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { min: -1, max: 1, grid: { color: gridColor }, ticks: { color: textColor } },
+          y: { grid: { display: false }, ticks: { color: textColor } }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+  }
+
+  // Sparklines
+  renderSparklines();
+}
+
+function renderSparklines() {
+  var cd = DATA.chartData;
+  if (!cd || !cd.price_cards) return;
+  var el = document.getElementById('sparkContainer');
+  el.innerHTML = cd.price_cards.filter(function(p){ return p.closes_5d && p.closes_5d.length > 1; }).map(function(p) {
+    var dir = (p.day_change_pct || 0) > 0 ? 'up' : ((p.day_change_pct || 0) < 0 ? 'dn' : 'fl');
+    return '<div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--border2)"><span style="min-width:60px;font-weight:700;font-size:11px">' + p.name + '</span>' + renderMiniSpark(p.closes_5d, dir).replace('width="50"', 'width="120"').replace('height="18"', 'height="24"') + '<span style="font-size:11px;color:var(--muted)">' + formatPrice(p.price, p.name) + '</span></div>';
+  }).join('');
+}
+
+// ── TICKER ANIMATION ────────────────────────────────────────────────────────
+var tickerPos = 0;
+function animTicker() {
+  var ti = document.getElementById('tickerInner');
+  if (!ti || ti.scrollWidth < 10) { requestAnimationFrame(animTicker); return; }
+  tickerPos -= 0.4;
+  if (Math.abs(tickerPos) >= ti.scrollWidth / 2) tickerPos = 0;
+  ti.style.transform = 'translateX(' + tickerPos + 'px)';
+  requestAnimationFrame(animTicker);
+}
+
+// ── COUNTDOWN ───────────────────────────────────────────────────────────────
+function tickCountdown() {
+  countdownVal--;
+  if (countdownVal <= 0) {
+    fetchData();
+    countdownVal = REFRESH_INTERVAL;
+  }
+  var el = document.getElementById('sbCountdown');
+  if (el) el.textContent = countdownVal + 's';
+}
+
+// ── INIT ────────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', function() {
+  fetchData();
+  setInterval(tickCountdown, 1000);
+  requestAnimationFrame(animTicker);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "refresh_interval_minutes": 30,
+  "github_pages": true,
+  "instruments": {
+    "tradable": ["XAUUSD", "WTI", "SPX", "NASDAQ", "BTC", "ETH"],
+    "barometers": ["DXY", "VIX", "10Y", "DOW"]
+  },
+  "mirofish_base_probs": {
+    "_note": "Update after each MiroFish simulation run",
+    "XAUUSD": 81, "WTI": 68, "SPX": 62, "NASDAQ": 58,
+    "BTC": 83, "ETH": 75, "DXY": 48, "DOW": 55
+  }
+}
