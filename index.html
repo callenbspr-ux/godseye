@@ -73,9 +73,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .sb-sub{font-size:10px;color:var(--muted);margin-top:1px;}
 
 /* ── HOME SPLIT LAYOUT ── */
-.main-split{display:flex;gap:10px;flex:1;overflow:hidden;min-height:0;}
-.left-panel{width:270px;flex-shrink:0;display:flex;flex-direction:column;gap:10px;overflow:hidden;}
-.right-panel{flex:1;display:flex;flex-direction:column;gap:10px;overflow:hidden;}
+.main-split{display:flex;gap:0;flex:1;overflow:hidden;min-height:0;}
+.left-panel{width:270px;flex-shrink:0;display:flex;flex-direction:column;gap:0;overflow:hidden;}
+.right-panel{flex:1;display:flex;flex-direction:column;gap:10px;overflow:hidden;padding-left:10px;}
+
+/* ── RESIZE HANDLES ── */
+.vresize{width:6px;flex-shrink:0;cursor:col-resize;background:transparent;transition:background .15s;position:relative;z-index:10;}
+.vresize:hover,.vresize.dragging{background:var(--blue);}
+.vresize::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:2px;height:40px;background:var(--border);border-radius:2px;transition:background .15s;}
+.vresize:hover::after,.vresize.dragging::after{background:var(--blue);}
+.hresize{height:6px;flex-shrink:0;cursor:row-resize;background:transparent;transition:background .15s;position:relative;z-index:10;margin:0;}
+.hresize:hover,.hresize.dragging{background:var(--purple);}
+.hresize::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:2px;width:40px;background:var(--border);border-radius:2px;transition:background .15s;}
+.hresize:hover::after,.hresize.dragging::after{background:var(--purple);}
 
 /* ── INSTRUMENT CARDS ── */
 .inst-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;padding-top:2px;}
@@ -280,13 +290,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 
   <!-- Main 2-column Split -->
-  <div class="main-split">
+  <div class="main-split" id="mainSplit">
 
     <!-- ── LEFT PANEL ── -->
-    <div class="left-panel">
+    <div class="left-panel" id="leftPanel">
 
       <!-- News Feed -->
-      <div class="card" style="flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;">
+      <div class="card" id="paneNews" style="flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:60px;margin-bottom:0;border-radius:10px 10px 0 0;">
         <div class="card-title">
           <div class="dot" style="background:var(--cyan)"></div> News Feed
           <span id="newsBadge" style="font-size:9px;color:var(--muted);font-weight:400"></span>
@@ -294,23 +304,32 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div id="newsRows" style="flex:1;overflow-y:auto;"></div>
       </div>
 
+      <!-- H-resize: News ↕ Debate -->
+      <div class="hresize" id="hresize1" title="Drag to resize"></div>
+
       <!-- MiroFish Agent Debate -->
-      <div class="card debate-card" style="flex-shrink:0;max-height:280px;display:flex;flex-direction:column;overflow:hidden;">
+      <div class="card debate-card" id="paneDebate" style="height:240px;flex-shrink:0;display:flex;flex-direction:column;overflow:hidden;min-height:40px;border-radius:0;">
         <div class="card-title" style="flex-shrink:0;"><div class="dot" style="background:var(--purple)"></div> 🐟 Agent Debate <span class="debate-fresh" id="debateFreshBadge" style="display:none">FRESH</span></div>
         <div class="debate-meta" id="debateTimestamp" style="flex-shrink:0;"></div>
         <div id="debateContent" style="overflow-y:auto;flex:1;"><div style="color:var(--muted);font-size:11px">No debate data — run MiroFish sim</div></div>
       </div>
 
+      <!-- H-resize: Debate ↕ Insights -->
+      <div class="hresize" id="hresize2" title="Drag to resize"></div>
+
       <!-- Actionable Insights -->
-      <div class="card" style="flex-shrink:0;max-height:200px;display:flex;flex-direction:column;overflow:hidden;">
+      <div class="card" id="paneInsights" style="height:180px;flex-shrink:0;display:flex;flex-direction:column;overflow:hidden;min-height:40px;border-radius:0 0 10px 10px;">
         <div class="card-title" style="flex-shrink:0;"><div class="dot" style="background:var(--orange)"></div> Actionable Insights</div>
         <div id="insightsContent" style="overflow-y:auto;flex:1;"><div style="color:var(--muted);font-size:11px">Loading...</div></div>
       </div>
 
     </div>
 
+    <!-- V-resize: Left ↔ Right -->
+    <div class="vresize" id="vresize" title="Drag to resize"></div>
+
     <!-- ── RIGHT PANEL ── -->
-    <div class="right-panel">
+    <div class="right-panel" id="rightPanel" style="padding-left:6px;">
 
       <!-- Trading Signal Cards -->
       <div class="card" style="flex-shrink:0;">
@@ -1219,6 +1238,89 @@ function renderSources() {
   if (DATA.polymarketMarkets && DATA.polymarketMarkets.length) parts.push('Polymarket');
   el.innerHTML = 'Source: <b>' + parts.join(' · ') + '</b>';
 }
+
+// ── PANEL RESIZE ─────────────────────────────────────────────────────────────
+(function() {
+  // Vertical resize: left ↔ right panel
+  var vHandle = document.getElementById('vresize');
+  var leftPanel = document.getElementById('leftPanel');
+  var mainSplit = document.getElementById('mainSplit');
+  if (vHandle && leftPanel) {
+    vHandle.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      vHandle.classList.add('dragging');
+      var startX = e.clientX;
+      var startW = leftPanel.offsetWidth;
+      function onMove(e) {
+        var newW = Math.max(160, Math.min(520, startW + e.clientX - startX));
+        leftPanel.style.width = newW + 'px';
+      }
+      function onUp() {
+        vHandle.classList.remove('dragging');
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  }
+
+  // Horizontal resize 1: News ↕ Debate
+  var hHandle1 = document.getElementById('hresize1');
+  var paneNews = document.getElementById('paneNews');
+  var paneDebate = document.getElementById('paneDebate');
+  if (hHandle1 && paneNews && paneDebate) {
+    hHandle1.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      hHandle1.classList.add('dragging');
+      var startY = e.clientY;
+      var startNewsH = paneNews.offsetHeight;
+      var startDebateH = paneDebate.offsetHeight;
+      function onMove(e) {
+        var delta = e.clientY - startY;
+        var newNewsH = Math.max(60, startNewsH + delta);
+        var newDebateH = Math.max(40, startDebateH - delta);
+        paneNews.style.flex = 'none';
+        paneNews.style.height = newNewsH + 'px';
+        paneDebate.style.height = newDebateH + 'px';
+      }
+      function onUp() {
+        hHandle1.classList.remove('dragging');
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  }
+
+  // Horizontal resize 2: Debate ↕ Insights
+  var hHandle2 = document.getElementById('hresize2');
+  var paneInsights = document.getElementById('paneInsights');
+  if (hHandle2 && paneDebate && paneInsights) {
+    hHandle2.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      hHandle2.classList.add('dragging');
+      var startY = e.clientY;
+      var startDebateH = paneDebate.offsetHeight;
+      var startInsightsH = paneInsights.offsetHeight;
+      function onMove(e) {
+        var delta = e.clientY - startY;
+        var newDebateH = Math.max(40, startDebateH + delta);
+        var newInsightsH = Math.max(40, startInsightsH - delta);
+        paneDebate.style.height = newDebateH + 'px';
+        paneInsights.style.height = newInsightsH + 'px';
+      }
+      function onUp() {
+        hHandle2.classList.remove('dragging');
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  }
+})();
 
 // ── TICKER ANIMATION ─────────────────────────────────────────────────────────
 var tickerPos = 0;
