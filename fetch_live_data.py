@@ -307,16 +307,26 @@ def fetch_polymarket_markets():
                 except Exception:
                     outcomes = ["Yes", "No"]
 
+                # Build the most reliable URL possible:
+                # 1. groupSlug = event-level slug (most reliable for URL)
+                # 2. slug = market-level slug (fallback)
+                # 3. conditionId = condition hash (last resort)
+                group_slug   = m.get("groupSlug", "")
+                market_slug  = m.get("slug", "")
+                condition_id = m.get("conditionId", "")
+                best_slug    = group_slug or market_slug or condition_id
+                poly_url     = f"https://polymarket.com/event/{best_slug}" if best_slug else "https://polymarket.com/markets"
+
                 markets.append({
                     "id":        mid,
                     "question":  m.get("question", ""),
-                    "slug":      m.get("slug", ""),
+                    "slug":      best_slug,
                     "outcomes":  outcomes,
                     "prices":    prices,
                     "volume":    m.get("volume", 0),
                     "liquidity": m.get("liquidity", 0),
                     "endDate":   m.get("endDate", ""),
-                    "url":       f"https://polymarket.com/event/{m.get('slug', '')}",
+                    "url":       poly_url,
                 })
         except urllib.error.HTTPError as e:
             print(f"  [Polymarket] HTTP {e.code} for '{kw}'", file=sys.stderr)
