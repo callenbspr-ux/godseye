@@ -295,16 +295,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </div>
 
       <!-- MiroFish Agent Debate -->
-      <div class="card debate-card" style="flex-shrink:0;">
-        <div class="card-title"><div class="dot" style="background:var(--purple)"></div> 🐟 Agent Debate <span class="debate-fresh" id="debateFreshBadge" style="display:none">FRESH</span></div>
-        <div class="debate-meta" id="debateTimestamp"></div>
-        <div id="debateContent"><div style="color:var(--muted);font-size:11px">No debate data — run MiroFish sim</div></div>
+      <div class="card debate-card" style="flex-shrink:0;max-height:280px;display:flex;flex-direction:column;overflow:hidden;">
+        <div class="card-title" style="flex-shrink:0;"><div class="dot" style="background:var(--purple)"></div> 🐟 Agent Debate <span class="debate-fresh" id="debateFreshBadge" style="display:none">FRESH</span></div>
+        <div class="debate-meta" id="debateTimestamp" style="flex-shrink:0;"></div>
+        <div id="debateContent" style="overflow-y:auto;flex:1;"><div style="color:var(--muted);font-size:11px">No debate data — run MiroFish sim</div></div>
       </div>
 
       <!-- Actionable Insights -->
-      <div class="card" style="flex-shrink:0;">
-        <div class="card-title"><div class="dot" style="background:var(--orange)"></div> Actionable Insights</div>
-        <div id="insightsContent"><div style="color:var(--muted);font-size:11px">Loading...</div></div>
+      <div class="card" style="flex-shrink:0;max-height:200px;display:flex;flex-direction:column;overflow:hidden;">
+        <div class="card-title" style="flex-shrink:0;"><div class="dot" style="background:var(--orange)"></div> Actionable Insights</div>
+        <div id="insightsContent" style="overflow-y:auto;flex:1;"><div style="color:var(--muted);font-size:11px">Loading...</div></div>
       </div>
 
     </div>
