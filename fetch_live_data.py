@@ -96,32 +96,67 @@ NEWS_FEEDS = [
 ]
 
 GLOBAL_NEWS_KEYWORDS = [
+    # Geopolitics / Middle East
     "iran", "hormuz", "strait", "persian gulf", "tehran", "escalat",
     "sanctions", "ceasefire", "nuclear", "tanker", "middle east",
-    "russia", "ukraine", "nato", "kyiv", "moscow", "putin",
-    "taiwan", "china", "pla", "tsmc", "south china sea",
-    "north korea", "kim jong", "icbm",
-    "election", "senate", "midterm", "congress",
+    "israel", "gaza", "hezbollah", "hamas", "red sea", "houthi",
+    # Russia / Ukraine / NATO
+    "russia", "ukraine", "nato", "kyiv", "moscow", "putin", "zelensky",
+    "missile strike", "drone attack", "war",
+    # Asia / Taiwan / China
+    "taiwan", "china", "pla", "tsmc", "south china sea", "xi jinping",
+    "north korea", "kim jong", "icbm", "hypersonic",
+    # US Politics / Policy
+    "trump", "biden", "election", "senate", "congress", "white house",
+    "executive order", "tariff", "trade war", "trade deal",
+    # Interest Rates / Fed / Macro
+    "federal reserve", "fed rate", "interest rate", "rate cut", "rate hike",
+    "fomc", "jerome powell", "basis point", "yield curve",
+    "inflation", "cpi", "pce", "core inflation", "deflation",
+    "gdp", "recession", "soft landing", "hard landing", "stagflation",
+    "unemployment", "jobs report", "nonfarm payroll",
+    # Oil / Energy
     "oil price", "crude", "brent", "wti", "opec", "natural gas",
-    "gold price", "bullion", "precious metal", "safe haven",
-    "stock market", "s&p 500", "wall street", "dow jones", "nasdaq",
-    "earnings", "recession", "bear market", "market crash",
-    "federal reserve", "interest rate", "rate cut", "inflation", "cpi",
-    "dollar index", "dxy", "tariff", "trade war",
+    "energy crisis", "pipeline", "refinery",
+    # Gold / XAUUSD
+    "gold price", "bullion", "precious metal", "safe haven", "gold rally",
+    "central bank gold", "gold reserves",
+    # Equities / US500 / NAS100
+    "stock market", "s&p 500", "s&p500", "us500", "wall street",
+    "dow jones", "nasdaq", "nas100", "qqq", "russell 2000",
+    "earnings", "earnings beat", "earnings miss", "guidance",
+    "bear market", "bull market", "market crash", "correction",
+    "volatility", "vix", "risk off", "risk on",
+    # DXY / Dollar / FX
+    "dollar index", "dxy", "us dollar", "dollar strength", "dollar weakness",
+    "euro", "yen", "gbp", "forex", "currency",
+    # Crypto
     "bitcoin", "ethereum", "crypto", "btc", "blackrock etf",
-    "nvidia", "ai stocks", "semiconductor", "big tech",
+    "strategic reserve", "coinbase", "crypto regulation",
+    # Tech / AI
+    "nvidia", "ai stocks", "semiconductor", "big tech", "magnificent 7",
+    "apple", "microsoft", "google", "meta earnings",
 ]
 
 # Per-instrument keywords for tagging headlines
 INSTRUMENT_KEYWORDS = {
-    "XAUUSD":  ["gold", "xauusd", "bullion", "precious metal", "GC=F", "safe haven", "gold price"],
-    "WTI":     ["wti", "crude oil", "oil price", "opec", "hormuz", "brent", "petroleum", "barrel"],
-    "SPX":     ["s&p 500", "spx", "stock market", "wall street", "earnings", "equities"],
-    "NASDAQ":  ["nasdaq", "tech stock", "ai stock", "semiconductor", "nvidia", "magnificent 7", "qqq"],
-    "BTC":     ["bitcoin", "btc", "crypto", "blackrock etf", "strategic reserve", "coinbase"],
-    "ETH":     ["ethereum", "eth ", "defi", "layer 2", "staking"],
-    "DXY":     ["dollar index", "dxy", "greenback", "dollar strength", "us dollar", "forex"],
+    "XAUUSD":  ["gold", "xauusd", "bullion", "precious metal", "safe haven", "gold price",
+                "gold rally", "central bank gold", "gold reserves", "xau"],
+    "WTI":     ["wti", "crude oil", "oil price", "opec", "hormuz", "brent", "petroleum",
+                "barrel", "energy crisis", "refinery", "pipeline", "oil supply"],
+    "SPX":     ["s&p 500", "s&p500", "spx", "us500", "stock market", "wall street",
+                "earnings", "equities", "bear market", "bull market", "s&p"],
+    "NASDAQ":  ["nasdaq", "nas100", "qqq", "tech stock", "ai stock", "semiconductor",
+                "nvidia", "magnificent 7", "big tech", "apple", "microsoft", "google"],
+    "BTC":     ["bitcoin", "btc", "crypto", "blackrock etf", "strategic reserve",
+                "coinbase", "crypto regulation", "digital asset"],
+    "ETH":     ["ethereum", "eth ", "defi", "layer 2", "staking", "smart contract"],
+    "DXY":     ["dollar index", "dxy", "greenback", "dollar strength", "dollar weakness",
+                "us dollar", "forex", "currency", "dollar rally", "dollar selloff"],
     "DOW":     ["dow jones", "djia", "dow 30", "blue chip", "industrials"],
+    "VIX":     ["vix", "volatility index", "fear gauge", "market fear", "risk off"],
+    "10Y":     ["10-year", "10 year", "treasury yield", "bond yield", "yield curve",
+                "10y yield", "t-note", "fomc", "federal reserve"],
 }
 
 # Sentiment words
@@ -272,69 +307,128 @@ def fetch_gold_spot():
 # ── POLYMARKET ───────────────────────────────────────────────────────────────
 
 def fetch_polymarket_markets():
-    """Search Polymarket Gamma API across keyword batches, deduplicate."""
+    """Fetch Polymarket events via Gamma API — events endpoint gives correct slugs."""
     markets  = []
     seen_ids = set()
 
-    for kw in POLY_SEARCH_TERMS:
+    # ── Step 1: Fetch from /events endpoint (gives real event-level slugs) ──
+    event_search_terms = [
+        "iran", "oil", "russia", "ukraine", "gold", "bitcoin", "nasdaq",
+        "interest rate", "fed", "tariff", "china", "taiwan", "trump",
+        "ceasefire", "election", "inflation", "recession", "dollar",
+    ]
+
+    for kw in event_search_terms:
         url = (
-            "https://gamma-api.polymarket.com/markets"
-            f"?active=true&closed=false&limit=20&offset=0"
+            "https://gamma-api.polymarket.com/events"
+            f"?active=true&closed=false&limit=15"
             f"&search={urllib.parse.quote(kw)}"
         )
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "GODSEYE/3.0"})
             with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-                data = json.loads(resp.read().decode())
+                events = json.loads(resp.read().decode())
 
-            for m in data:
-                mid = m.get("id", "")
-                if mid in seen_ids:
+            for ev in events:
+                # Each event has a slug and contains multiple markets
+                event_slug = ev.get("slug", "")
+                event_title = ev.get("title", "") or ev.get("description", "")
+                ev_lower = event_title.lower()
+
+                # Filter for relevant events
+                if not any(k in ev_lower for k in POLY_RELEVANT_KEYWORDS):
                     continue
-                q = m.get("question", "").lower()
-                if not any(k in q for k in POLY_RELEVANT_KEYWORDS):
+
+                # Use event slug for URL — this is the correct Polymarket URL
+                poly_url = f"https://polymarket.com/event/{event_slug}" if event_slug else "https://polymarket.com/markets"
+
+                # Pull markets from within the event
+                ev_markets = ev.get("markets", [])
+                if not ev_markets:
+                    # Event with no sub-markets — treat event itself as a market
+                    eid = ev.get("id", event_slug)
+                    if eid in seen_ids:
+                        continue
+                    seen_ids.add(eid)
+
+                    volume = ev.get("volume", 0) or 0
+                    try:
+                        volume = float(volume)
+                    except Exception:
+                        volume = 0
+
+                    markets.append({
+                        "id":        eid,
+                        "question":  event_title[:160],
+                        "slug":      event_slug,
+                        "outcomes":  ["Yes", "No"],
+                        "prices":    [],
+                        "volume":    volume,
+                        "liquidity": float(ev.get("liquidity", 0) or 0),
+                        "endDate":   ev.get("endDate", ""),
+                        "url":       poly_url,
+                    })
                     continue
-                seen_ids.add(mid)
 
-                raw_prices   = m.get("outcomePrices", "[]")
-                outcomes_raw = m.get("outcomes", '["Yes","No"]')
-                try:
-                    prices = [float(p) for p in json.loads(raw_prices)]
-                except Exception:
-                    prices = []
-                try:
-                    outcomes = json.loads(outcomes_raw)
-                except Exception:
-                    outcomes = ["Yes", "No"]
+                for m in ev_markets:
+                    mid = m.get("id", "")
+                    if mid in seen_ids:
+                        continue
+                    q = m.get("question", "") or event_title
+                    q_lower = q.lower()
+                    if not any(k in q_lower for k in POLY_RELEVANT_KEYWORDS):
+                        # Still accept if the parent event is relevant
+                        if not any(k in ev_lower for k in POLY_RELEVANT_KEYWORDS):
+                            continue
+                    seen_ids.add(mid)
 
-                # Build the most reliable URL possible:
-                # 1. groupSlug = event-level slug (most reliable for URL)
-                # 2. slug = market-level slug (fallback)
-                # 3. conditionId = condition hash (last resort)
-                group_slug   = m.get("groupSlug", "")
-                market_slug  = m.get("slug", "")
-                condition_id = m.get("conditionId", "")
-                best_slug    = group_slug or market_slug or condition_id
-                poly_url     = f"https://polymarket.com/event/{best_slug}" if best_slug else "https://polymarket.com/markets"
+                    raw_prices   = m.get("outcomePrices", "[]")
+                    outcomes_raw = m.get("outcomes", '["Yes","No"]')
+                    try:
+                        prices = [float(p) for p in json.loads(raw_prices)]
+                    except Exception:
+                        prices = []
+                    try:
+                        outcomes = json.loads(outcomes_raw)
+                    except Exception:
+                        outcomes = ["Yes", "No"]
 
-                markets.append({
-                    "id":        mid,
-                    "question":  m.get("question", ""),
-                    "slug":      best_slug,
-                    "outcomes":  outcomes,
-                    "prices":    prices,
-                    "volume":    m.get("volume", 0),
-                    "liquidity": m.get("liquidity", 0),
-                    "endDate":   m.get("endDate", ""),
-                    "url":       poly_url,
-                })
+                    volume = m.get("volume", 0) or ev.get("volume", 0) or 0
+                    try:
+                        volume = float(volume)
+                    except Exception:
+                        volume = 0
+
+                    markets.append({
+                        "id":        mid,
+                        "question":  q[:160],
+                        "slug":      event_slug,          # Always use event-level slug
+                        "outcomes":  outcomes,
+                        "prices":    prices,
+                        "volume":    volume,
+                        "liquidity": float(m.get("liquidity", 0) or 0),
+                        "endDate":   m.get("endDate", "") or ev.get("endDate", ""),
+                        "url":       poly_url,            # Always event-level URL
+                    })
+
         except urllib.error.HTTPError as e:
-            print(f"  [Polymarket] HTTP {e.code} for '{kw}'", file=sys.stderr)
+            print(f"  [Polymarket/events] HTTP {e.code} for '{kw}'", file=sys.stderr)
         except Exception as e:
-            print(f"  [Polymarket] Error for '{kw}': {e}", file=sys.stderr)
+            print(f"  [Polymarket/events] Error for '{kw}': {e}", file=sys.stderr)
 
-    markets.sort(key=lambda x: float(x.get("volume", 0) or 0), reverse=True)
-    return markets[:30]
+    # ── Step 2: Deduplicate and sort by volume ──
+    # Remove duplicates that slipped through (same question)
+    seen_q = set()
+    unique = []
+    for m in markets:
+        qkey = m["question"][:50].lower().strip()
+        if qkey not in seen_q:
+            seen_q.add(qkey)
+            unique.append(m)
+
+    unique.sort(key=lambda x: float(x.get("volume", 0) or 0), reverse=True)
+    print(f"    [Polymarket] {len(unique)} unique markets from /events endpoint")
+    return unique[:35]
 
 
 # ── NEWS RSS ─────────────────────────────────────────────────────────────────
@@ -395,12 +489,25 @@ def fetch_news_headlines():
                     if any(k in combined for k in kws):
                         tagged.append(inst)
 
+                # Parse pubDate to ISO timestamp for "X ago" display
+                pub_iso = ""
+                try:
+                    from email.utils import parsedate_to_datetime
+                    pub_iso = parsedate_to_datetime(pub).isoformat()
+                except Exception:
+                    try:
+                        # Try ISO format directly
+                        pub_iso = pub
+                    except Exception:
+                        pub_iso = ""
+
                 headlines.append({
                     "source":      feed["name"],
                     "title":       title,
                     "desc":        clean_desc,
                     "link":        link,
                     "pubDate":     pub,
+                    "pubISO":      pub_iso,
                     "sentiment":   sentiment,
                     "instruments": tagged,
                 })

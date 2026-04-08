@@ -121,17 +121,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .dir-badge.BAROMETER{background:var(--purple-t);color:var(--purple);}
 
 /* ── NEWS ── */
-.news-row{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--border2);}
+.news-row{padding:7px 0;border-bottom:1px solid var(--border2);cursor:default;}
 .news-row:last-child{border:none;}
-.news-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px;}
-.news-dot.bullish{background:var(--green);}
-.news-dot.bearish{background:var(--red);}
-.news-dot.neutral{background:var(--yellow);}
-.news-text{flex:1;font-size:11px;line-height:1.4;}
-.news-source{font-size:9px;color:var(--muted);font-weight:700;}
-.news-title{color:var(--text);text-decoration:none;border-bottom:1px solid transparent;}
-.news-title:hover{border-color:var(--text);}
-.news-tags{margin-top:3px;display:flex;flex-wrap:wrap;gap:3px;}
+.news-row:hover{background:rgba(255,255,255,0.02);border-radius:6px;padding-left:4px;}
+.news-meta{display:flex;align-items:center;gap:5px;margin-bottom:3px;}
+.news-source-tag{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;}
+.news-time{font-size:9px;color:var(--muted);}
+.news-time-dot{width:3px;height:3px;border-radius:50%;background:var(--border);display:inline-block;margin:0 2px;vertical-align:middle;}
+.news-sentiment-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block;margin-right:4px;vertical-align:middle;}
+.news-sentiment-dot.bullish{background:var(--green);}
+.news-sentiment-dot.bearish{background:var(--red);}
+.news-sentiment-dot.neutral{background:var(--yellow);}
+.news-title-link{font-size:11px;font-weight:600;color:var(--text);text-decoration:none;line-height:1.4;display:block;}
+.news-title-link:hover{color:var(--blue);}
+.news-tags{margin-top:4px;display:flex;flex-wrap:wrap;gap:3px;}
+.news-tag{font-size:8px;font-weight:700;padding:1px 5px;border-radius:3px;letter-spacing:0.3px;}
+.news-tag.XAUUSD{background:rgba(249,168,37,0.15);color:var(--yellow);}
+.news-tag.WTI{background:rgba(255,112,67,0.15);color:var(--orange);}
+.news-tag.SPX{background:rgba(38,166,154,0.15);color:var(--green);}
+.news-tag.NASDAQ{background:rgba(33,150,243,0.15);color:var(--blue);}
+.news-tag.BTC{background:rgba(255,112,67,0.15);color:var(--orange);}
+.news-tag.ETH{background:rgba(171,71,188,0.15);color:var(--purple);}
+.news-tag.DXY{background:rgba(0,188,212,0.15);color:var(--cyan);}
+.news-tag.VIX{background:rgba(239,83,80,0.15);color:var(--red);}
+.news-tag.default{background:var(--bg4);color:var(--muted);}
 
 /* ── MIROFISH DEBATE ── */
 .debate-card{background:linear-gradient(135deg,rgba(171,71,188,0.06),rgba(33,150,243,0.04));border:1px solid rgba(171,71,188,0.25);}
@@ -202,6 +215,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .modal-chart-wrap{height:260px;position:relative;margin:12px 0 8px;}
 .modal-reasons{font-size:10px;color:var(--muted);line-height:1.6;padding-top:8px;border-top:1px solid var(--border2);}
 .modal-candle-note{font-size:10px;color:var(--muted);text-align:center;margin-top:8px;padding:6px;background:var(--bg3);border-radius:6px;}
+
+/* ── DECISION CARDS ── */
+.decision-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;}
+.decision-card.HIGH{border-left:3px solid var(--green);}
+.decision-card.HIGH.SELL{border-left-color:var(--red);}
+.decision-card.MEDIUM{border-left:3px solid var(--yellow);}
+.decision-card.MEDIUM.SELL{border-left-color:var(--orange);}
+.dc-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.dc-instrument{font-size:18px;font-weight:800;color:var(--text);}
+.dc-label{font-size:11px;color:var(--muted);}
+.dc-direction{font-size:13px;font-weight:800;padding:4px 12px;border-radius:6px;}
+.dc-direction.BUY{background:var(--green-t);color:var(--green);}
+.dc-direction.SELL{background:var(--red-t);color:var(--red);}
+.dc-direction.NEUTRAL{background:var(--yellow-t);color:var(--yellow);}
+.dc-conf{font-size:9px;font-weight:800;padding:3px 7px;border-radius:4px;}
+.dc-conf.HIGH{background:rgba(38,166,154,0.2);color:var(--green);}
+.dc-conf.MEDIUM{background:rgba(249,168,37,0.2);color:var(--yellow);}
+.dc-stats{display:flex;gap:20px;flex-wrap:wrap;}
+.dc-stat{display:flex;flex-direction:column;gap:2px;}
+.dc-stat-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.4px;}
+.dc-stat-value{font-size:13px;font-weight:700;font-family:'SF Mono',monospace;color:var(--text);}
+.dc-body{display:flex;gap:12px;flex-wrap:wrap;}
+.dc-reasons{flex:1;min-width:180px;}
+.dc-reasons-title{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px;}
+.dc-reason-item{font-size:10px;color:var(--text2);line-height:1.5;padding:2px 0;}
+.dc-miro{flex:1;min-width:180px;background:var(--bg3);border-radius:8px;padding:10px;}
+.dc-miro-title{font-size:9px;color:var(--purple);font-weight:700;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px;}
+.dc-miro-bar{height:5px;background:var(--bg4);border-radius:3px;margin:4px 0 2px;}
+.dc-miro-fill{height:100%;border-radius:3px;}
+.dc-miro-narrative{font-size:10px;color:var(--text2);line-height:1.4;margin-top:4px;}
+.dc-miro-skeptic{font-size:10px;color:var(--red);line-height:1.4;font-style:italic;margin-top:3px;}
 
 /* ── OLD PAGES (trading, poly, charts, howto) ── */
 .grid{display:grid;gap:12px;}
@@ -285,7 +329,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="header-title">Global Market Intelligence</div>
   <div class="page-nav">
     <button class="page-btn active" onclick="showPage('home',this)">Home</button>
-    <button class="page-btn" onclick="showPage('trading',this)">Signals</button>
+    <button class="page-btn" onclick="showPage('trading',this)">Decisions</button>
     <button class="page-btn" onclick="showPage('polymarket',this)">Polymarket</button>
     <button class="page-btn" onclick="showPage('charts',this)">Charts</button>
     <button class="page-btn" onclick="showPage('howto',this)">How To Use</button>
@@ -380,26 +424,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 </div>
 
-<!-- ═══════════ TRADING SIGNALS PAGE ═══════════ -->
+<!-- ═══════════ DECISIONS PAGE ═══════════ -->
 <div class="page" id="page-trading">
-  <div class="card">
-    <div class="card-title"><div class="dot" style="background:var(--orange)"></div> Trading Signals <span id="sigTimestamp" style="font-size:9px;color:var(--muted);margin-left:8px;font-weight:400"></span></div>
-    <div class="ts-row ts-header">
-      <div>Direction</div><div>Instrument</div><div>Entry</div><div>Exp. Move</div><div>Confidence</div><div>Volatility</div>
+  <!-- Page header -->
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-shrink:0;">
+    <div>
+      <div style="font-size:16px;font-weight:800;color:var(--text)">⚡ Decision Engine</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px">MiroFish consensus × market signals → actionable trade ideas</div>
     </div>
-    <div id="tradingSignalRows">Loading...</div>
+    <span id="sigTimestamp" style="font-size:10px;color:var(--muted);font-weight:400"></span>
   </div>
-  <div class="grid grid-2" style="margin-top:12px;">
-    <div class="card">
-      <div class="card-title"><div class="dot" style="background:var(--blue)"></div> Barometers (Context Only)</div>
-      <div id="barometerCards">Loading...</div>
-    </div>
-    <div class="card">
-      <div class="card-title"><div class="dot" style="background:var(--cyan)"></div> Signal Methodology</div>
-      <div style="font-size:11px;color:var(--text2);line-height:1.7;">
-        Signals combine <b>news sentiment</b> (30%), <b>Polymarket vs MiroFish divergence</b> (30%), <b>price momentum</b> (20%), <b>DXY inverse correlation</b> (10%), and <b>VIX risk gauge</b> (10%). Expected move is ATR-based, scaled by signal strength. Confidence: HIGH (&gt;0.40), MEDIUM (&gt;0.20), LOW.
-      </div>
-    </div>
+  <!-- Decision cards — HIGH and MEDIUM signals only -->
+  <div id="decisionCards" style="display:flex;flex-direction:column;gap:10px;">
+    <div style="color:var(--muted);font-size:11px;padding:20px;text-align:center">Loading decisions...</div>
+  </div>
+  <!-- Barometers strip at bottom -->
+  <div class="card" style="margin-top:12px;flex-shrink:0;">
+    <div class="card-title"><div class="dot" style="background:var(--blue)"></div> Market Context</div>
+    <div id="barometerCards" style="display:flex;gap:16px;flex-wrap:wrap;"></div>
   </div>
 </div>
 
@@ -666,6 +708,7 @@ function renderAll() {
   renderDebateCard();
   renderActionableInsights();
   renderPolyGrid();
+  renderDecisions();
   renderTradingSignals();
   renderBarometers();
   renderPolySignals();
@@ -797,29 +840,51 @@ function fmtAge(raw) {
 
 function renderNews() {
   var headlines = DATA.headlines;
-  if (!headlines || headlines.length === 0) return;
+  var el = document.getElementById('newsRows');
+  if (!el || !headlines || !headlines.length) return;
+
   var badge = document.getElementById('newsBadge');
   if (badge) badge.textContent = '· ' + headlines.length + ' articles';
 
-  var el = document.getElementById('newsRows');
-  if (!el) return;
+  function timeAgo(isoStr) {
+    if (!isoStr) return '';
+    try {
+      var d = new Date(isoStr);
+      if (isNaN(d)) return '';
+      var mins = Math.floor((Date.now() - d.getTime()) / 60000);
+      if (mins < 1) return 'just now';
+      if (mins < 60) return mins + 'm ago';
+      var hrs = Math.floor(mins / 60);
+      if (hrs < 24) return hrs + 'h ago';
+      return Math.floor(hrs / 24) + 'd ago';
+    } catch(e) { return ''; }
+  }
 
-  el.innerHTML = headlines.slice(0, 20).map(function(h) {
-    var dotClass = h.sentiment || 'neutral';
-    var safe = (h.title || '').replace(/</g, '&lt;');
-    var url = h.link || '#';
-    var timeStr = fmtAge(h.pubDate);
-    var instPills = (h.instruments || []).map(function(i) {
-      return '<span style="font-size:8px;padding:1px 5px;border-radius:3px;font-weight:700;background:' + (INST_BG[i]||'var(--bg4)') + ';color:' + (INST_COLORS[i]||'var(--muted)') + '">' + i + '</span>';
+  el.innerHTML = headlines.map(function(h) {
+    var ago = timeAgo(h.pubISO || h.pubDate);
+    var tags = (h.instruments || []).map(function(t) {
+      var cls = ['XAUUSD','WTI','SPX','NASDAQ','BTC','ETH','DXY','VIX'].indexOf(t) >= 0 ? t : 'default';
+      return '<span class="news-tag ' + cls + '">' + t + '</span>';
     }).join('');
+
+    // Source short names
+    var srcMap = {
+      'Reuters Business': 'Reuters', 'Reuters World': 'Reuters',
+      'AP Top News': 'AP', 'BBC World': 'BBC', 'Al Jazeera': 'AJ',
+      'CNBC Markets': 'CNBC', 'CNBC Economy': 'CNBC',
+      'MarketWatch': 'MktWatch', 'Yahoo Finance News': 'Yahoo Fin',
+      'Investing.com': 'Investing'
+    };
+    var src = srcMap[h.source] || h.source;
+
     return '<div class="news-row">' +
-      '<div class="news-dot ' + dotClass + '"></div>' +
-      '<div class="news-text">' +
-        '<span class="news-source">' + (h.source || '') + '</span>' +
-        (timeStr ? ' <span style="color:var(--muted);font-size:9px">· ' + timeStr + '</span>' : '') +
-        ' <a href="' + url + '" target="_blank" rel="noopener" class="news-title">' + safe.substring(0, 95) + (safe.length > 95 ? '...' : '') + '</a>' +
-        (instPills ? '<div class="news-tags">' + instPills + '</div>' : '') +
+      '<div class="news-meta">' +
+        '<span class="news-sentiment-dot ' + h.sentiment + '"></span>' +
+        '<span class="news-source-tag">' + src + '</span>' +
+        (ago ? '<span class="news-time-dot"></span><span class="news-time">' + ago + '</span>' : '') +
       '</div>' +
+      '<a class="news-title-link" href="' + (h.link||'#') + '" target="_blank" rel="noopener">' + h.title + '</a>' +
+      (tags ? '<div class="news-tags">' + tags + '</div>' : '') +
     '</div>';
   }).join('');
 }
@@ -985,6 +1050,84 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') { closeChartModal(); closeDebateModal(); }
 });
 
+// ── DECISIONS PAGE ──────────────────────────────────────────────────────────
+function renderDecisions() {
+  var ts = DATA.tradingSignals;
+  var el = document.getElementById('decisionCards');
+  if (!el || !ts || !ts.length) return;
+
+  // Update timestamp
+  var tsEl = document.getElementById('sigTimestamp');
+  if (tsEl && ts[0] && ts[0].timestamp) {
+    var d = new Date(ts[0].timestamp);
+    tsEl.textContent = 'Updated ' + d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) + ' UTC';
+  }
+
+  // Filter HIGH + MEDIUM, non-neutral
+  var actionable = ts.filter(function(s) {
+    return s.confidence !== 'LOW' || s.direction !== 'NEUTRAL';
+  });
+
+  if (!actionable.length) {
+    el.innerHTML = '<div style="color:var(--muted);font-size:11px;padding:20px;text-align:center">No HIGH or MEDIUM signals right now. Market is NEUTRAL across instruments.</div>';
+    return;
+  }
+
+  el.innerHTML = actionable.map(function(s) {
+    var md = s.mirofish_debate;
+    var miroHtml = '';
+    if (md) {
+      var pct = md.consensus_pct || 50;
+      var miroColor = pct >= 60 ? 'var(--green)' : (pct <= 40 ? 'var(--red)' : 'var(--yellow)');
+      miroHtml = '<div class="dc-miro">' +
+        '<div class="dc-miro-title">🐟 MiroFish · ' + (md.agents_bullish||0) + '🟢 ' + (md.agents_bearish||0) + '🔴 ' + (md.agents_neutral||0) + '🟡</div>' +
+        '<div style="display:flex;align-items:center;gap:8px;">' +
+          '<div class="dc-miro-bar" style="flex:1"><div class="dc-miro-fill" style="width:' + pct + '%;background:' + miroColor + '"></div></div>' +
+          '<span style="font-size:12px;font-weight:700;color:' + miroColor + '">' + pct + '%</span>' +
+        '</div>' +
+        (md.top_narrative ? '<div class="dc-miro-narrative">📣 ' + md.top_narrative.substring(0, 100) + '</div>' : '') +
+        (md.skeptic_counter ? '<div class="dc-miro-skeptic">⚠ ' + md.skeptic_counter.substring(0, 80) + '</div>' : '') +
+        '<div style="margin-top:6px"><a href="#" onclick="event.preventDefault();openDebateModal(\'' + s.instrument + '\')" style="font-size:9px;color:var(--purple);text-decoration:underline;">View full debate →</a></div>' +
+      '</div>';
+    } else {
+      var mBase = s.mirofish_base || 50;
+      var mColor = mBase >= 60 ? 'var(--green)' : (mBase <= 40 ? 'var(--red)' : 'var(--yellow)');
+      miroHtml = '<div class="dc-miro">' +
+        '<div class="dc-miro-title">🐟 MiroFish Base</div>' +
+        '<div style="display:flex;align-items:center;gap:8px;">' +
+          '<div class="dc-miro-bar" style="flex:1"><div class="dc-miro-fill" style="width:' + mBase + '%;background:' + mColor + '"></div></div>' +
+          '<span style="font-size:12px;font-weight:700;color:' + mColor + '">' + mBase + '%</span>' +
+        '</div>' +
+        '<div class="dc-miro-narrative" style="color:var(--muted)">Run MiroFish sim for live debate context →</div>' +
+      '</div>';
+    }
+
+    var moveColor = s.expected_move_pct >= 0 ? 'var(--green)' : 'var(--red)';
+    var reasons = (s.reasons || []).map(function(r) {
+      return '<div class="dc-reason-item">· ' + r + '</div>';
+    }).join('');
+
+    return '<div class="decision-card ' + s.confidence + ' ' + s.direction + '">' +
+      '<div class="dc-top">' +
+        '<div><div class="dc-instrument">' + s.instrument + '</div><div class="dc-label">' + s.label + '</div></div>' +
+        '<span class="dc-direction ' + s.direction + '">' + s.direction + '</span>' +
+        '<span class="dc-conf ' + s.confidence + '">' + s.confidence + '</span>' +
+        '<div style="margin-left:auto;font-size:10px;color:var(--muted)">Score: ' + (s.score > 0 ? '+' : '') + s.score.toFixed(3) + '</div>' +
+      '</div>' +
+      '<div class="dc-stats">' +
+        '<div class="dc-stat"><div class="dc-stat-label">Entry</div><div class="dc-stat-value">$' + (s.entry||0).toLocaleString(undefined,{maximumFractionDigits:2}) + '</div></div>' +
+        '<div class="dc-stat"><div class="dc-stat-label">Exp. Move</div><div class="dc-stat-value" style="color:' + moveColor + '">' + (s.expected_move_pct > 0 ? '+' : '') + s.expected_move_pct.toFixed(2) + '%</div></div>' +
+        '<div class="dc-stat"><div class="dc-stat-label">Volatility</div><div class="dc-stat-value">' + s.volatility + '</div></div>' +
+        '<div class="dc-stat"><div class="dc-stat-label">News</div><div class="dc-stat-value">' + s.bull_headlines + '🟢 ' + s.bear_headlines + '🔴</div></div>' +
+      '</div>' +
+      '<div class="dc-body">' +
+        '<div class="dc-reasons"><div class="dc-reasons-title">Why this signal</div>' + reasons + '</div>' +
+        miroHtml +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
 // ── TRADING SIGNALS PAGE ────────────────────────────────────────────────────
 function renderTradingSignals() {
   var ts = DATA.tradingSignals;
@@ -1013,12 +1156,10 @@ function renderBarometers() {
   el.innerHTML = cd.price_cards.filter(function(p){ return p.barometer && p.price; }).map(function(p) {
     var dir = (p.day_change_pct || 0) > 0 ? 'up' : ((p.day_change_pct || 0) < 0 ? 'dn' : 'fl');
     var pct = p.day_change_pct != null ? ((p.day_change_pct > 0 ? '+' : '') + p.day_change_pct.toFixed(2) + '%') : '';
-    var spark = renderMiniSpark(p.closes_5d, dir, 50, 18);
-    return '<div class="price-card" style="margin-bottom:6px;">' +
-      '<div class="pc-name">' + p.name + ' <span class="barometer-badge">BAR</span></div>' +
-      '<div class="pc-price">' + formatPrice(p.price, p.name) + '</div>' +
-      '<div class="pc-change ' + dir + '">' + pct + '</div>' +
-      '<div style="margin-left:auto">' + spark + '</div>' +
+    return '<div style="display:flex;flex-direction:column;gap:2px;min-width:80px;">' +
+      '<div style="font-size:10px;font-weight:700;color:var(--text)">' + p.name + ' <span style="font-size:8px;color:var(--muted)">BAR</span></div>' +
+      '<div style="font-size:13px;font-weight:800;font-family:monospace;color:var(--text)">' + formatPrice(p.price, p.name) + '</div>' +
+      '<div style="font-size:10px" class="' + dir + '">' + pct + '</div>' +
     '</div>';
   }).join('');
 }
