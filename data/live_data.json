@@ -1,23 +1,24 @@
 {
-  "fetchedAt": "2026-07-24T02:34:45.310243+00:00",
-  "fetchedDisplay": "2026-07-24 02:34 UTC",
+  "fetchedAt": "2026-07-24T06:24:38.998006+00:00",
+  "fetchedDisplay": "2026-07-24 06:24 UTC",
   "prices": {
     "XAUUSD": {
       "name": "XAUUSD",
       "symbol": "GC=F",
-      "price": 4047.6,
+      "price": 4033.1,
       "prev_close": 4010.3,
-      "day_change": 37.3,
-      "day_change_pct": 0.93,
+      "day_change": 22.8,
+      "day_change_pct": 0.57,
       "high_52w": 5586.2,
       "low_52w": 3263.9,
       "intraday_high": 4054.1,
-      "intraday_low": 4041.9,
+      "intraday_low": 4024.0,
       "closes_5d": [
         4010.3,
         4071.1001,
         4146.8999,
-        4047.6001
+        4046.6001,
+        4033.1001
       ],
       "ohlc_5d": [
         {
@@ -42,22 +43,29 @@
           "close": 4146.8999
         },
         {
-          "time": 1784859867,
+          "time": 1784779200,
+          "open": 4129.8999,
+          "high": 4130.8999,
+          "low": 4046.6001,
+          "close": 4046.6001
+        },
+        {
+          "time": 1784865600,
           "open": 4053.3999,
           "high": 4054.1001,
-          "low": 4041.8999,
-          "close": 4047.6001
+          "low": 4024.0,
+          "close": 4033.1001
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:36.824673+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.431559+00:00"
     },
     "WTI": {
       "name": "WTI",
       "symbol": "CL=F",
-      "price": 91.86,
+      "price": 91.26,
       "prev_close": 83.23,
-      "day_change": 8.63,
-      "day_change_pct": 10.37,
+      "day_change": 8.03,
+      "day_change_pct": 9.65,
       "high_52w": 119.48,
       "low_52w": 54.98,
       "intraday_high": 92.83,
@@ -66,7 +74,8 @@
         83.23,
         84.91,
         86.83,
-        91.86
+        92.19,
+        91.26
       ],
       "ohlc_5d": [
         {
@@ -91,14 +100,21 @@
           "close": 86.83
         },
         {
-          "time": 1784859864,
+          "time": 1784779200,
+          "open": 87.72,
+          "high": 93.5,
+          "low": 87.32,
+          "close": 92.19
+        },
+        {
+          "time": 1784865600,
           "open": 92.55,
           "high": 92.83,
           "low": 91.16,
-          "close": 91.86
+          "close": 91.26
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.077656+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.469230+00:00"
     },
     "SPX": {
       "name": "SPX",
@@ -155,7 +171,7 @@
           "close": 7408.2998
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.261161+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.506276+00:00"
     },
     "NASDAQ": {
       "name": "NASDAQ",
@@ -173,7 +189,7 @@
         25508.0703,
         25837.2109,
         25690.9004,
-        25137.6934
+        25137.6895
       ],
       "ohlc_5d": [
         {
@@ -206,30 +222,31 @@
         },
         {
           "time": 1784813400,
-          "open": 25245.541,
-          "high": 25358.2812,
-          "low": 24954.7734,
-          "close": 25137.6934
+          "open": 25245.5391,
+          "high": 25358.2793,
+          "low": 24954.7695,
+          "close": 25137.6895
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.398528+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.553667+00:00"
     },
     "BTC": {
       "name": "BTC",
       "symbol": "BTC-USD",
-      "price": 64923.3,
+      "price": 65406.0,
       "prev_close": 65230.027,
-      "day_change": -306.727,
-      "day_change_pct": -0.47,
+      "day_change": 175.973,
+      "day_change_pct": 0.27,
       "high_52w": 126198.07,
       "low_52w": 57747.766,
-      "intraday_high": 65116.555,
+      "intraday_high": 65401.465,
       "intraday_low": 64744.03,
       "closes_5d": [
         65230.0273,
         66505.125,
         66100.7969,
-        64923.3008
+        65044.8125,
+        65406.0
       ],
       "ohlc_5d": [
         {
@@ -254,31 +271,39 @@
           "close": 66100.7969
         },
         {
+          "time": 1784764800,
+          "open": 66100.1328,
+          "high": 66282.3828,
+          "low": 64610.6094,
+          "close": 65044.8125
+        },
+        {
           "time": 1784851200,
           "open": 65047.8711,
-          "high": 65116.5547,
+          "high": 65401.4648,
           "low": 64744.0312,
-          "close": 64923.3008
+          "close": 65406.0
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.569765+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.591920+00:00"
     },
     "ETH": {
       "name": "ETH",
       "symbol": "ETH-USD",
-      "price": 1868.29,
+      "price": 1883.51,
       "prev_close": 1903.7589,
-      "day_change": -35.4689,
-      "day_change_pct": -1.86,
+      "day_change": -20.2489,
+      "day_change_pct": -1.06,
       "high_52w": 4953.733,
       "low_52w": 1506.5057,
-      "intraday_high": 1876.9178,
+      "intraday_high": 1882.5107,
       "intraday_low": 1864.2811,
       "closes_5d": [
         1903.7589,
         1928.3838,
         1933.4901,
-        1868.29
+        1877.1002,
+        1883.51
       ],
       "ohlc_5d": [
         {
@@ -303,22 +328,29 @@
           "close": 1933.4901
         },
         {
+          "time": 1784764800,
+          "open": 1933.4709,
+          "high": 1940.2828,
+          "low": 1868.5204,
+          "close": 1877.1002
+        },
+        {
           "time": 1784851200,
           "open": 1876.9178,
-          "high": 1876.9178,
+          "high": 1882.5107,
           "low": 1864.2811,
-          "close": 1868.29
+          "close": 1883.51
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.803761+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.628549+00:00"
     },
     "DXY": {
       "name": "DXY",
       "symbol": "DX-Y.NYB",
-      "price": 101.389,
+      "price": 101.432,
       "prev_close": 100.99,
-      "day_change": 0.399,
-      "day_change_pct": 0.4,
+      "day_change": 0.442,
+      "day_change_pct": 0.44,
       "high_52w": 101.8,
       "low_52w": 95.55,
       "intraday_high": 101.462,
@@ -328,7 +360,7 @@
         101.18,
         101.14,
         101.43,
-        101.389
+        101.432
       ],
       "ohlc_5d": [
         {
@@ -360,14 +392,14 @@
           "close": 101.43
         },
         {
-          "time": 1784859875,
+          "time": 1784865600,
           "open": 101.444,
           "high": 101.462,
           "low": 101.359,
-          "close": 101.389
+          "close": 101.432
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:37.975526+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.668090+00:00"
     },
     "VIX": {
       "name": "VIX",
@@ -377,9 +409,9 @@
       "day_change": -0.07,
       "day_change_pct": -0.37,
       "high_52w": 35.3,
-      "low_52w": 13.38,
-      "intraday_high": 20.31,
-      "intraday_low": 17.32,
+      "low_52w": null,
+      "intraday_high": null,
+      "intraday_low": null,
       "closes_5d": [
         18.77,
         18.65,
@@ -424,7 +456,7 @@
           "close": 18.7
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:38.141798+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.707710+00:00"
     },
     "10Y": {
       "name": "10Y",
@@ -434,9 +466,9 @@
       "day_change": 0.162,
       "day_change_pct": 3.57,
       "high_52w": 4.714,
-      "low_52w": 3.947,
-      "intraday_high": 4.714,
-      "intraday_low": 4.693,
+      "low_52w": null,
+      "intraday_high": null,
+      "intraday_low": null,
       "closes_5d": [
         4.541,
         4.598,
@@ -481,7 +513,7 @@
           "close": 4.703
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:38.341707+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.749129+00:00"
     },
     "DOW": {
       "name": "DOW",
@@ -538,7 +570,7 @@
           "close": 51711.6484
         }
       ],
-      "fetchedAt": "2026-07-24T02:34:38.508739+00:00"
+      "fetchedAt": "2026-07-24T06:24:34.784881+00:00"
     }
   },
   "gold_spot": {
@@ -582,6 +614,23 @@
       "url": "https://polymarket.com/event/ukraine-election-held-in-2025"
     },
     {
+      "id": "677366",
+      "question": "Will Russia capture Kostyantynivka by December 31, 2026?",
+      "slug": "will-russia-capture-kostyantynivka-by",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "prices": [
+        0.8965,
+        0.1035
+      ],
+      "volume": 1315883.922904997,
+      "liquidity": 266760.72335,
+      "endDate": "2026-12-31T12:00:00Z",
+      "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by"
+    },
+    {
       "id": "546806",
       "question": "Will Russia capture Kostyantynivka by December 31?",
       "slug": "will-russia-capture-kostyantynivka-by",
@@ -596,23 +645,6 @@
       "volume": 1307057.244169,
       "liquidity": 0.0,
       "endDate": "2025-12-31T12:00:00Z",
-      "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by"
-    },
-    {
-      "id": "677366",
-      "question": "Will Russia capture Kostyantynivka by December 31, 2026?",
-      "slug": "will-russia-capture-kostyantynivka-by",
-      "outcomes": [
-        "Yes",
-        "No"
-      ],
-      "prices": [
-        0.888,
-        0.112
-      ],
-      "volume": 1302659.488620997,
-      "liquidity": 267385.6747,
-      "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by"
     },
     {
@@ -797,8 +829,8 @@
         0.735,
         0.265
       ],
-      "volume": 399810.93468500016,
-      "liquidity": 43608.2285,
+      "volume": 399834.44819700014,
+      "liquidity": 44988.9032,
       "endDate": "2026-09-30T12:00:00Z",
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by"
     },
@@ -815,7 +847,7 @@
         0.9575
       ],
       "volume": 363612.58402499993,
-      "liquidity": 11438.21608,
+      "liquidity": 11107.18814,
       "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -879,11 +911,11 @@
         "No"
       ],
       "prices": [
-        0.065,
-        0.935
+        0.0585,
+        0.9415
       ],
-      "volume": 246414.35935399987,
-      "liquidity": 6304.5101,
+      "volume": 248104.42878099985,
+      "liquidity": 6933.69434,
       "endDate": "2026-07-31T12:00:00Z",
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by"
     },
@@ -917,7 +949,7 @@
         0.92
       ],
       "volume": 224404.09873099969,
-      "liquidity": 7582.0967,
+      "liquidity": 8326.1582,
       "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/ukraine-election-held-in-2025"
     },
@@ -951,7 +983,7 @@
         0.885
       ],
       "volume": 201729.78904699985,
-      "liquidity": 4458.6856,
+      "liquidity": 4721.1873,
       "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31"
     },
@@ -998,11 +1030,11 @@
         "No"
       ],
       "prices": [
-        0.063,
-        0.937
+        0.048,
+        0.952
       ],
-      "volume": 154052.055444,
-      "liquidity": 7478.73099,
+      "volume": 154055.914364,
+      "liquidity": 4245.52262,
       "endDate": "2026-08-31T11:00:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     },
@@ -1032,11 +1064,11 @@
         "No"
       ],
       "prices": [
-        0.1,
-        0.9
+        0.09,
+        0.91
       ],
       "volume": 87537.81854999997,
-      "liquidity": 1876.6729,
+      "liquidity": 1879.476,
       "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025"
     },
@@ -1087,7 +1119,7 @@
         0.845
       ],
       "volume": 67969.991718,
-      "liquidity": 9509.9402,
+      "liquidity": 9836.9262,
       "endDate": "2026-12-31T12:00:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     },
@@ -1146,23 +1178,11 @@
   "headlines": [
     {
       "source": "Yahoo Finance News",
-      "title": "Beyond The GPU: What Could Drive NVIDIA Stock Higher From Here?",
+      "title": "Nasdaq Slips Ahead of Earnings From Tesla, Alphabet",
       "desc": "",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/beyond-gpu-could-drive-nvidia-143619908.html",
-      "pubDate": "2026-07-22T14:36:19Z",
-      "pubISO": "2026-07-22T14:36:19Z",
-      "sentiment": "neutral",
-      "instruments": [
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "Yahoo Finance News",
-      "title": "Google Earnings Due. Cloud Growth Could Shake Up Big Tech, AI Trade",
-      "desc": "",
-      "link": "https://www.investors.com/news/technology/googl-stock-google-earnings-cloud-gowth-artificial-intelligence-hyperscalers/?src=A00220&yptr=yahoo",
-      "pubDate": "2026-07-22T14:52:58Z",
-      "pubISO": "2026-07-22T14:52:58Z",
+      "link": "https://www.wsj.com/finance/stocks/ai-stock-rally-loses-steam-ahead-of-key-big-tech-earnings-ac4b72ac?siteid=yhoof2&yptr=yahoo",
+      "pubDate": "2026-07-22T18:24:00Z",
+      "pubISO": "2026-07-22T18:24:00Z",
       "sentiment": "neutral",
       "instruments": [
         "SPX",
@@ -1171,50 +1191,111 @@
     },
     {
       "source": "Yahoo Finance News",
-      "title": "Earnings Preview: What To Expect From Zimmer Biomet\u2019s Report",
+      "title": "Precious Metals Rally as Outlook Brightens",
       "desc": "",
-      "link": "https://finance.yahoo.com/healthcare/articles/earnings-preview-expect-zimmer-biomet-150406199.html",
-      "pubDate": "2026-07-22T15:04:06Z",
-      "pubISO": "2026-07-22T15:04:06Z",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX"
-      ]
-    },
-    {
-      "source": "Yahoo Finance News",
-      "title": "What to Expect From Kimberly-Clark's Next Quarterly Earnings Report",
-      "desc": "",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/expect-kimberly-clarks-next-quarterly-150907358.html",
-      "pubDate": "2026-07-22T15:09:07Z",
-      "pubISO": "2026-07-22T15:09:07Z",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX"
-      ]
-    },
-    {
-      "source": "Yahoo Finance News",
-      "title": "Stock Indexes Mixed Ahead of Alphabet\u2019s Earnings",
-      "desc": "",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/stock-indexes-mixed-ahead-alphabet-151522060.html",
-      "pubDate": "2026-07-22T15:15:22Z",
-      "pubISO": "2026-07-22T15:15:22Z",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX"
-      ]
-    },
-    {
-      "source": "Yahoo Finance News",
-      "title": "Bitcoin Rally May Have Legs; Bank Income With BTCI",
-      "desc": "",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-rally-may-legs-bank-152558321.html",
-      "pubDate": "2026-07-22T15:25:58Z",
-      "pubISO": "2026-07-22T15:25:58Z",
+      "link": "https://www.wsj.com/finance/commodities-futures/gold-rises-amid-hopes-for-u-s-iran-deal-fe301cd7?siteid=yhoof2&yptr=yahoo",
+      "pubDate": "2026-07-22T18:26:00Z",
+      "pubISO": "2026-07-22T18:26:00Z",
       "sentiment": "bullish",
       "instruments": [
-        "BTC"
+        "XAUUSD"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "Fortinet and Intel Just Announced a New Collaboration. The Real Test for FTNT Stock Is Earnings.",
+      "desc": "",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/fortinet-intel-just-announced-collaboration-185134974.html",
+      "pubDate": "2026-07-22T18:51:34Z",
+      "pubISO": "2026-07-22T18:51:34Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "CapEx Is in Focus for Microsoft Stock Ahead of Q4 Earnings, But the Bull Case Remains Strong",
+      "desc": "",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/capex-focus-microsoft-stock-ahead-185832048.html",
+      "pubDate": "2026-07-22T18:58:32Z",
+      "pubISO": "2026-07-22T18:58:32Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX",
+        "NASDAQ"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "T. Rowe Price\u2019s Love Says Small-Cap Earnings Are Turning",
+      "desc": "",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/t-rowe-price-love-says-191147739.html",
+      "pubDate": "2026-07-22T19:11:47Z",
+      "pubISO": "2026-07-22T19:11:47Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "Escalating Global Supply Risks Underpin Crude Oil Prices",
+      "desc": "",
+      "link": "https://finance.yahoo.com/energy/articles/escalating-global-supply-risks-underpin-192024904.html",
+      "pubDate": "2026-07-22T19:20:24Z",
+      "pubISO": "2026-07-22T19:20:24Z",
+      "sentiment": "bearish",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "How 5 Giant Stocks Are Causing a Potentially Nuclear Debt Headache for the U.S. Stock Market",
+      "desc": "",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/5-giant-stocks-causing-potentially-193828770.html",
+      "pubDate": "2026-07-22T19:38:28Z",
+      "pubISO": "2026-07-22T19:38:28Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "Mortgage rates hit 11-month high as oil prices rise",
+      "desc": "",
+      "link": "https://finance.yahoo.com/real-estate/articles/mortgage-rates-hit-11-month-200000535.html",
+      "pubDate": "2026-07-22T20:00:00Z",
+      "pubISO": "2026-07-22T20:00:00Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "Yahoo Finance News",
+      "title": "Africa\u2019s Richest Man Proposes To Build 700,000 Bpd Oil Refinery In Kenya",
+      "desc": "",
+      "link": "https://finance.yahoo.com/energy/articles/africa-richest-man-proposes-build-200000050.html",
+      "pubDate": "2026-07-22T20:00:00Z",
+      "pubISO": "2026-07-22T20:00:00Z",
+      "sentiment": "neutral",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "Investing.com",
+      "title": "Poste Italiane Q2 tops estimates as insurance growth lifts earnings",
+      "desc": "",
+      "link": "https://www.investing.com/news/earnings/poste-italiane-q2-tops-estimates-as-insurance-growth-lifts-earnings-4810488",
+      "pubDate": "2026-07-24 05:52:20",
+      "pubISO": "2026-07-24 05:52:20",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
       ]
     },
     {
@@ -1237,6 +1318,18 @@
       "pubDate": "Fri, 19 Jun 2026 08:08:34 GMT",
       "pubISO": "2026-06-19T08:08:34+00:00",
       "sentiment": "bullish",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "As oil soars, experts watch Red Sea tankers for clarity on Houthi blockade",
+      "desc": "Houthi attacks for now are shaping who moves Saudi crude, not whether it moves, analysts say, even as oil prices soar.",
+      "link": "https://www.aljazeera.com/economy/2026/7/24/as-oil-soars-experts-watch-red-sea-tankers-for-clarity-on-houthi-blockade?traffic_source=rss",
+      "pubDate": "Fri, 24 Jul 2026 03:34:10 +0000",
+      "pubISO": "2026-07-24T03:34:10+00:00",
+      "sentiment": "bearish",
       "instruments": [
         "WTI"
       ]
@@ -1446,83 +1539,59 @@
       "instruments": [
         "SPX"
       ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "ServiceNow\u2019s stock falls as a new AI threat overshadows earnings beat",
-      "desc": "While ServiceNow\u2019s earnings beat proved that its AI momentum is picking up, the launch of OpenAI Presence reignited fears of enterprise software disruption",
-      "link": "https://www.marketwatch.com/story/why-servicenows-stock-is-a-rare-bright-spot-while-the-rest-of-tech-stumbles-383f7f20?mod=mw_rss_topstories",
-      "pubDate": "Thu, 23 Jul 2026 21:41:00 GMT",
-      "pubISO": "2026-07-23T21:41:00+00:00",
-      "sentiment": "bullish",
-      "instruments": [
-        "SPX"
-      ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "The stock market\u2019s calm is cracking. Here\u2019s how to prepare for an August shock.",
-      "desc": "August is historically brutal for market volatility. Here\u2019s how to protect your portfolio.",
-      "link": "https://www.marketwatch.com/story/the-stock-markets-calm-surface-is-cracking-heres-how-to-prepare-for-an-august-shock-7d655813?mod=mw_rss_topstories",
-      "pubDate": "Thu, 23 Jul 2026 21:53:00 GMT",
-      "pubISO": "2026-07-23T21:53:00+00:00",
-      "sentiment": "bullish",
-      "instruments": [
-        "SPX"
-      ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "AMD\u2019s rivalry with Nvidia is increasingly moving into a new realm",
-      "desc": "The chip makers are best known for competing in the GPU business, but they\u2019re stepping up their offerings in the attractive market for server CPUs.",
-      "link": "https://www.marketwatch.com/story/amds-rivalry-with-nvidia-is-increasingly-moving-into-a-new-realm-ac63eceb?mod=mw_rss_topstories",
-      "pubDate": "Thu, 23 Jul 2026 21:59:00 GMT",
-      "pubISO": "2026-07-23T21:59:00+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "Yes, the AI stock selloff looks terrifying. But it might actually save the bull market.",
-      "desc": "The hottest tech trades of 2026 just got slammed \u2014 smart investors are buying anyway.",
-      "link": "https://www.marketwatch.com/story/yes-the-ai-stock-selloff-looks-terrifying-but-it-might-actually-save-the-bull-market-3bef59be?mod=mw_rss_topstories",
-      "pubDate": "Thu, 23 Jul 2026 22:02:00 GMT",
-      "pubISO": "2026-07-23T22:02:00+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX",
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "S&P 500 flashes sell signals \u2014 options traders are bracing for wild swings in Apple, Meta and Microsoft",
-      "desc": "Nervous investors set the stage for massive post-earnings moves in Wall Street\u2019s biggest stocks.",
-      "link": "https://www.marketwatch.com/story/s-p-500-flashes-sell-signals-options-traders-are-bracing-for-wild-swings-in-apple-meta-and-microsoft-83ff7d65?mod=mw_rss_topstories",
-      "pubDate": "Thu, 23 Jul 2026 22:03:00 GMT",
-      "pubISO": "2026-07-23T22:03:00+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX",
-        "NASDAQ"
-      ]
     }
   ],
   "tradingSignals": [
+    {
+      "instrument": "SPX",
+      "label": "S&P 500",
+      "direction": "SELL",
+      "confidence": "MEDIUM",
+      "entry": 7408.3,
+      "expected_move_pct": -1.08,
+      "volatility": "LOW",
+      "score": -0.36,
+      "reasons": [
+        "News sentiment bearish (0B/1S)",
+        "Momentum -1.67% today"
+      ],
+      "news_count": 14,
+      "bull_headlines": 0,
+      "bear_headlines": 1,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 71.0,
+      "mirofish_debate": {
+        "consensus_pct": 71.0,
+        "agents_bullish": 4,
+        "agents_bearish": 2,
+        "agents_neutral": 1,
+        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
+        "skeptic_counter": "Overbought conditions on multiple timeframes. 5% pullback would be healthy. Any miss in earnings triggers 8-10% correcti...",
+        "sentiment_by_round": [
+          75.0,
+          71.0,
+          71.0,
+          71.0,
+          71.0
+        ],
+        "timestamp": "2026-07-24T06:24:34.226833Z"
+      },
+      "day_change_pct": -1.67,
+      "timestamp": "2026-07-24T06:24:38.997223+00:00"
+    },
     {
       "instrument": "ETH",
       "label": "Ethereum",
       "direction": "SELL",
       "confidence": "MEDIUM",
-      "entry": 1868.29,
-      "expected_move_pct": -4.5,
+      "entry": 1883.51,
+      "expected_move_pct": -3.75,
       "volatility": "HIGH",
-      "score": -0.36,
+      "score": -0.3,
       "reasons": [
-        "News sentiment bearish (0B/1S)",
-        "Momentum -1.86% today"
+        "News sentiment bearish (0B/1S)"
       ],
       "news_count": 2,
       "bull_headlines": 0,
@@ -1545,124 +1614,10 @@
           73.0,
           73.0
         ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
+        "timestamp": "2026-07-24T06:24:34.226833Z"
       },
-      "day_change_pct": -1.86,
-      "timestamp": "2026-07-24T02:34:45.309814+00:00"
-    },
-    {
-      "instrument": "XAUUSD",
-      "label": "Gold",
-      "direction": "SELL",
-      "confidence": "MEDIUM",
-      "entry": 4047.6,
-      "expected_move_pct": -1.12,
-      "volatility": "LOW",
-      "score": -0.3,
-      "reasons": [
-        "News sentiment bearish (0B/1S)"
-      ],
-      "news_count": 2,
-      "bull_headlines": 0,
-      "bear_headlines": 1,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 85.0,
-      "mirofish_debate": {
-        "consensus_pct": 85.0,
-        "agents_bullish": 6,
-        "agents_bearish": 1,
-        "agents_neutral": 0,
-        "top_narrative": "Rate cut cycle beginning in Q3 removes the final headwind. Historical correlation suggests 8-12% upside once Fed pivots....",
-        "skeptic_counter": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggest...",
-        "sentiment_by_round": [
-          85.0,
-          85.0,
-          85.0,
-          85.0,
-          85.0
-        ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
-      },
-      "day_change_pct": 0.93,
-      "timestamp": "2026-07-24T02:34:45.309604+00:00"
-    },
-    {
-      "instrument": "BTC",
-      "label": "Bitcoin",
-      "direction": "BUY",
-      "confidence": "MEDIUM",
-      "entry": 64923.3,
-      "expected_move_pct": 3.0,
-      "volatility": "HIGH",
-      "score": 0.3,
-      "reasons": [
-        "News sentiment bullish (1B/0S)"
-      ],
-      "news_count": 1,
-      "bull_headlines": 1,
-      "bear_headlines": 0,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 70.0,
-      "mirofish_debate": {
-        "consensus_pct": 70.0,
-        "agents_bullish": 4,
-        "agents_bearish": 1,
-        "agents_neutral": 2,
-        "top_narrative": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulatin...",
-        "skeptic_counter": "Parabolic move from $42k to $72k screams bubble. RSI 82, MACD overbought. Pullback to $55k likely before next leg. Final...",
-        "sentiment_by_round": [
-          55.0,
-          70.0,
-          70.0,
-          70.0,
-          70.0
-        ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
-      },
-      "day_change_pct": -0.47,
-      "timestamp": "2026-07-24T02:34:45.309783+00:00"
-    },
-    {
-      "instrument": "WTI",
-      "label": "WTI Crude",
-      "direction": "NEUTRAL",
-      "confidence": "LOW",
-      "entry": 91.86,
-      "expected_move_pct": 0.45,
-      "volatility": "MEDIUM",
-      "score": 0.06,
-      "reasons": [
-        "Momentum +10.37% today"
-      ],
-      "news_count": 6,
-      "bull_headlines": 2,
-      "bear_headlines": 2,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 53.0,
-      "mirofish_debate": {
-        "consensus_pct": 53.0,
-        "agents_bullish": 3,
-        "agents_bearish": 2,
-        "agents_neutral": 2,
-        "top_narrative": "Chinese economic reopening continuing to drive demand. PMI data improving steadily. Asian crude flows north drive WTI to...",
-        "skeptic_counter": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 suppo...",
-        "sentiment_by_round": [
-          63.0,
-          53.0,
-          53.0,
-          53.0,
-          53.0
-        ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
-      },
-      "day_change_pct": 10.37,
-      "timestamp": "2026-07-24T02:34:45.309665+00:00"
+      "day_change_pct": -1.06,
+      "timestamp": "2026-07-24T06:24:38.997384+00:00"
     },
     {
       "instrument": "NASDAQ",
@@ -1676,7 +1631,7 @@
       "reasons": [
         "Momentum -2.88% today"
       ],
-      "news_count": 7,
+      "news_count": 4,
       "bull_headlines": 0,
       "bear_headlines": 0,
       "polymarket_prob": null,
@@ -1697,49 +1652,125 @@
           37.0,
           37.0
         ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
+        "timestamp": "2026-07-24T06:24:34.226833Z"
       },
       "day_change_pct": -2.88,
-      "timestamp": "2026-07-24T02:34:45.309749+00:00"
+      "timestamp": "2026-07-24T06:24:38.997286+00:00"
     },
     {
-      "instrument": "SPX",
-      "label": "S&P 500",
+      "instrument": "WTI",
+      "label": "WTI Crude",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 7408.3,
-      "expected_move_pct": 0.12,
-      "volatility": "LOW",
-      "score": 0.04,
+      "entry": 91.26,
+      "expected_move_pct": 0.3,
+      "volatility": "MEDIUM",
+      "score": -0.04,
       "reasons": [
-        "News sentiment bullish (2B/1S)",
-        "Momentum -1.67% today"
+        "News sentiment bearish (2B/4S)",
+        "Momentum +9.65% today"
       ],
-      "news_count": 16,
+      "news_count": 10,
       "bull_headlines": 2,
+      "bear_headlines": 4,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 53.0,
+      "mirofish_debate": {
+        "consensus_pct": 53.0,
+        "agents_bullish": 3,
+        "agents_bearish": 2,
+        "agents_neutral": 2,
+        "top_narrative": "Chinese economic reopening continuing to drive demand. PMI data improving steadily. Asian crude flows north drive WTI to...",
+        "skeptic_counter": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 suppo...",
+        "sentiment_by_round": [
+          63.0,
+          53.0,
+          53.0,
+          53.0,
+          53.0
+        ],
+        "timestamp": "2026-07-24T06:24:34.226833Z"
+      },
+      "day_change_pct": 9.65,
+      "timestamp": "2026-07-24T06:24:38.997159+00:00"
+    },
+    {
+      "instrument": "XAUUSD",
+      "label": "Gold",
+      "direction": "NEUTRAL",
+      "confidence": "LOW",
+      "entry": 4033.1,
+      "expected_move_pct": 0.0,
+      "volatility": "LOW",
+      "score": 0.0,
+      "reasons": [
+        "No strong directional catalyst"
+      ],
+      "news_count": 3,
+      "bull_headlines": 1,
       "bear_headlines": 1,
       "polymarket_prob": null,
       "polymarket_url": null,
       "polymarket_question": null,
-      "mirofish_base": 71.0,
+      "mirofish_base": 85.0,
       "mirofish_debate": {
-        "consensus_pct": 71.0,
-        "agents_bullish": 4,
-        "agents_bearish": 2,
-        "agents_neutral": 1,
-        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
-        "skeptic_counter": "Overbought conditions on multiple timeframes. 5% pullback would be healthy. Any miss in earnings triggers 8-10% correcti...",
+        "consensus_pct": 85.0,
+        "agents_bullish": 6,
+        "agents_bearish": 1,
+        "agents_neutral": 0,
+        "top_narrative": "Rate cut cycle beginning in Q3 removes the final headwind. Historical correlation suggests 8-12% upside once Fed pivots....",
+        "skeptic_counter": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggest...",
         "sentiment_by_round": [
-          75.0,
-          71.0,
-          71.0,
-          71.0,
-          71.0
+          85.0,
+          85.0,
+          85.0,
+          85.0,
+          85.0
         ],
-        "timestamp": "2026-07-24T02:34:34.936588Z"
+        "timestamp": "2026-07-24T06:24:34.226833Z"
       },
-      "day_change_pct": -1.67,
-      "timestamp": "2026-07-24T02:34:45.309708+00:00"
+      "day_change_pct": 0.57,
+      "timestamp": "2026-07-24T06:24:38.997070+00:00"
+    },
+    {
+      "instrument": "BTC",
+      "label": "Bitcoin",
+      "direction": "NEUTRAL",
+      "confidence": "LOW",
+      "entry": 65406.0,
+      "expected_move_pct": 0.0,
+      "volatility": "HIGH",
+      "score": 0.0,
+      "reasons": [
+        "No strong directional catalyst"
+      ],
+      "news_count": 0,
+      "bull_headlines": 0,
+      "bear_headlines": 0,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 70.0,
+      "mirofish_debate": {
+        "consensus_pct": 70.0,
+        "agents_bullish": 4,
+        "agents_bearish": 1,
+        "agents_neutral": 2,
+        "top_narrative": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulatin...",
+        "skeptic_counter": "Parabolic move from $42k to $72k screams bubble. RSI 82, MACD overbought. Pullback to $55k likely before next leg. Final...",
+        "sentiment_by_round": [
+          55.0,
+          70.0,
+          70.0,
+          70.0,
+          70.0
+        ],
+        "timestamp": "2026-07-24T06:24:34.226833Z"
+      },
+      "day_change_pct": 0.27,
+      "timestamp": "2026-07-24T06:24:38.997338+00:00"
     }
   ],
   "polySignals": [
@@ -1937,12 +1968,12 @@
     },
     {
       "question": "Will Russia capture Kostyantynivka by July 31?",
-      "polymarket_prob": 6.5,
+      "polymarket_prob": 5.9,
       "mirofish_prob": 62.0,
-      "divergence": 55.5,
+      "divergence": 56.1,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 246414.35935399987,
+      "volume": 248104.42878099985,
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by",
       "endDate": "2026-07-31T12:00:00Z",
       "mirofish_debate": null
@@ -2021,12 +2052,12 @@
     },
     {
       "question": "Will Russia capture Kostyantynivka by December 31, 2026?",
-      "polymarket_prob": 88.8,
+      "polymarket_prob": 89.6,
       "mirofish_prob": 62.0,
-      "divergence": 26.8,
+      "divergence": 27.6,
       "direction": "NO likely",
       "confidence": "HIGH",
-      "volume": 1302659.488620997,
+      "volume": 1315883.922904997,
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by",
       "endDate": "2026-12-31T12:00:00Z",
       "mirofish_debate": null
@@ -2038,7 +2069,7 @@
       "divergence": 11.5,
       "direction": "NO likely",
       "confidence": "LOW",
-      "volume": 399810.93468500016,
+      "volume": 399834.44819700014,
       "url": "https://polymarket.com/event/will-russia-capture-kostyantynivka-by",
       "endDate": "2026-09-30T12:00:00Z",
       "mirofish_debate": null
@@ -2080,16 +2111,17 @@
         "name": "XAUUSD",
         "label": "Gold",
         "symbol": "GC=F",
-        "price": 4047.6,
-        "day_change": 37.3,
-        "day_change_pct": 0.93,
+        "price": 4033.1,
+        "day_change": 22.8,
+        "day_change_pct": 0.57,
         "high_52w": 5586.2,
         "low_52w": 3263.9,
         "closes_5d": [
           4010.3,
           4071.1001,
           4146.8999,
-          4047.6001
+          4046.6001,
+          4033.1001
         ],
         "tradable": true,
         "barometer": false
@@ -2098,16 +2130,17 @@
         "name": "WTI",
         "label": "WTI Crude",
         "symbol": "CL=F",
-        "price": 91.86,
-        "day_change": 8.63,
-        "day_change_pct": 10.37,
+        "price": 91.26,
+        "day_change": 8.03,
+        "day_change_pct": 9.65,
         "high_52w": 119.48,
         "low_52w": 54.98,
         "closes_5d": [
           83.23,
           84.91,
           86.83,
-          91.86
+          92.19,
+          91.26
         ],
         "tradable": true,
         "barometer": false
@@ -2145,7 +2178,7 @@
           25508.0703,
           25837.2109,
           25690.9004,
-          25137.6934
+          25137.6895
         ],
         "tradable": true,
         "barometer": false
@@ -2154,16 +2187,17 @@
         "name": "BTC",
         "label": "Bitcoin",
         "symbol": "BTC-USD",
-        "price": 64923.3,
-        "day_change": -306.727,
-        "day_change_pct": -0.47,
+        "price": 65406.0,
+        "day_change": 175.973,
+        "day_change_pct": 0.27,
         "high_52w": 126198.07,
         "low_52w": 57747.766,
         "closes_5d": [
           65230.0273,
           66505.125,
           66100.7969,
-          64923.3008
+          65044.8125,
+          65406.0
         ],
         "tradable": true,
         "barometer": false
@@ -2172,16 +2206,17 @@
         "name": "ETH",
         "label": "Ethereum",
         "symbol": "ETH-USD",
-        "price": 1868.29,
-        "day_change": -35.4689,
-        "day_change_pct": -1.86,
+        "price": 1883.51,
+        "day_change": -20.2489,
+        "day_change_pct": -1.06,
         "high_52w": 4953.733,
         "low_52w": 1506.5057,
         "closes_5d": [
           1903.7589,
           1928.3838,
           1933.4901,
-          1868.29
+          1877.1002,
+          1883.51
         ],
         "tradable": true,
         "barometer": false
@@ -2190,9 +2225,9 @@
         "name": "DXY",
         "label": "Dollar Index",
         "symbol": "DX-Y.NYB",
-        "price": 101.389,
-        "day_change": 0.399,
-        "day_change_pct": 0.4,
+        "price": 101.432,
+        "day_change": 0.442,
+        "day_change_pct": 0.44,
         "high_52w": 101.8,
         "low_52w": 95.55,
         "closes_5d": [
@@ -2200,7 +2235,7 @@
           101.18,
           101.14,
           101.43,
-          101.389
+          101.432
         ],
         "tradable": false,
         "barometer": true
@@ -2213,7 +2248,7 @@
         "day_change": -0.07,
         "day_change_pct": -0.37,
         "high_52w": 35.3,
-        "low_52w": 13.38,
+        "low_52w": null,
         "closes_5d": [
           18.77,
           18.65,
@@ -2232,7 +2267,7 @@
         "day_change": 0.162,
         "day_change_pct": 3.57,
         "high_52w": 4.714,
-        "low_52w": 3.947,
+        "low_52w": null,
         "closes_5d": [
           4.541,
           4.598,
@@ -2265,7 +2300,7 @@
     ]
   },
   "mirofishDebates": {
-    "timestamp": "2026-07-24T02:34:34.936588Z",
+    "timestamp": "2026-07-24T06:24:34.226833Z",
     "sim_metadata": {
       "version": "2.0",
       "agents_per_instrument": 7,
