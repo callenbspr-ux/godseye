@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-10-22T13:28:03.141952+00:00",
-  "fetchedDisplay": "2026-10-22 13:28 UTC",
+  "fetchedAt": "2026-10-22T17:43:41.068307+00:00",
+  "fetchedDisplay": "2026-10-22 17:43 UTC",
   "prices": {
     "XAUUSD": {
       "name": "XAUUSD",
       "symbol": "GC=F",
-      "price": 4096.4,
+      "price": 4059.9,
       "prev_close": 4160.1,
-      "day_change": -63.7,
-      "day_change_pct": -1.53,
+      "day_change": -100.2,
+      "day_change_pct": -2.41,
       "high_52w": 5586.2,
       "low_52w": 3901.3,
       "intraday_high": 4164.3,
-      "intraday_low": 4072.7,
+      "intraday_low": 4049.1,
       "closes_5d": [
         4160.1001,
         4142.6001,
         4150.0,
-        4096.3999
+        4059.8999
       ],
       "ohlc_5d": [
         {
@@ -45,19 +45,19 @@
           "time": 1792641600,
           "open": 4159.0,
           "high": 4164.2998,
-          "low": 4072.7,
-          "close": 4096.3999
+          "low": 4049.1001,
+          "close": 4059.8999
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.529540+00:00"
+      "fetchedAt": "2026-10-22T17:43:35.734608+00:00"
     },
     "WTI": {
       "name": "WTI",
       "symbol": "CL=F",
-      "price": 99.76,
+      "price": 99.36,
       "prev_close": 103.66,
-      "day_change": -3.9,
-      "day_change_pct": -3.76,
+      "day_change": -4.3,
+      "day_change_pct": -4.15,
       "high_52w": 119.48,
       "low_52w": 54.98,
       "intraday_high": 100.09,
@@ -66,7 +66,7 @@
         103.66,
         101.79,
         97.15,
-        99.76
+        99.36
       ],
       "ohlc_5d": [
         {
@@ -95,37 +95,30 @@
           "open": 97.78,
           "high": 100.09,
           "low": 97.72,
-          "close": 99.76
+          "close": 99.36
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.588648+00:00"
+      "fetchedAt": "2026-10-22T17:43:35.805540+00:00"
     },
     "SPX": {
       "name": "SPX",
       "symbol": "^GSPC",
-      "price": 7757.17,
-      "prev_close": 7718.94,
-      "day_change": 38.23,
-      "day_change_pct": 0.5,
+      "price": 7660.09,
+      "prev_close": 7744.06,
+      "day_change": -83.97,
+      "day_change_pct": -1.08,
       "high_52w": 7844.52,
       "low_52w": 6316.91,
-      "intraday_high": 7770.4,
-      "intraday_low": 7709.34,
+      "intraday_high": 7702.94,
+      "intraday_low": 7646.05,
       "closes_5d": [
-        7744.0601,
         7659.4399,
         7690.73,
         7712.5698,
-        7757.1699
+        7757.1699,
+        7660.0898
       ],
       "ohlc_5d": [
-        {
-          "time": 1792071000,
-          "open": 7687.3101,
-          "high": 7754.1499,
-          "low": 7669.6602,
-          "close": 7744.0601
-        },
         {
           "time": 1792157400,
           "open": 7745.3198,
@@ -153,36 +146,36 @@
           "high": 7770.3999,
           "low": 7709.3398,
           "close": 7757.1699
+        },
+        {
+          "time": 1792675800,
+          "open": 7694.6201,
+          "high": 7702.9399,
+          "low": 7646.0498,
+          "close": 7660.0898
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.646887+00:00"
+      "fetchedAt": "2026-10-22T17:43:35.914837+00:00"
     },
     "NASDAQ": {
       "name": "NASDAQ",
       "symbol": "^IXIC",
-      "price": 26702.857,
-      "prev_close": 26692.87,
-      "day_change": 9.987,
-      "day_change_pct": 0.04,
+      "price": 26054.72,
+      "prev_close": 26713.03,
+      "day_change": -658.31,
+      "day_change_pct": -2.46,
       "high_52w": 27722.75,
       "low_52w": 20690.25,
-      "intraday_high": 26778.904,
-      "intraday_low": 26507.066,
+      "intraday_high": 26359.406,
+      "intraday_low": 26003.557,
       "closes_5d": [
-        26713.0293,
         26140.0293,
         26430.8906,
         26424.8203,
-        26702.8594
+        26702.8594,
+        26054.7207
       ],
       "ohlc_5d": [
-        {
-          "time": 1792071000,
-          "open": 26380.7695,
-          "high": 26754.0195,
-          "low": 26308.8496,
-          "close": 26713.0293
-        },
         {
           "time": 1792157400,
           "open": 26652.9805,
@@ -210,27 +203,34 @@
           "high": 26778.9004,
           "low": 26507.0703,
           "close": 26702.8594
+        },
+        {
+          "time": 1792675800,
+          "open": 26308.4062,
+          "high": 26359.4062,
+          "low": 26003.5566,
+          "close": 26054.7207
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.701124+00:00"
+      "fetchedAt": "2026-10-22T17:43:35.973071+00:00"
     },
     "BTC": {
       "name": "BTC",
       "symbol": "BTC-USD",
-      "price": 81771.22,
+      "price": 81217.36,
       "prev_close": 82017.6,
-      "day_change": -246.38,
-      "day_change_pct": -0.3,
+      "day_change": -800.24,
+      "day_change_pct": -0.98,
       "high_52w": 116273.31,
       "low_52w": 57747.766,
       "intraday_high": 84280.19,
-      "intraday_low": 81523.61,
+      "intraday_low": 80948.71,
       "closes_5d": [
         82017.6016,
         81853.5391,
         82941.0,
         84011.9688,
-        81771.2188
+        81217.3594
       ],
       "ohlc_5d": [
         {
@@ -265,29 +265,29 @@
           "time": 1792627200,
           "open": 84024.4375,
           "high": 84280.1875,
-          "low": 81523.6094,
-          "close": 81771.2188
+          "low": 80948.7109,
+          "close": 81217.3594
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.792930+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.040725+00:00"
     },
     "ETH": {
       "name": "ETH",
       "symbol": "ETH-USD",
-      "price": 2401.96,
+      "price": 2378.16,
       "prev_close": 2408.7415,
-      "day_change": -6.7815,
-      "day_change_pct": -0.28,
+      "day_change": -30.5815,
+      "day_change_pct": -1.27,
       "high_52w": 4250.67,
       "low_52w": 1506.5057,
       "intraday_high": 2479.283,
-      "intraday_low": 2394.088,
+      "intraday_low": 2366.1619,
       "closes_5d": [
         2408.7415,
         2404.8152,
         2446.7307,
         2470.7661,
-        2401.96
+        2378.1599
       ],
       "ohlc_5d": [
         {
@@ -322,28 +322,28 @@
           "time": 1792627200,
           "open": 2471.3467,
           "high": 2479.283,
-          "low": 2394.0879,
-          "close": 2401.96
+          "low": 2366.1619,
+          "close": 2378.1599
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.848187+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.101023+00:00"
     },
     "DXY": {
       "name": "DXY",
       "symbol": "DX-Y.NYB",
-      "price": 101.781,
+      "price": 101.615,
       "prev_close": 101.98,
-      "day_change": -0.199,
-      "day_change_pct": -0.2,
+      "day_change": -0.365,
+      "day_change_pct": -0.36,
       "high_52w": 102.95,
       "low_52w": 95.55,
-      "intraday_high": 101.837,
+      "intraday_high": 101.883,
       "intraday_low": 101.446,
       "closes_5d": [
         101.98,
         101.73,
         101.78,
-        101.781
+        101.615
       ],
       "ohlc_5d": [
         {
@@ -370,30 +370,30 @@
         {
           "time": 1792641600,
           "open": 101.707,
-          "high": 101.837,
+          "high": 101.883,
           "low": 101.446,
-          "close": 101.781
+          "close": 101.615
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.902682+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.158010+00:00"
     },
     "VIX": {
       "name": "VIX",
       "symbol": "^VIX",
-      "price": 18.06,
+      "price": 19.06,
       "prev_close": 19.99,
-      "day_change": -1.93,
-      "day_change_pct": -9.65,
+      "day_change": -0.93,
+      "day_change_pct": -4.65,
       "high_52w": 35.3,
       "low_52w": 13.38,
-      "intraday_high": 18.58,
-      "intraday_low": 17.95,
+      "intraday_high": 19.37,
+      "intraday_low": 17.71,
       "closes_5d": [
         19.99,
         18.44,
         17.31,
         16.68,
-        18.06
+        19.06
       ],
       "ohlc_5d": [
         {
@@ -427,30 +427,30 @@
         {
           "time": 1792652400,
           "open": 18.29,
-          "high": 18.58,
-          "low": 17.95,
-          "close": 18.06
+          "high": 19.37,
+          "low": 17.71,
+          "close": 19.06
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:57.958840+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.219327+00:00"
     },
     "10Y": {
       "name": "10Y",
       "symbol": "^TNX",
-      "price": 5.036,
+      "price": 4.963,
       "prev_close": 5.098,
-      "day_change": -0.062,
-      "day_change_pct": -1.22,
+      "day_change": -0.135,
+      "day_change_pct": -2.65,
       "high_52w": 5.364,
       "low_52w": 3.956,
-      "intraday_high": 5.044,
-      "intraday_low": 5.029,
+      "intraday_high": 5.054,
+      "intraday_low": 4.961,
       "closes_5d": [
         5.098,
         5.136,
         5.117,
         5.146,
-        5.036
+        4.963
       ],
       "ohlc_5d": [
         {
@@ -484,39 +484,32 @@
         {
           "time": 1792671600,
           "open": 5.04,
-          "high": 5.044,
-          "low": 5.029,
-          "close": 5.036
+          "high": 5.054,
+          "low": 4.961,
+          "close": 4.963
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:58.024629+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.280687+00:00"
     },
     "DOW": {
       "name": "DOW",
       "symbol": "^DJI",
-      "price": 52856.09,
-      "prev_close": 51621.48,
-      "day_change": 1234.61,
-      "day_change_pct": 2.39,
+      "price": 52793.74,
+      "prev_close": 52177.69,
+      "day_change": 616.05,
+      "day_change_pct": 1.18,
       "high_52w": 54744.33,
       "low_52w": 45057.28,
-      "intraday_high": 52860.11,
-      "intraday_low": 52392.28,
+      "intraday_high": 52927.88,
+      "intraday_low": 52508.38,
       "closes_5d": [
-        52177.6914,
         52002.4102,
         51966.0312,
         52495.8789,
-        52856.0898
+        52856.0898,
+        52793.7383
       ],
       "ohlc_5d": [
-        {
-          "time": 1792071000,
-          "open": 51858.0586,
-          "high": 52250.1797,
-          "low": 51681.3711,
-          "close": 52177.6914
-        },
         {
           "time": 1792157400,
           "open": 52308.2812,
@@ -544,9 +537,16 @@
           "high": 52860.1094,
           "low": 52392.2812,
           "close": 52856.0898
+        },
+        {
+          "time": 1792675800,
+          "open": 52788.4102,
+          "high": 52927.8789,
+          "low": 52508.3789,
+          "close": 52793.7383
         }
       ],
-      "fetchedAt": "2026-10-22T13:27:58.084961+00:00"
+      "fetchedAt": "2026-10-22T17:43:36.316693+00:00"
     }
   },
   "gold_spot": {
@@ -632,11 +632,11 @@
         "No"
       ],
       "prices": [
-        0.0295,
-        0.9705
+        0.029,
+        0.971
       ],
-      "volume": 1087310.1072970002,
-      "liquidity": 24556.2684,
+      "volume": 1087316.2599610002,
+      "liquidity": 24561.3868,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by"
     },
@@ -738,7 +738,7 @@
         0.955
       ],
       "volume": 416610.9887149999,
-      "liquidity": 69881.0776,
+      "liquidity": 67092.3572,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025"
     },
@@ -751,11 +751,11 @@
         "No"
       ],
       "prices": [
-        0.0435,
-        0.9565
+        0.055,
+        0.945
       ],
       "volume": 410617.427383,
-      "liquidity": 15135.81492,
+      "liquidity": 14165.64783,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -819,11 +819,11 @@
         "No"
       ],
       "prices": [
-        0.0415,
-        0.9585
+        0.0425,
+        0.9575
       ],
       "volume": 241729.00471799995,
-      "liquidity": 19947.05008,
+      "liquidity": 18721.38897,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-held-in-2025"
     },
@@ -840,7 +840,7 @@
         0.94
       ],
       "volume": 222398.42746900002,
-      "liquidity": 14981.8345,
+      "liquidity": 14888.5445,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31"
     },
@@ -908,7 +908,7 @@
         0.964
       ],
       "volume": 159263.981711,
-      "liquidity": 22706.17363,
+      "liquidity": 22704.53368,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025"
     },
@@ -959,7 +959,7 @@
         0.9095
       ],
       "volume": 102833.19339900001,
-      "liquidity": 20069.32123,
+      "liquidity": 19966.27716,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     },
@@ -1057,11 +1057,11 @@
         "No"
       ],
       "prices": [
-        0.034,
-        0.966
+        0.031,
+        0.969
       ],
       "volume": 33919.317171999995,
-      "liquidity": 638.6394,
+      "liquidity": 636.68533,
       "endDate": "2027-01-01T05:00:00Z",
       "url": "https://polymarket.com/event/trump-eliminates-capital-gains-tax-on-crypto-in-2025"
     },
@@ -1074,11 +1074,11 @@
         "No"
       ],
       "prices": [
-        0.215,
-        0.785
+        0.22,
+        0.78
       ],
-      "volume": 8090.452977,
-      "liquidity": 2173.3081,
+      "volume": 8323.052977000001,
+      "liquidity": 2092.071,
       "endDate": "2027-07-01T03:59:00Z",
       "url": "https://polymarket.com/event/uk-election-called-by"
     },
@@ -1103,11 +1103,11 @@
   "headlines": [
     {
       "source": "Investing.com",
-      "title": "European stocks buckle under French yields, mixed tech earnings",
+      "title": "Earnings call transcript: L\u2019Or\u00e9al posts strong Q3 2026 growth, stock flat",
       "desc": "",
-      "link": "https://www.investing.com/news/stock-market-news/european-stocks-buckle-as-french-yields-cross-5-barrier-4964797",
-      "pubDate": "2026-10-22 13:16:31",
-      "pubISO": "2026-10-22 13:16:31",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-loreal-posts-strong-q3-2026-growth-stock-flat-93CH-4967098",
+      "pubDate": "2026-10-22 17:28:59",
+      "pubISO": "2026-10-22 17:28:59",
       "sentiment": "neutral",
       "instruments": [
         "SPX"
@@ -1115,15 +1115,38 @@
     },
     {
       "source": "Investing.com",
-      "title": "Earnings call transcript: Nasdaq tops Q3 2026 estimates as stock rises premarket",
+      "title": "Nasdaq falls over 2% on Meta drag, slide in chip stocks; oil jumps and bonds rally",
       "desc": "",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-nasdaq-tops-q3-2026-estimates-as-stock-rises-premarket-93CH-4966346",
-      "pubDate": "2026-10-22 13:17:25",
-      "pubISO": "2026-10-22 13:17:25",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-fall-as-investors-weigh-tesla-meta-earnings-4964498",
+      "pubDate": "2026-10-22 17:29:07",
+      "pubISO": "2026-10-22 17:29:07",
+      "sentiment": "bullish",
+      "instruments": [
+        "NASDAQ"
+      ]
+    },
+    {
+      "source": "Investing.com",
+      "title": "SD Bullion Announces Co-Branded Gold Bar Collection in Partnership With Argor-Heraeus",
+      "desc": "",
+      "link": "https://www.investing.com/news/press-releases/sd-bullion-announces-cobranded-gold-bar-collection-in-partnership-with-argorheraeus-4967108",
+      "pubDate": "2026-10-22 17:32:32",
+      "pubISO": "2026-10-22 17:32:32",
       "sentiment": "neutral",
       "instruments": [
-        "SPX",
-        "NASDAQ"
+        "XAUUSD"
+      ]
+    },
+    {
+      "source": "Investing.com",
+      "title": "Earnings call transcript: Gruma\u2019s Q3 2026 profit pressure offsets share gains",
+      "desc": "",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-grumas-q3-2026-profit-pressure-offsets-share-gains-93CH-4967110",
+      "pubDate": "2026-10-22 17:32:56",
+      "pubISO": "2026-10-22 17:32:56",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
       ]
     },
     {
@@ -1273,26 +1296,27 @@
     },
     {
       "source": "MarketWatch",
-      "title": "Why this JPMorgan strategist thinks the stock market\u2019s tailspin might have run its course",
-      "desc": "Hedge fund positioning has lightened considerably since its recent September peak, and JPMorgan strategists deduce from this that downside for stocks is now limited.",
-      "link": "https://www.marketwatch.com/story/why-a-jpmorgan-strategist-says-the-stock-markets-tailspin-might-have-run-its-course-71571335?mod=mw_rss_topstories",
-      "pubDate": "Thu, 22 Oct 2026 11:57:00 GMT",
-      "pubISO": "2026-10-22T11:57:00+00:00",
-      "sentiment": "neutral",
+      "title": "Investors\u2019 recent money moves show a preference for lowering risks over boosting rewards",
+      "desc": "Investors have been steadily pouring money into the Invesco S&P 500 Quality ETF this year.",
+      "link": "https://www.marketwatch.com/story/investors-recent-money-moves-show-a-preference-for-quality-over-momentum-within-the-s-p-500-ed6b5149?mod=mw_rss_topstories",
+      "pubDate": "Thu, 22 Oct 2026 15:10:00 GMT",
+      "pubISO": "2026-10-22T15:10:00+00:00",
+      "sentiment": "bearish",
       "instruments": [
         "SPX"
       ]
     },
     {
       "source": "MarketWatch",
-      "title": "IBM\u2019s stock falls as investors struggle to shake off July earnings miss",
-      "desc": "Shares in International Business Machines declined 5% in Thursday\u2019s premarket trading as investors digested the company\u2019s third-quarter results.",
-      "link": "https://www.marketwatch.com/story/ibms-stock-falls-as-investors-struggle-to-shake-off-july-earnings-miss-0969b9e3?mod=mw_rss_topstories",
-      "pubDate": "Thu, 22 Oct 2026 12:04:00 GMT",
-      "pubISO": "2026-10-22T12:04:00+00:00",
-      "sentiment": "bearish",
+      "title": "Young investors are betting on prediction markets and crypto. But this bestselling author says the boring money moves still work.",
+      "desc": "Beth Kobliner, author of \u201cGet a Financial Life,\u201d explains why today\u2019s young people face a tougher financial world and reveals the three money moves she would make first.",
+      "link": "https://www.marketwatch.com/story/young-investors-are-betting-on-prediction-markets-and-crypto-but-this-bestselling-author-says-the-boring-money-moves-still-work-cd9d350a?mod=mw_rss_topstories",
+      "pubDate": "Thu, 22 Oct 2026 17:21:00 GMT",
+      "pubISO": "2026-10-22T17:21:00+00:00",
+      "sentiment": "neutral",
       "instruments": [
-        "SPX"
+        "BTC",
+        "ETH"
       ]
     },
     {
@@ -1392,16 +1416,6 @@
       "instruments": []
     },
     {
-      "source": "BBC World",
-      "title": "Ukraine says it carried out first drone airlift of wounded soldier from front line",
-      "desc": "The serviceman was surrounded by landmines and enemy drones so a ground rescue was not possible, Ukraine's military says.",
-      "link": "https://www.bbc.co.uk/news/videos/c3vgx05p149wo?at_medium=RSS&at_campaign=rss",
-      "pubDate": "Mon, 19 Oct 2026 20:00:43 GMT",
-      "pubISO": "2026-10-19T20:00:43+00:00",
-      "sentiment": "neutral",
-      "instruments": []
-    },
-    {
       "source": "CNBC Markets",
       "title": "Europe\u2019s winter energy crunch may already be underway. Two U.S. stocks that may benefit",
       "desc": "BP's largest oil discovery in 25 years. What it means for the stock.",
@@ -1430,32 +1444,61 @@
       "pubISO": "2026-10-15T08:44:17+00:00",
       "sentiment": "bullish",
       "instruments": []
-    },
-    {
-      "source": "CNBC Economy",
-      "title": "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
-      "desc": "European trade commissioner Maro\u0161 Sef\u010dovi\u010d met with Chinese Commerce Minister Wang Wentao in Beijing last week.",
-      "link": "https://www.cnbc.com/2026/10/15/china-rare-earth-exports-europe.html",
-      "pubDate": "Thu, 15 Oct 2026 09:02:31 GMT",
-      "pubISO": "2026-10-15T09:02:31+00:00",
-      "sentiment": "neutral",
-      "instruments": []
     }
   ],
   "tradingSignals": [
+    {
+      "instrument": "NASDAQ",
+      "label": "NASDAQ",
+      "direction": "BUY",
+      "confidence": "MEDIUM",
+      "entry": 26054.72,
+      "expected_move_pct": 1.08,
+      "volatility": "LOW",
+      "score": 0.24,
+      "reasons": [
+        "News sentiment bullish (1B/0S)",
+        "Momentum -2.46% today"
+      ],
+      "news_count": 2,
+      "bull_headlines": 1,
+      "bear_headlines": 0,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 51.0,
+      "mirofish_debate": {
+        "consensus_pct": 51.0,
+        "agents_bullish": 3,
+        "agents_bearish": 3,
+        "agents_neutral": 1,
+        "top_narrative": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premiu...",
+        "skeptic_counter": "Nasdaq chart shows topping behavior. Lower highs on daily despite higher closes. Deteriorating momentum setup. Final con...",
+        "sentiment_by_round": [
+          45.0,
+          51.0,
+          51.0,
+          51.0,
+          51.0
+        ],
+        "timestamp": "2026-10-22T17:43:35.492447Z"
+      },
+      "day_change_pct": -2.46,
+      "timestamp": "2026-10-22T17:43:41.067509+00:00"
+    },
     {
       "instrument": "BTC",
       "label": "Bitcoin",
       "direction": "SELL",
       "confidence": "LOW",
-      "entry": 81771.22,
+      "entry": 81217.36,
       "expected_move_pct": -1.98,
       "volatility": "HIGH",
       "score": -0.198,
       "reasons": [
         "Polymarket 0.0% vs MiroFish 66% (66pt gap)"
       ],
-      "news_count": 0,
+      "news_count": 1,
       "bull_headlines": 0,
       "bear_headlines": 0,
       "polymarket_prob": 0.0,
@@ -1476,24 +1519,24 @@
           66.0,
           66.0
         ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
+        "timestamp": "2026-10-22T17:43:35.492447Z"
       },
-      "day_change_pct": -0.3,
-      "timestamp": "2026-10-22T13:28:03.141286+00:00"
+      "day_change_pct": -0.98,
+      "timestamp": "2026-10-22T17:43:41.067567+00:00"
     },
     {
       "instrument": "XAUUSD",
       "label": "Gold",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 4096.4,
+      "entry": 4059.9,
       "expected_move_pct": 0.22,
       "volatility": "LOW",
       "score": -0.06,
       "reasons": [
-        "Momentum -1.53% today"
+        "Momentum -2.41% today"
       ],
-      "news_count": 0,
+      "news_count": 1,
       "bull_headlines": 0,
       "bear_headlines": 0,
       "polymarket_prob": null,
@@ -1514,22 +1557,22 @@
           79.0,
           79.0
         ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
+        "timestamp": "2026-10-22T17:43:35.492447Z"
       },
-      "day_change_pct": -1.53,
-      "timestamp": "2026-10-22T13:28:03.141042+00:00"
+      "day_change_pct": -2.41,
+      "timestamp": "2026-10-22T17:43:41.067276+00:00"
     },
     {
       "instrument": "WTI",
       "label": "WTI Crude",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 99.76,
+      "entry": 99.36,
       "expected_move_pct": 0.45,
       "volatility": "MEDIUM",
       "score": -0.06,
       "reasons": [
-        "Momentum -3.76% today"
+        "Momentum -4.15% today"
       ],
       "news_count": 2,
       "bull_headlines": 0,
@@ -1552,24 +1595,24 @@
           62.0,
           62.0
         ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
+        "timestamp": "2026-10-22T17:43:35.492447Z"
       },
-      "day_change_pct": -3.76,
-      "timestamp": "2026-10-22T13:28:03.141119+00:00"
+      "day_change_pct": -4.15,
+      "timestamp": "2026-10-22T17:43:41.067366+00:00"
     },
     {
       "instrument": "SPX",
       "label": "S&P 500",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 7757.17,
+      "entry": 7660.09,
       "expected_move_pct": 0.0,
       "volatility": "LOW",
       "score": 0.0,
       "reasons": [
         "No strong directional catalyst"
       ],
-      "news_count": 11,
+      "news_count": 10,
       "bull_headlines": 1,
       "bear_headlines": 1,
       "polymarket_prob": null,
@@ -1590,62 +1633,24 @@
           72.0,
           72.0
         ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
+        "timestamp": "2026-10-22T17:43:35.492447Z"
       },
-      "day_change_pct": 0.5,
-      "timestamp": "2026-10-22T13:28:03.141178+00:00"
-    },
-    {
-      "instrument": "NASDAQ",
-      "label": "NASDAQ",
-      "direction": "NEUTRAL",
-      "confidence": "LOW",
-      "entry": 26702.857,
-      "expected_move_pct": 0.0,
-      "volatility": "LOW",
-      "score": 0.0,
-      "reasons": [
-        "No strong directional catalyst"
-      ],
-      "news_count": 2,
-      "bull_headlines": 0,
-      "bear_headlines": 0,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 51.0,
-      "mirofish_debate": {
-        "consensus_pct": 51.0,
-        "agents_bullish": 3,
-        "agents_bearish": 3,
-        "agents_neutral": 1,
-        "top_narrative": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premiu...",
-        "skeptic_counter": "Nasdaq chart shows topping behavior. Lower highs on daily despite higher closes. Deteriorating momentum setup. Final con...",
-        "sentiment_by_round": [
-          45.0,
-          51.0,
-          51.0,
-          51.0,
-          51.0
-        ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
-      },
-      "day_change_pct": 0.04,
-      "timestamp": "2026-10-22T13:28:03.141235+00:00"
+      "day_change_pct": -1.08,
+      "timestamp": "2026-10-22T17:43:41.067434+00:00"
     },
     {
       "instrument": "ETH",
       "label": "Ethereum",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 2401.96,
+      "entry": 2378.16,
       "expected_move_pct": 0.0,
       "volatility": "HIGH",
       "score": 0.0,
       "reasons": [
         "No strong directional catalyst"
       ],
-      "news_count": 0,
+      "news_count": 1,
       "bull_headlines": 0,
       "bear_headlines": 0,
       "polymarket_prob": null,
@@ -1666,10 +1671,10 @@
           71.0,
           71.0
         ],
-        "timestamp": "2026-10-22T13:27:57.343838Z"
+        "timestamp": "2026-10-22T17:43:35.492447Z"
       },
-      "day_change_pct": -0.28,
-      "timestamp": "2026-10-22T13:28:03.141330+00:00"
+      "day_change_pct": -1.27,
+      "timestamp": "2026-10-22T17:43:41.067618+00:00"
     }
   ],
   "polySignals": [
@@ -1824,7 +1829,7 @@
       "divergence": 59.1,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 1087310.1072970002,
+      "volume": 1087316.2599610002,
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1845,7 +1850,7 @@
       "question": "Ukraine election held by December 31, 2026?",
       "polymarket_prob": 4.2,
       "mirofish_prob": 60.0,
-      "divergence": 55.9,
+      "divergence": 55.8,
       "direction": "YES likely",
       "confidence": "HIGH",
       "volume": 241729.00471799995,
@@ -1915,9 +1920,9 @@
     },
     {
       "question": "Will any country leave NATO by December 31, 2026?",
-      "polymarket_prob": 4.3,
+      "polymarket_prob": 5.5,
       "mirofish_prob": 50.0,
-      "divergence": 45.6,
+      "divergence": 44.5,
       "direction": "YES likely",
       "confidence": "HIGH",
       "volume": 410617.427383,
@@ -2010,16 +2015,16 @@
         "name": "XAUUSD",
         "label": "Gold",
         "symbol": "GC=F",
-        "price": 4096.4,
-        "day_change": -63.7,
-        "day_change_pct": -1.53,
+        "price": 4059.9,
+        "day_change": -100.2,
+        "day_change_pct": -2.41,
         "high_52w": 5586.2,
         "low_52w": 3901.3,
         "closes_5d": [
           4160.1001,
           4142.6001,
           4150.0,
-          4096.3999
+          4059.8999
         ],
         "tradable": true,
         "barometer": false
@@ -2028,16 +2033,16 @@
         "name": "WTI",
         "label": "WTI Crude",
         "symbol": "CL=F",
-        "price": 99.76,
-        "day_change": -3.9,
-        "day_change_pct": -3.76,
+        "price": 99.36,
+        "day_change": -4.3,
+        "day_change_pct": -4.15,
         "high_52w": 119.48,
         "low_52w": 54.98,
         "closes_5d": [
           103.66,
           101.79,
           97.15,
-          99.76
+          99.36
         ],
         "tradable": true,
         "barometer": false
@@ -2046,17 +2051,17 @@
         "name": "SPX",
         "label": "S&P 500",
         "symbol": "^GSPC",
-        "price": 7757.17,
-        "day_change": 38.23,
-        "day_change_pct": 0.5,
+        "price": 7660.09,
+        "day_change": -83.97,
+        "day_change_pct": -1.08,
         "high_52w": 7844.52,
         "low_52w": 6316.91,
         "closes_5d": [
-          7744.0601,
           7659.4399,
           7690.73,
           7712.5698,
-          7757.1699
+          7757.1699,
+          7660.0898
         ],
         "tradable": true,
         "barometer": false
@@ -2065,17 +2070,17 @@
         "name": "NASDAQ",
         "label": "NASDAQ",
         "symbol": "^IXIC",
-        "price": 26702.857,
-        "day_change": 9.987,
-        "day_change_pct": 0.04,
+        "price": 26054.72,
+        "day_change": -658.31,
+        "day_change_pct": -2.46,
         "high_52w": 27722.75,
         "low_52w": 20690.25,
         "closes_5d": [
-          26713.0293,
           26140.0293,
           26430.8906,
           26424.8203,
-          26702.8594
+          26702.8594,
+          26054.7207
         ],
         "tradable": true,
         "barometer": false
@@ -2084,9 +2089,9 @@
         "name": "BTC",
         "label": "Bitcoin",
         "symbol": "BTC-USD",
-        "price": 81771.22,
-        "day_change": -246.38,
-        "day_change_pct": -0.3,
+        "price": 81217.36,
+        "day_change": -800.24,
+        "day_change_pct": -0.98,
         "high_52w": 116273.31,
         "low_52w": 57747.766,
         "closes_5d": [
@@ -2094,7 +2099,7 @@
           81853.5391,
           82941.0,
           84011.9688,
-          81771.2188
+          81217.3594
         ],
         "tradable": true,
         "barometer": false
@@ -2103,9 +2108,9 @@
         "name": "ETH",
         "label": "Ethereum",
         "symbol": "ETH-USD",
-        "price": 2401.96,
-        "day_change": -6.7815,
-        "day_change_pct": -0.28,
+        "price": 2378.16,
+        "day_change": -30.5815,
+        "day_change_pct": -1.27,
         "high_52w": 4250.67,
         "low_52w": 1506.5057,
         "closes_5d": [
@@ -2113,7 +2118,7 @@
           2404.8152,
           2446.7307,
           2470.7661,
-          2401.96
+          2378.1599
         ],
         "tradable": true,
         "barometer": false
@@ -2122,16 +2127,16 @@
         "name": "DXY",
         "label": "Dollar Index",
         "symbol": "DX-Y.NYB",
-        "price": 101.781,
-        "day_change": -0.199,
-        "day_change_pct": -0.2,
+        "price": 101.615,
+        "day_change": -0.365,
+        "day_change_pct": -0.36,
         "high_52w": 102.95,
         "low_52w": 95.55,
         "closes_5d": [
           101.98,
           101.73,
           101.78,
-          101.781
+          101.615
         ],
         "tradable": false,
         "barometer": true
@@ -2140,9 +2145,9 @@
         "name": "VIX",
         "label": "VIX",
         "symbol": "^VIX",
-        "price": 18.06,
-        "day_change": -1.93,
-        "day_change_pct": -9.65,
+        "price": 19.06,
+        "day_change": -0.93,
+        "day_change_pct": -4.65,
         "high_52w": 35.3,
         "low_52w": 13.38,
         "closes_5d": [
@@ -2150,7 +2155,7 @@
           18.44,
           17.31,
           16.68,
-          18.06
+          19.06
         ],
         "tradable": false,
         "barometer": true
@@ -2159,9 +2164,9 @@
         "name": "10Y",
         "label": "10Y Yield",
         "symbol": "^TNX",
-        "price": 5.036,
-        "day_change": -0.062,
-        "day_change_pct": -1.22,
+        "price": 4.963,
+        "day_change": -0.135,
+        "day_change_pct": -2.65,
         "high_52w": 5.364,
         "low_52w": 3.956,
         "closes_5d": [
@@ -2169,7 +2174,7 @@
           5.136,
           5.117,
           5.146,
-          5.036
+          4.963
         ],
         "tradable": false,
         "barometer": true
@@ -2178,17 +2183,17 @@
         "name": "DOW",
         "label": "Dow Jones",
         "symbol": "^DJI",
-        "price": 52856.09,
-        "day_change": 1234.61,
-        "day_change_pct": 2.39,
+        "price": 52793.74,
+        "day_change": 616.05,
+        "day_change_pct": 1.18,
         "high_52w": 54744.33,
         "low_52w": 45057.28,
         "closes_5d": [
-          52177.6914,
           52002.4102,
           51966.0312,
           52495.8789,
-          52856.0898
+          52856.0898,
+          52793.7383
         ],
         "tradable": false,
         "barometer": true
@@ -2196,7 +2201,7 @@
     ]
   },
   "mirofishDebates": {
-    "timestamp": "2026-10-22T13:27:57.343838Z",
+    "timestamp": "2026-10-22T17:43:35.492447Z",
     "sim_metadata": {
       "version": "2.0",
       "agents_per_instrument": 7,
