@@ -1,23 +1,24 @@
 {
-  "fetchedAt": "2026-11-18T20:58:42.625892+00:00",
-  "fetchedDisplay": "2026-11-18 20:58 UTC",
+  "fetchedAt": "2026-11-19T02:17:16.193890+00:00",
+  "fetchedDisplay": "2026-11-19 02:17 UTC",
   "prices": {
     "XAUUSD": {
       "name": "XAUUSD",
       "symbol": "GC=F",
-      "price": 3734.0,
+      "price": 3746.8,
       "prev_close": 3886.3,
-      "day_change": -152.3,
-      "day_change_pct": -3.92,
+      "day_change": -139.5,
+      "day_change_pct": -3.59,
       "high_52w": 5586.2,
-      "low_52w": 3722.1,
-      "intraday_high": 3859.3,
-      "intraday_low": 3722.1,
+      "low_52w": 3727.4,
+      "intraday_high": 3759.4,
+      "intraday_low": 3727.4,
       "closes_5d": [
         3886.3,
         3853.0,
         3864.2,
-        3734.0
+        3741.8999,
+        3746.8
       ],
       "ohlc_5d": [
         {
@@ -45,28 +46,36 @@
           "time": 1794978000,
           "open": 3855.2,
           "high": 3859.3,
-          "low": 3722.1001,
-          "close": 3734.0
+          "low": 3721.8,
+          "close": 3741.8999
+        },
+        {
+          "time": 1795054024,
+          "open": 3855.2,
+          "high": 3759.3999,
+          "low": 3727.3999,
+          "close": 3746.8
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.462602+00:00"
+      "fetchedAt": "2026-11-19T02:17:07.682758+00:00"
     },
     "WTI": {
       "name": "WTI",
       "symbol": "CL=F",
-      "price": 82.06,
+      "price": 82.61,
       "prev_close": 88.56,
-      "day_change": -6.5,
-      "day_change_pct": -7.34,
+      "day_change": -5.95,
+      "day_change_pct": -6.72,
       "high_52w": 119.48,
       "low_52w": 54.98,
-      "intraday_high": 84.77,
-      "intraday_low": 81.2,
+      "intraday_high": 83.08,
+      "intraday_low": 81.69,
       "closes_5d": [
         88.56,
         85.72,
         86.01,
-        82.06
+        83.26,
+        82.61
       ],
       "ohlc_5d": [
         {
@@ -93,20 +102,27 @@
         {
           "time": 1794978000,
           "open": 85.75,
-          "high": 84.77,
-          "low": 81.2,
-          "close": 82.06
+          "high": 85.95,
+          "low": 81.97,
+          "close": 83.26
+        },
+        {
+          "time": 1795054023,
+          "open": 81.85,
+          "high": 83.08,
+          "low": 81.69,
+          "close": 82.61
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.554473+00:00"
+      "fetchedAt": "2026-11-19T02:17:07.861638+00:00"
     },
     "SPX": {
       "name": "SPX",
       "symbol": "^GSPC",
-      "price": 7321.38,
+      "price": 7323.63,
       "prev_close": 7619.38,
-      "day_change": -298.0,
-      "day_change_pct": -3.91,
+      "day_change": -295.75,
+      "day_change_pct": -3.88,
       "high_52w": 7844.52,
       "low_52w": 6316.91,
       "intraday_high": 7367.68,
@@ -116,7 +132,7 @@
         7561.6699,
         7416.5898,
         7340.5298,
-        7321.3799
+        7323.6299
       ],
       "ohlc_5d": [
         {
@@ -152,18 +168,18 @@
           "open": 7355.6899,
           "high": 7367.6802,
           "low": 7285.7598,
-          "close": 7321.3799
+          "close": 7323.6299
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.636739+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.041145+00:00"
     },
     "NASDAQ": {
       "name": "NASDAQ",
       "symbol": "^IXIC",
-      "price": 24418.701,
+      "price": 24429.885,
       "prev_close": 25466.19,
-      "day_change": -1047.489,
-      "day_change_pct": -4.11,
+      "day_change": -1036.305,
+      "day_change_pct": -4.07,
       "high_52w": 27722.75,
       "low_52w": 20690.25,
       "intraday_high": 24538.78,
@@ -173,7 +189,7 @@
         25136.2695,
         24509.7598,
         24328.3809,
-        24418.7012
+        24429.8848
       ],
       "ohlc_5d": [
         {
@@ -209,37 +225,29 @@
           "open": 24486.1738,
           "high": 24538.7793,
           "low": 24225.3027,
-          "close": 24418.7012
+          "close": 24429.8848
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.712088+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.248305+00:00"
     },
     "BTC": {
       "name": "BTC",
       "symbol": "BTC-USD",
-      "price": 62471.59,
-      "prev_close": 64128.05,
-      "day_change": -1656.46,
-      "day_change_pct": -2.58,
+      "price": 62733.88,
+      "prev_close": 65305.062,
+      "day_change": -2571.182,
+      "day_change_pct": -3.94,
       "high_52w": 97860.6,
       "low_52w": 57747.766,
-      "intraday_high": 64884.81,
-      "intraday_low": 62281.12,
+      "intraday_high": 63210.613,
+      "intraday_low": 62382.484,
       "closes_5d": [
-        64128.0508,
         65305.0625,
         64855.8438,
         64893.9453,
-        62471.5898
+        62733.8789
       ],
       "ohlc_5d": [
-        {
-          "time": 1794614400,
-          "open": 68249.2734,
-          "high": 68377.5391,
-          "low": 63329.4297,
-          "close": 64128.0508
-        },
         {
           "time": 1794700800,
           "open": 64128.0508,
@@ -262,41 +270,33 @@
           "close": 64893.9453
         },
         {
-          "time": 1794960000,
-          "open": 64875.8047,
-          "high": 64884.8086,
-          "low": 62281.1211,
-          "close": 62471.5898
+          "time": 1795046400,
+          "open": 62987.2852,
+          "high": 63210.6133,
+          "low": 62382.4844,
+          "close": 62733.8789
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.787382+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.402341+00:00"
     },
     "ETH": {
       "name": "ETH",
       "symbol": "ETH-USD",
-      "price": 1750.47,
-      "prev_close": 1769.1205,
-      "day_change": -18.6505,
-      "day_change_pct": -1.05,
+      "price": 1773.84,
+      "prev_close": 1835.4952,
+      "day_change": -61.6552,
+      "day_change_pct": -3.36,
       "high_52w": 3446.6228,
       "low_52w": 1506.5057,
-      "intraday_high": 1823.0618,
-      "intraday_low": 1735.4569,
+      "intraday_high": 1787.0103,
+      "intraday_low": 1765.1978,
       "closes_5d": [
-        1769.1205,
         1835.4952,
         1819.2759,
         1822.9613,
-        1750.47
+        1773.84
       ],
       "ohlc_5d": [
-        {
-          "time": 1794614400,
-          "open": 1927.5889,
-          "high": 1933.9482,
-          "low": 1730.7046,
-          "close": 1769.1205
-        },
         {
           "time": 1794700800,
           "open": 1769.1205,
@@ -319,31 +319,31 @@
           "close": 1822.9613
         },
         {
-          "time": 1794960000,
-          "open": 1822.5739,
-          "high": 1823.0618,
-          "low": 1735.4569,
-          "close": 1750.47
+          "time": 1795046400,
+          "open": 1774.7078,
+          "high": 1787.0103,
+          "low": 1765.1978,
+          "close": 1773.84
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.886181+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.581873+00:00"
     },
     "DXY": {
       "name": "DXY",
       "symbol": "DX-Y.NYB",
-      "price": 103.789,
+      "price": 103.859,
       "prev_close": 103.41,
-      "day_change": 0.379,
-      "day_change_pct": 0.37,
-      "high_52w": 103.911,
+      "day_change": 0.449,
+      "day_change_pct": 0.43,
+      "high_52w": 103.86,
       "low_52w": 95.55,
-      "intraday_high": 103.911,
-      "intraday_low": 103.586,
+      "intraday_high": 103.86,
+      "intraday_low": 103.77,
       "closes_5d": [
         103.41,
         103.55,
         103.49,
-        103.789
+        103.859
       ],
       "ohlc_5d": [
         {
@@ -368,22 +368,22 @@
           "close": 103.49
         },
         {
-          "time": 1794978000,
-          "open": 103.664,
-          "high": 103.911,
-          "low": 103.586,
-          "close": 103.789
+          "time": 1795054026,
+          "open": 103.807,
+          "high": 103.86,
+          "low": 103.77,
+          "close": 103.859
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:36.955826+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.752423+00:00"
     },
     "VIX": {
       "name": "VIX",
       "symbol": "^VIX",
-      "price": 24.52,
+      "price": 24.56,
       "prev_close": 18.7,
-      "day_change": 5.82,
-      "day_change_pct": 31.12,
+      "day_change": 5.86,
+      "day_change_pct": 31.34,
       "high_52w": 35.3,
       "low_52w": 13.38,
       "intraday_high": 26.26,
@@ -393,7 +393,7 @@
         19.3,
         22.91,
         25.46,
-        24.52
+        24.56
       ],
       "ohlc_5d": [
         {
@@ -429,10 +429,10 @@
           "open": 24.22,
           "high": 26.26,
           "low": 23.45,
-          "close": 24.52
+          "close": 24.56
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:37.019925+00:00"
+      "fetchedAt": "2026-11-19T02:17:08.978114+00:00"
     },
     "10Y": {
       "name": "10Y",
@@ -489,15 +489,15 @@
           "close": 5.066
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:37.088467+00:00"
+      "fetchedAt": "2026-11-19T02:17:09.228999+00:00"
     },
     "DOW": {
       "name": "DOW",
       "symbol": "^DJI",
-      "price": 50183.87,
+      "price": 50198.17,
       "prev_close": 52486.49,
-      "day_change": -2302.62,
-      "day_change_pct": -4.39,
+      "day_change": -2288.32,
+      "day_change_pct": -4.36,
       "high_52w": 54744.33,
       "low_52w": 45057.28,
       "intraday_high": 50637.7,
@@ -507,7 +507,7 @@
         52347.5508,
         51608.1719,
         50759.4219,
-        50183.8711
+        50198.1719
       ],
       "ohlc_5d": [
         {
@@ -543,10 +543,10 @@
           "open": 50627.3594,
           "high": 50637.6992,
           "low": 50029.3516,
-          "close": 50183.8711
+          "close": 50198.1719
         }
       ],
-      "fetchedAt": "2026-11-18T20:58:37.162632+00:00"
+      "fetchedAt": "2026-11-19T02:17:09.406400+00:00"
     }
   },
   "gold_spot": {
@@ -635,8 +635,8 @@
         0.0245,
         0.9755
       ],
-      "volume": 1088690.2532320004,
-      "liquidity": 15274.1148,
+      "volume": 1088690.2532320009,
+      "liquidity": 11330.56064,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by"
     },
@@ -721,7 +721,7 @@
         0.983
       ],
       "volume": 529064.8478729998,
-      "liquidity": 74271.6861,
+      "liquidity": 74361.45083,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025"
     },
@@ -751,11 +751,11 @@
         "No"
       ],
       "prices": [
-        0.0135,
-        0.9865
+        0.012,
+        0.988
       ],
       "volume": 416213.98884299997,
-      "liquidity": 35243.76946,
+      "liquidity": 35082.30451,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -823,7 +823,7 @@
         0.9855
       ],
       "volume": 243079.928464,
-      "liquidity": 3073.8023,
+      "liquidity": 3081.99057,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-held-in-2025"
     },
@@ -840,7 +840,7 @@
         0.9615
       ],
       "volume": 235759.291432,
-      "liquidity": 5060.90172,
+      "liquidity": 5047.74622,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31"
     },
@@ -907,8 +907,8 @@
         0.038,
         0.962
       ],
-      "volume": 159897.744371,
-      "liquidity": 34807.77844,
+      "volume": 159897.74437100004,
+      "liquidity": 38283.26876,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025"
     },
@@ -942,7 +942,7 @@
         0.981
       ],
       "volume": 116023.98713500002,
-      "liquidity": 4467.88942,
+      "liquidity": 3862.18861,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     },
@@ -1061,7 +1061,7 @@
         0.989
       ],
       "volume": 35459.998125,
-      "liquidity": 1486.29218,
+      "liquidity": 1494.70824,
       "endDate": "2027-01-01T05:00:00Z",
       "url": "https://polymarket.com/event/trump-eliminates-capital-gains-tax-on-crypto-in-2025"
     },
@@ -1074,11 +1074,11 @@
         "No"
       ],
       "prices": [
-        0.32,
-        0.68
+        0.315,
+        0.685
       ],
       "volume": 11188.663520000004,
-      "liquidity": 4594.4573,
+      "liquidity": 4560.5272,
       "endDate": "2027-07-01T03:59:00Z",
       "url": "https://polymarket.com/event/uk-election-called-by"
     },
@@ -1091,11 +1091,11 @@
         "No"
       ],
       "prices": [
-        0.079,
-        0.921
+        0.083,
+        0.917
       ],
-      "volume": 4793.933305000001,
-      "liquidity": 3837.71103,
+      "volume": 4793.9333050000005,
+      "liquidity": 4017.97253,
       "endDate": "2028-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -1129,7 +1129,7 @@
         0.955
       ],
       "volume": 1527.803113,
-      "liquidity": 3568.902,
+      "liquidity": 4200.5046,
       "endDate": "2027-07-01T03:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -1142,11 +1142,11 @@
         "No"
       ],
       "prices": [
-        0.395,
-        0.605
+        0.425,
+        0.575
       ],
       "volume": 677.67347,
-      "liquidity": 2688.7846,
+      "liquidity": 2385.0657,
       "endDate": "2028-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     }
@@ -1154,26 +1154,14 @@
   "headlines": [
     {
       "source": "Investing.com",
-      "title": "US House panel seeks Microsoft briefing on reported AI deal talks with China\u2019s ByteDance",
+      "title": "Trump says he referred to ex-Nvidia boss Huang\u2019s situation \u2019briefly\u2019 in talk with Xi",
       "desc": "",
-      "link": "https://www.investing.com/news/stock-market-news/us-house-panel-seeks-microsoft-briefing-on-reported-ai-deal-talks-with-chinas-bytedance-5036932",
-      "pubDate": "2026-11-18 20:30:56",
-      "pubISO": "2026-11-18 20:30:56",
-      "sentiment": "bullish",
-      "instruments": [
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "Investing.com",
-      "title": "Fastly at RBC Global Industrials Conference 2026: growth plan widens",
-      "desc": "",
-      "link": "https://www.investing.com/news/transcripts/fastly-at-rbc-global-industrials-conference-2026-growth-plan-widens-93CH-5036934",
-      "pubDate": "2026-11-18 20:31:43",
-      "pubISO": "2026-11-18 20:31:43",
+      "link": "https://www.investing.com/news/stock-market-news/trump-says-he-referred-to-exnvidia-boss-huangs-situation-briefly-in-talk-with-xi-5037541",
+      "pubDate": "2026-11-19 01:54:33",
+      "pubISO": "2026-11-19 01:54:33",
       "sentiment": "neutral",
       "instruments": [
-        "DOW"
+        "NASDAQ"
       ]
     },
     {
@@ -1466,6 +1454,42 @@
       ]
     },
     {
+      "source": "Al Jazeera",
+      "title": "Iran war live: Saudi-led coalition strikes Yemen; ships on fire in Hormuz",
+      "desc": "Saudi-led coalition says it destroyed a missile platform in Saada, Yemen, as Iran claims three ships hit mines.",
+      "link": "https://www.aljazeera.com/news/liveblog/2026/11/19/iran-war-live-saudi-led-coalition-strikes-yemen-ships-on-fire-in-hormuz?traffic_source=rss",
+      "pubDate": "Thu, 19 Nov 2026 00:01:02 +0000",
+      "pubISO": "2026-11-19T00:01:02+00:00",
+      "sentiment": "bearish",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "MarketWatch",
+      "title": "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Should I sell my stocks and buy real estate \u2014 or ride out the storm?",
+      "desc": "Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves.",
+      "link": "https://www.marketwatch.com/story/nvidia-spooked-me-should-i-sell-my-stocks-or-ride-out-the-market-turmoil-560583c6?mod=mw_rss_topstories",
+      "pubDate": "Thu, 19 Nov 2026 00:30:00 GMT",
+      "pubISO": "2026-11-19T00:30:00+00:00",
+      "sentiment": "neutral",
+      "instruments": [
+        "NASDAQ"
+      ]
+    },
+    {
+      "source": "MarketWatch",
+      "title": "Palo Alto Networks\u2019 stock gets a fresh AI-fueled boost from earnings",
+      "desc": "The company boosts its outlook in the face of the \u201ccurrent threat environment and demand we see ahead of us.\u201d",
+      "link": "https://www.marketwatch.com/story/palo-alto-networks-stock-soars-as-earnings-show-ai-has-upped-the-stakes-for-cybersecurity-308e34b8?mod=mw_rss_topstories",
+      "pubDate": "Thu, 19 Nov 2026 01:02:00 GMT",
+      "pubISO": "2026-11-19T01:02:00+00:00",
+      "sentiment": "neutral",
+      "instruments": [
+        "SPX"
+      ]
+    },
+    {
       "source": "CNBC Economy",
       "title": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report",
       "desc": "The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones consensus outlook for 7.15 million",
@@ -1488,127 +1512,62 @@
       "instruments": [
         "10Y"
       ]
-    },
-    {
-      "source": "CNBC Markets",
-      "title": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings",
-      "desc": "Nvidia options are pricing in a bigger move than usual.",
-      "link": "https://www.cnbc.com/2026/11/17/nvidia-has-lost-2-trillion-in-value-heres-what-options-traders-expect-from-earnings.html",
-      "pubDate": "Tue, 17 Nov 2026 13:16:43 GMT",
-      "pubISO": "2026-11-17T13:16:43+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX",
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "CNBC Markets",
-      "title": "The 'debasement trade' returns after Bessent bond maneuver. Crypto and gold are back in style",
-      "desc": "Concern over the size and the cost of U.S. government spending has given new life to the debasement trade.",
-      "link": "https://www.cnbc.com/2026/08/25/debasement-trade-debt-gold-bitcoin-dollar.html",
-      "pubDate": "Tue, 25 Aug 2026 15:16:02 GMT",
-      "pubISO": "2026-08-25T15:16:02+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "XAUUSD",
-        "BTC"
-      ]
     }
   ],
   "tradingSignals": [
     {
-      "instrument": "BTC",
-      "label": "Bitcoin",
+      "instrument": "WTI",
+      "label": "WTI Crude",
       "direction": "SELL",
       "confidence": "MEDIUM",
-      "entry": 62471.59,
-      "expected_move_pct": -2.58,
-      "volatility": "HIGH",
-      "score": -0.258,
+      "entry": 82.61,
+      "expected_move_pct": -2.7,
+      "volatility": "MEDIUM",
+      "score": -0.36,
       "reasons": [
-        "Polymarket 0.0% vs MiroFish 66% (66pt gap)",
-        "Momentum -2.58% today"
+        "News sentiment bearish (0B/1S)",
+        "Momentum -6.72% today"
       ],
-      "news_count": 1,
+      "news_count": 2,
       "bull_headlines": 0,
-      "bear_headlines": 0,
-      "polymarket_prob": 0.0,
-      "polymarket_url": "https://polymarket.com/event/trump-eliminates-capital-gains-tax-on-crypto-in-2025",
-      "polymarket_question": "Trump eliminates capital gains tax on crypto in 2025?",
-      "mirofish_base": 66.0,
+      "bear_headlines": 1,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 40.0,
       "mirofish_debate": {
-        "consensus_pct": 66.0,
-        "agents_bullish": 4,
-        "agents_bearish": 1,
-        "agents_neutral": 2,
-        "top_narrative": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulatin...",
-        "skeptic_counter": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bi...",
+        "consensus_pct": 40.0,
+        "agents_bullish": 3,
+        "agents_bearish": 4,
+        "agents_neutral": 0,
+        "top_narrative": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. F...",
+        "skeptic_counter": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target. Final convi...",
         "sentiment_by_round": [
-          66.0,
-          66.0,
-          66.0,
-          66.0,
-          66.0
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0
         ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
+        "timestamp": "2026-11-19T02:17:07.344528Z"
       },
-      "day_change_pct": -2.58,
-      "timestamp": "2026-11-18T20:58:42.625349+00:00"
+      "day_change_pct": -6.72,
+      "timestamp": "2026-11-19T02:17:16.193217+00:00"
     },
     {
       "instrument": "SPX",
       "label": "S&P 500",
       "direction": "BUY",
       "confidence": "MEDIUM",
-      "entry": 7321.38,
+      "entry": 7323.63,
       "expected_move_pct": 0.72,
       "volatility": "LOW",
       "score": 0.24,
       "reasons": [
         "News sentiment bullish (1B/0S)",
-        "Momentum -3.91% today"
+        "Momentum -3.88% today"
       ],
       "news_count": 18,
-      "bull_headlines": 1,
-      "bear_headlines": 0,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 44.0,
-      "mirofish_debate": {
-        "consensus_pct": 44.0,
-        "agents_bullish": 3,
-        "agents_bearish": 3,
-        "agents_neutral": 1,
-        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
-        "skeptic_counter": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning....",
-        "sentiment_by_round": [
-          44.0,
-          44.0,
-          44.0,
-          44.0,
-          44.0
-        ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
-      },
-      "day_change_pct": -3.91,
-      "timestamp": "2026-11-18T20:58:42.625257+00:00"
-    },
-    {
-      "instrument": "NASDAQ",
-      "label": "NASDAQ",
-      "direction": "BUY",
-      "confidence": "MEDIUM",
-      "entry": 24418.701,
-      "expected_move_pct": 1.08,
-      "volatility": "LOW",
-      "score": 0.24,
-      "reasons": [
-        "News sentiment bullish (1B/0S)",
-        "Momentum -4.11% today"
-      ],
-      "news_count": 8,
       "bull_headlines": 1,
       "bear_headlines": 0,
       "polymarket_prob": null,
@@ -1617,110 +1576,73 @@
       "mirofish_base": 40.0,
       "mirofish_debate": {
         "consensus_pct": 40.0,
-        "agents_bullish": 2,
-        "agents_bearish": 3,
-        "agents_neutral": 2,
-        "top_narrative": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving ...",
-        "skeptic_counter": "Resistance at 18,500 has failed twice. Next test likely to break down toward 17,800-18,000 support zone. Final convictio...",
+        "agents_bullish": 3,
+        "agents_bearish": 4,
+        "agents_neutral": 0,
+        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
+        "skeptic_counter": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning....",
         "sentiment_by_round": [
-          31.0,
+          40.0,
           40.0,
           40.0,
           40.0,
           40.0
         ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
+        "timestamp": "2026-11-19T02:17:07.344528Z"
       },
-      "day_change_pct": -4.11,
-      "timestamp": "2026-11-18T20:58:42.625308+00:00"
+      "day_change_pct": -3.88,
+      "timestamp": "2026-11-19T02:17:16.193268+00:00"
+    },
+    {
+      "instrument": "BTC",
+      "label": "Bitcoin",
+      "direction": "SELL",
+      "confidence": "LOW",
+      "entry": 62733.88,
+      "expected_move_pct": -1.83,
+      "volatility": "HIGH",
+      "score": -0.183,
+      "reasons": [
+        "Polymarket 0.0% vs MiroFish 41% (41pt gap)",
+        "Momentum -3.94% today"
+      ],
+      "news_count": 0,
+      "bull_headlines": 0,
+      "bear_headlines": 0,
+      "polymarket_prob": 0.0,
+      "polymarket_url": "https://polymarket.com/event/trump-eliminates-capital-gains-tax-on-crypto-in-2025",
+      "polymarket_question": "Trump eliminates capital gains tax on crypto in 2025?",
+      "mirofish_base": 41.0,
+      "mirofish_debate": {
+        "consensus_pct": 41.0,
+        "agents_bullish": 2,
+        "agents_bearish": 3,
+        "agents_neutral": 2,
+        "top_narrative": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $10...",
+        "skeptic_counter": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bi...",
+        "sentiment_by_round": [
+          51.0,
+          41.0,
+          41.0,
+          41.0,
+          41.0
+        ],
+        "timestamp": "2026-11-19T02:17:07.344528Z"
+      },
+      "day_change_pct": -3.94,
+      "timestamp": "2026-11-19T02:17:16.193359+00:00"
     },
     {
       "instrument": "XAUUSD",
       "label": "Gold",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 3734.0,
+      "entry": 3746.8,
       "expected_move_pct": 0.22,
       "volatility": "LOW",
       "score": -0.06,
       "reasons": [
-        "Momentum -3.92% today"
-      ],
-      "news_count": 1,
-      "bull_headlines": 0,
-      "bear_headlines": 0,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 81.0,
-      "mirofish_debate": {
-        "consensus_pct": 81.0,
-        "agents_bullish": 5,
-        "agents_bearish": 1,
-        "agents_neutral": 1,
-        "top_narrative": "Geopolitical fragmentation keeps central banks defensive. Gold's percentage of reserves near historic lows\u2014accumulation ...",
-        "skeptic_counter": "Downtrend in USD has been the hidden driver. Once dollar stabilizes, gold loses 40-50% of recent move. Test $2,380 on DX...",
-        "sentiment_by_round": [
-          77.0,
-          81.0,
-          81.0,
-          81.0,
-          81.0
-        ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
-      },
-      "day_change_pct": -3.92,
-      "timestamp": "2026-11-18T20:58:42.625138+00:00"
-    },
-    {
-      "instrument": "WTI",
-      "label": "WTI Crude",
-      "direction": "NEUTRAL",
-      "confidence": "LOW",
-      "entry": 82.06,
-      "expected_move_pct": 0.45,
-      "volatility": "MEDIUM",
-      "score": -0.06,
-      "reasons": [
-        "Momentum -7.34% today"
-      ],
-      "news_count": 1,
-      "bull_headlines": 0,
-      "bear_headlines": 0,
-      "polymarket_prob": null,
-      "polymarket_url": null,
-      "polymarket_question": null,
-      "mirofish_base": 39.0,
-      "mirofish_debate": {
-        "consensus_pct": 39.0,
-        "agents_bullish": 3,
-        "agents_bearish": 4,
-        "agents_neutral": 0,
-        "top_narrative": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. F...",
-        "skeptic_counter": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 suppo...",
-        "sentiment_by_round": [
-          39.0,
-          39.0,
-          39.0,
-          39.0,
-          39.0
-        ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
-      },
-      "day_change_pct": -7.34,
-      "timestamp": "2026-11-18T20:58:42.625204+00:00"
-    },
-    {
-      "instrument": "ETH",
-      "label": "Ethereum",
-      "direction": "NEUTRAL",
-      "confidence": "LOW",
-      "entry": 1750.47,
-      "expected_move_pct": 0.0,
-      "volatility": "HIGH",
-      "score": 0.0,
-      "reasons": [
-        "No strong directional catalyst"
+        "Momentum -3.59% today"
       ],
       "news_count": 0,
       "bull_headlines": 0,
@@ -1728,25 +1650,101 @@
       "polymarket_prob": null,
       "polymarket_url": null,
       "polymarket_question": null,
-      "mirofish_base": 84.0,
+      "mirofish_base": 68.0,
       "mirofish_debate": {
-        "consensus_pct": 84.0,
-        "agents_bullish": 5,
-        "agents_bearish": 0,
-        "agents_neutral": 2,
-        "top_narrative": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own th...",
-        "skeptic_counter": "Options market showing dealer short positioning. Typical reversal setup. Pullback to $2,200 before next run. Final convi...",
+        "consensus_pct": 68.0,
+        "agents_bullish": 4,
+        "agents_bearish": 2,
+        "agents_neutral": 1,
+        "top_narrative": "Real yields turning negative across developed markets create a tailwind. Gold rerating from $2,400 to $2,600 is justifie...",
+        "skeptic_counter": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggest...",
         "sentiment_by_round": [
-          76.0,
-          84.0,
-          84.0,
-          84.0,
-          84.0
+          77.0,
+          68.0,
+          68.0,
+          68.0,
+          68.0
         ],
-        "timestamp": "2026-11-18T20:58:35.533986Z"
+        "timestamp": "2026-11-19T02:17:07.344528Z"
       },
-      "day_change_pct": -1.05,
-      "timestamp": "2026-11-18T20:58:42.625385+00:00"
+      "day_change_pct": -3.59,
+      "timestamp": "2026-11-19T02:17:16.193148+00:00"
+    },
+    {
+      "instrument": "NASDAQ",
+      "label": "NASDAQ",
+      "direction": "NEUTRAL",
+      "confidence": "LOW",
+      "entry": 24429.885,
+      "expected_move_pct": 0.27,
+      "volatility": "LOW",
+      "score": -0.06,
+      "reasons": [
+        "Momentum -4.07% today"
+      ],
+      "news_count": 8,
+      "bull_headlines": 0,
+      "bear_headlines": 0,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 59.0,
+      "mirofish_debate": {
+        "consensus_pct": 59.0,
+        "agents_bullish": 3,
+        "agents_bearish": 2,
+        "agents_neutral": 2,
+        "top_narrative": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premiu...",
+        "skeptic_counter": "QQQ options show dealer short build. Options market positioning typical of mean reversion. 5-7% pullback likely. Final c...",
+        "sentiment_by_round": [
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0
+        ],
+        "timestamp": "2026-11-19T02:17:07.344528Z"
+      },
+      "day_change_pct": -4.07,
+      "timestamp": "2026-11-19T02:17:16.193318+00:00"
+    },
+    {
+      "instrument": "ETH",
+      "label": "Ethereum",
+      "direction": "NEUTRAL",
+      "confidence": "LOW",
+      "entry": 1773.84,
+      "expected_move_pct": 0.75,
+      "volatility": "HIGH",
+      "score": -0.06,
+      "reasons": [
+        "Momentum -3.36% today"
+      ],
+      "news_count": 0,
+      "bull_headlines": 0,
+      "bear_headlines": 0,
+      "polymarket_prob": null,
+      "polymarket_url": null,
+      "polymarket_question": null,
+      "mirofish_base": 68.0,
+      "mirofish_debate": {
+        "consensus_pct": 68.0,
+        "agents_bullish": 4,
+        "agents_bearish": 1,
+        "agents_neutral": 2,
+        "top_narrative": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation r...",
+        "skeptic_counter": "Volume declining into recent strength. MACD rolling over. Setup suggests 15-20% pullback. Shorter-term downtrend intact....",
+        "sentiment_by_round": [
+          57.0,
+          68.0,
+          68.0,
+          68.0,
+          68.0
+        ],
+        "timestamp": "2026-11-19T02:17:07.344528Z"
+      },
+      "day_change_pct": -3.36,
+      "timestamp": "2026-11-19T02:17:16.193396+00:00"
     }
   ],
   "polySignals": [
@@ -1901,7 +1899,7 @@
       "divergence": 59.6,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 1088690.2532320004,
+      "volume": 1088690.2532320009,
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1937,7 +1935,7 @@
       "divergence": 56.2,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 159897.744371,
+      "volume": 159897.74437100004,
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1992,9 +1990,9 @@
     },
     {
       "question": "Will any country leave NATO by December 31, 2026?",
-      "polymarket_prob": 1.4,
+      "polymarket_prob": 1.2,
       "mirofish_prob": 50.0,
-      "divergence": 48.6,
+      "divergence": 48.8,
       "direction": "YES likely",
       "confidence": "HIGH",
       "volume": 416213.98884299997,
@@ -2063,12 +2061,12 @@
       "DOW"
     ],
     "mirofish": [
-      81.0,
-      39.0,
-      44.0,
+      68.0,
       40.0,
-      66.0,
-      84.0,
+      40.0,
+      59.0,
+      41.0,
+      68.0,
       48,
       55
     ],
@@ -2087,16 +2085,17 @@
         "name": "XAUUSD",
         "label": "Gold",
         "symbol": "GC=F",
-        "price": 3734.0,
-        "day_change": -152.3,
-        "day_change_pct": -3.92,
+        "price": 3746.8,
+        "day_change": -139.5,
+        "day_change_pct": -3.59,
         "high_52w": 5586.2,
-        "low_52w": 3722.1,
+        "low_52w": 3727.4,
         "closes_5d": [
           3886.3,
           3853.0,
           3864.2,
-          3734.0
+          3741.8999,
+          3746.8
         ],
         "tradable": true,
         "barometer": false
@@ -2105,16 +2104,17 @@
         "name": "WTI",
         "label": "WTI Crude",
         "symbol": "CL=F",
-        "price": 82.06,
-        "day_change": -6.5,
-        "day_change_pct": -7.34,
+        "price": 82.61,
+        "day_change": -5.95,
+        "day_change_pct": -6.72,
         "high_52w": 119.48,
         "low_52w": 54.98,
         "closes_5d": [
           88.56,
           85.72,
           86.01,
-          82.06
+          83.26,
+          82.61
         ],
         "tradable": true,
         "barometer": false
@@ -2123,9 +2123,9 @@
         "name": "SPX",
         "label": "S&P 500",
         "symbol": "^GSPC",
-        "price": 7321.38,
-        "day_change": -298.0,
-        "day_change_pct": -3.91,
+        "price": 7323.63,
+        "day_change": -295.75,
+        "day_change_pct": -3.88,
         "high_52w": 7844.52,
         "low_52w": 6316.91,
         "closes_5d": [
@@ -2133,7 +2133,7 @@
           7561.6699,
           7416.5898,
           7340.5298,
-          7321.3799
+          7323.6299
         ],
         "tradable": true,
         "barometer": false
@@ -2142,9 +2142,9 @@
         "name": "NASDAQ",
         "label": "NASDAQ",
         "symbol": "^IXIC",
-        "price": 24418.701,
-        "day_change": -1047.489,
-        "day_change_pct": -4.11,
+        "price": 24429.885,
+        "day_change": -1036.305,
+        "day_change_pct": -4.07,
         "high_52w": 27722.75,
         "low_52w": 20690.25,
         "closes_5d": [
@@ -2152,7 +2152,7 @@
           25136.2695,
           24509.7598,
           24328.3809,
-          24418.7012
+          24429.8848
         ],
         "tradable": true,
         "barometer": false
@@ -2161,17 +2161,16 @@
         "name": "BTC",
         "label": "Bitcoin",
         "symbol": "BTC-USD",
-        "price": 62471.59,
-        "day_change": -1656.46,
-        "day_change_pct": -2.58,
+        "price": 62733.88,
+        "day_change": -2571.182,
+        "day_change_pct": -3.94,
         "high_52w": 97860.6,
         "low_52w": 57747.766,
         "closes_5d": [
-          64128.0508,
           65305.0625,
           64855.8438,
           64893.9453,
-          62471.5898
+          62733.8789
         ],
         "tradable": true,
         "barometer": false
@@ -2180,17 +2179,16 @@
         "name": "ETH",
         "label": "Ethereum",
         "symbol": "ETH-USD",
-        "price": 1750.47,
-        "day_change": -18.6505,
-        "day_change_pct": -1.05,
+        "price": 1773.84,
+        "day_change": -61.6552,
+        "day_change_pct": -3.36,
         "high_52w": 3446.6228,
         "low_52w": 1506.5057,
         "closes_5d": [
-          1769.1205,
           1835.4952,
           1819.2759,
           1822.9613,
-          1750.47
+          1773.84
         ],
         "tradable": true,
         "barometer": false
@@ -2199,16 +2197,16 @@
         "name": "DXY",
         "label": "Dollar Index",
         "symbol": "DX-Y.NYB",
-        "price": 103.789,
-        "day_change": 0.379,
-        "day_change_pct": 0.37,
-        "high_52w": 103.911,
+        "price": 103.859,
+        "day_change": 0.449,
+        "day_change_pct": 0.43,
+        "high_52w": 103.86,
         "low_52w": 95.55,
         "closes_5d": [
           103.41,
           103.55,
           103.49,
-          103.789
+          103.859
         ],
         "tradable": false,
         "barometer": true
@@ -2217,9 +2215,9 @@
         "name": "VIX",
         "label": "VIX",
         "symbol": "^VIX",
-        "price": 24.52,
-        "day_change": 5.82,
-        "day_change_pct": 31.12,
+        "price": 24.56,
+        "day_change": 5.86,
+        "day_change_pct": 31.34,
         "high_52w": 35.3,
         "low_52w": 13.38,
         "closes_5d": [
@@ -2227,7 +2225,7 @@
           19.3,
           22.91,
           25.46,
-          24.52
+          24.56
         ],
         "tradable": false,
         "barometer": true
@@ -2255,9 +2253,9 @@
         "name": "DOW",
         "label": "Dow Jones",
         "symbol": "^DJI",
-        "price": 50183.87,
-        "day_change": -2302.62,
-        "day_change_pct": -4.39,
+        "price": 50198.17,
+        "day_change": -2288.32,
+        "day_change_pct": -4.36,
         "high_52w": 54744.33,
         "low_52w": 45057.28,
         "closes_5d": [
@@ -2265,7 +2263,7 @@
           52347.5508,
           51608.1719,
           50759.4219,
-          50183.8711
+          50198.1719
         ],
         "tradable": false,
         "barometer": true
@@ -2273,7 +2271,7 @@
     ]
   },
   "mirofishDebates": {
-    "timestamp": "2026-11-18T20:58:35.533986Z",
+    "timestamp": "2026-11-19T02:17:07.344528Z",
     "sim_metadata": {
       "version": "2.0",
       "agents_per_instrument": 7,
@@ -2283,29 +2281,29 @@
     "debates": {
       "XAUUSD": {
         "label": "Gold",
-        "consensus_bullish_pct": 81.0,
-        "agents_bullish": 5,
-        "agents_bearish": 1,
+        "consensus_bullish_pct": 68.0,
+        "agents_bullish": 4,
+        "agents_bearish": 2,
         "agents_neutral": 1,
-        "top_narrative": "Geopolitical fragmentation keeps central banks defensive. Gold's percentage of reserves near historic lows\u2014accumulation ...",
-        "skeptic_counter": "Downtrend in USD has been the hidden driver. Once dollar stabilizes, gold loses 40-50% of recent move. Test $2,380 on DX...",
+        "top_narrative": "Real yields turning negative across developed markets create a tailwind. Gold rerating from $2,400 to $2,600 is justifie...",
+        "skeptic_counter": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggest...",
         "sentiment_by_round": [
           77.0,
-          81.0,
-          81.0,
-          81.0,
-          81.0
+          68.0,
+          68.0,
+          68.0,
+          68.0
         ],
         "agents": [
           {
             "name": "Macro Bull",
             "final_position": "BULLISH",
-            "confidence": 72,
+            "confidence": 83,
             "rounds": [
               {
                 "round": 1,
                 "position": "BULLISH",
-                "argument": "Central banks remain substantial accumulators despite elevated prices. Structural demand from reserve diversification drives gold above $2,450."
+                "argument": "Rate cut cycle beginning in Q3 removes the final headwind. Historical correlation suggests 8-12% upside once Fed pivots."
               },
               {
                 "round": 2,
@@ -2315,17 +2313,17 @@
               {
                 "round": 3,
                 "position": "BULLISH",
-                "argument": "Rate cut cycle beginning in Q3 removes the final headwind. Historical correlation suggests 8-12% upside once Fed pivots. Maintaining bullish conviction."
+                "argument": "Central banks remain substantial accumulators despite elevated prices. Structural demand from reserve diversification drives gold above $2,450. Maintaining bullish conviction."
               },
               {
                 "round": 4,
                 "position": "BULLISH",
-                "argument": "Central banks remain substantial accumulators despite elevated prices. Structural demand from reserve diversification drives gold above $2,450. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "argument": "Real yields turning negative across developed markets create a tailwind. Gold rerating from $2,400 to $2,600 is justified on 2-3 year horizon. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Geopolitical fragmentation keeps central banks defensive. Gold's percentage of reserves near historic lows\u2014accumulation theme intact. Final conviction: 72% bullish. Key trade trigger: break of resistance."
+                "argument": "Real yields turning negative across developed markets create a tailwind. Gold rerating from $2,400 to $2,600 is justified on 2-3 year horizon. Final conviction: 83% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
@@ -2337,12 +2335,12 @@
               {
                 "round": 1,
                 "position": "BULLISH",
-                "argument": "Resistance at $2,420 has rejected twice in three weeks. RSI divergence on 4H chart warns of exhaustion before new highs."
+                "argument": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggests a 3-5% pullback imminent."
               },
               {
                 "round": 2,
                 "position": "BULLISH",
-                "argument": "Options positioning shows dealer short building\u2014typical setup for mean reversion. Support test at $2,350 likely before continuation."
+                "argument": "Resistance at $2,420 has rejected twice in three weeks. RSI divergence on 4H chart warns of exhaustion before new highs."
               },
               {
                 "round": 3,
@@ -2357,14 +2355,14 @@
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Downtrend in USD has been the hidden driver. Once dollar stabilizes, gold loses 40-50% of recent move. Test $2,380 on DXY stabilization. Final conviction: 70% bullish. Key trade trigger: break of resistance."
+                "argument": "Overbought conditions on the daily timeframe (RSI 72) and declining volume into strength. Volatility compression suggests a 3-5% pullback imminent. Final conviction: 70% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Geopolitical Analyst",
-            "final_position": "BULLISH",
-            "confidence": 66,
+            "final_position": "NEUTRAL",
+            "confidence": 67,
             "rounds": [
               {
                 "round": 1,
@@ -2373,35 +2371,35 @@
               },
               {
                 "round": 2,
-                "position": "BULLISH",
-                "argument": "Russia-Ukraine deadlock supports extended risk premium. Central Bank demand in non-US aligned nations creates permanent bid under gold."
+                "position": "NEUTRAL",
+                "argument": "Middle East tension escalation remains the biggest upside catalyst. Any Iran-Israel flare-up sends gold to $2,550+ immediately."
               },
               {
                 "round": 3,
-                "position": "BULLISH",
-                "argument": "Sanctions regime becoming entrenched\u2014non-Western nations holding more gold is structural trend. BRICS dedollarization supports gold above $2,400. Maintaining bullish conviction."
+                "position": "NEUTRAL",
+                "argument": "Sanctions regime becoming entrenched\u2014non-Western nations holding more gold is structural trend. BRICS dedollarization supports gold above $2,400. Balanced view warranted here."
               },
               {
                 "round": 4,
-                "position": "BULLISH",
-                "argument": "Sanctions regime becoming entrenched\u2014non-Western nations holding more gold is structural trend. BRICS dedollarization supports gold above $2,400. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "position": "NEUTRAL",
+                "argument": "Taiwan strait remains tinderbox. De-escalation could mean 5% pullback, but baseline assumption is continued elevated tensions supporting gold. Stress test shows wide range of outcomes: -12% to +15% plausible."
               },
               {
                 "round": 5,
-                "position": "BULLISH",
-                "argument": "Sanctions regime becoming entrenched\u2014non-Western nations holding more gold is structural trend. BRICS dedollarization supports gold above $2,400. Final conviction: 66% bullish. Key trade trigger: break of resistance."
+                "position": "NEUTRAL",
+                "argument": "Sanctions regime becoming entrenched\u2014non-Western nations holding more gold is structural trend. BRICS dedollarization supports gold above $2,400. Final conviction: 67% on balanced view. Monitor both directions."
               }
             ]
           },
           {
             "name": "Retail Sentiment",
             "final_position": "BULLISH",
-            "confidence": 65,
+            "confidence": 81,
             "rounds": [
               {
                 "round": 1,
                 "position": "BULLISH",
-                "argument": "Geopolitical headlines dominating retail news cycles. Fear of conflict drives retail bid. When headlines fade, retail dumps positions quickly."
+                "argument": "Social media sentiment on precious metals hitting 3-year highs. Retail momentum often precedes institutional rotation\u2014bullish signal."
               },
               {
                 "round": 2,
@@ -2421,71 +2419,1039 @@
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Social media sentiment on precious metals hitting 3-year highs. Retail momentum often precedes institutional rotation\u2014bullish signal. Final conviction: 65% bullish. Key trade trigger: break of resistance."
+                "argument": "Geopolitical headlines dominating retail news cycles. Fear of conflict drives retail bid. When headlines fade, retail dumps positions quickly. Final conviction: 81% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Contrarian",
             "final_position": "BEARISH",
-            "confidence": 73,
+            "confidence": 72,
             "rounds": [
               {
                 "round": 1,
                 "position": "BEARISH",
-                "argument": "Technical deterioration despite higher prices. Volume declining, breadth weakening. Early warning of mean reversion starting."
+                "argument": "Crowded long positioning suggests fade. Commercial hedgers still short, but small specs now massively long\u2014classic reversal setup."
               },
               {
                 "round": 2,
                 "position": "BEARISH",
-                "argument": "Gold at multi-year highs after 12-month rally. Mean reversion would target $2,200-$2,250 within 6 months. Valuation stretched. However, near-term consolidation likely."
+                "argument": "Crowded long positioning suggests fade. Commercial hedgers still short, but small specs now massively long\u2014classic reversal setup. However, near-term consolidation likely."
               },
               {
                 "round": 3,
                 "position": "BEARISH",
-                "argument": "Crowded long positioning suggests fade. Commercial hedgers still short, but small specs now massively long\u2014classic reversal setup. Bearish thesis intact."
+                "argument": "Macro Bull case priced in. If rates don't cut as aggressively as expected, gold falls 10%. Unlikely to get $2,600 print. Bearish thesis intact."
               },
               {
                 "round": 4,
                 "position": "BEARISH",
-                "argument": "Crowded long positioning suggests fade. Commercial hedgers still short, but small specs now massively long\u2014classic reversal setup. Stress test upside: if sentiment shift occurs, resistance at +8%."
+                "argument": "Technical deterioration despite higher prices. Volume declining, breadth weakening. Early warning of mean reversion starting. Stress test upside: if sentiment shift occurs, resistance at +8%."
               },
               {
                 "round": 5,
                 "position": "BEARISH",
-                "argument": "Gold at multi-year highs after 12-month rally. Mean reversion would target $2,200-$2,250 within 6 months. Valuation stretched. Final conviction: 73% bearish. Key trade trigger: break of support."
+                "argument": "Gold at multi-year highs after 12-month rally. Mean reversion would target $2,200-$2,250 within 6 months. Valuation stretched. Final conviction: 72% bearish. Key trade trigger: break of support."
               }
             ]
           },
           {
             "name": "Quant",
             "final_position": "BULLISH",
-            "confidence": 67,
+            "confidence": 88,
             "rounds": [
               {
                 "round": 1,
                 "position": "BULLISH",
-                "argument": "90-day realized vol at 14% \u2014 below 1Y average of 18%. Low vol regimes historically precede large directional moves. Risk/reward skewed to upside."
+                "argument": "Options market pricing 2% monthly move. Skew heavily toward calls. Systematic flows into gold ETFs historically front-run spot moves by 3-5 days."
               },
               {
                 "round": 2,
                 "position": "BULLISH",
-                "argument": "90-day realized vol at 14% \u2014 below 1Y average of 18%. Low vol regimes historically precede large directional moves. Risk/reward skewed to upside."
+                "argument": "Cross-asset signal: when DXY 30-day momentum turns negative AND VIX is above 20, gold has a 68% win rate over the following 30 days."
               },
               {
                 "round": 3,
                 "position": "BULLISH",
-                "argument": "90-day realized vol at 14% \u2014 below 1Y average of 18%. Low vol regimes historically precede large directional moves. Risk/reward skewed to upside. Maintaining bullish conviction."
+                "argument": "Historical correlation: gold rallies 73% of the time when real yields fall below -0.5%. Current regime matches Q3 2020 setup. Statistical edge favors long. Maintaining bullish conviction."
               },
               {
                 "round": 4,
                 "position": "BULLISH",
-                "argument": "Cross-asset signal: when DXY 30-day momentum turns negative AND VIX is above 20, gold has a 68% win rate over the following 30 days. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "argument": "90-day realized vol at 14% \u2014 below 1Y average of 18%. Low vol regimes historically precede large directional moves. Risk/reward skewed to upside. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Cross-asset signal: when DXY 30-day momentum turns negative AND VIX is above 20, gold has a 68% win rate over the following 30 days. Final conviction: 67% bullish. Key trade trigger: break of resistance."
+                "argument": "Cross-asset signal: when DXY 30-day momentum turns negative AND VIX is above 20, gold has a 68% win rate over the following 30 days. Final conviction: 88% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Risk Manager",
+            "final_position": "BEARISH",
+            "confidence": 82,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Geopolitical risk premium currently $80-120/oz above fundamental value. Peace resolution would cause sharp unwinding. Risk-adjusted entry requires tight stops."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Tail risk scenario: coordinated G7 gold leasing to suppress prices during dollar crisis. Low probability (5%) but catastrophic. Size accordingly. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Geopolitical risk premium currently $80-120/oz above fundamental value. Peace resolution would cause sharp unwinding. Risk-adjusted entry requires tight stops. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Correlation breakdown risk: gold-equity correlation has turned positive 3 times since 2000 during deleveraging events. Not a pure safe haven in crash scenarios. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Primary risk: unexpected Fed hawkishness. If CPI prints above 3.5% twice consecutively, gold faces $150-200 headwind. Stop discipline at $2,320 critical. Final conviction: 82% bearish. Key trade trigger: break of support."
+              }
+            ]
+          }
+        ]
+      },
+      "WTI": {
+        "label": "WTI Crude",
+        "consensus_bullish_pct": 40.0,
+        "agents_bullish": 3,
+        "agents_bearish": 4,
+        "agents_neutral": 0,
+        "top_narrative": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. F...",
+        "skeptic_counter": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target. Final convi...",
+        "sentiment_by_round": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0
+        ],
+        "agents": [
+          {
+            "name": "Macro Bull",
+            "final_position": "BULLISH",
+            "confidence": 72,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Chinese economic reopening continuing to drive demand. PMI data improving steadily. Asian crude flows north drive WTI to $85. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Chinese economic reopening continuing to drive demand. PMI data improving steadily. Asian crude flows north drive WTI to $85. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. Final conviction: 72% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Technical Bear",
+            "final_position": "BEARISH",
+            "confidence": 71,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Chart pattern showing bearish engulfing. Sell signal on break below 20-day MA. $74 is next technical target. Final conviction: 71% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Geopolitical Analyst",
+            "final_position": "BEARISH",
+            "confidence": 82,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Russia production holding despite sanctions. Venezuelan output still capped. North Sea maintenance schedules support supply tightness."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Iran nuclear talks at impasse\u2014sanctions regime holding. Any breakthrough removes significant supply uncertainty. But status quo supports crude."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Iran nuclear talks at impasse\u2014sanctions regime holding. Any breakthrough removes significant supply uncertainty. But status quo supports crude. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Gaza conflict could spread to broader regional conflagration. Oil markets will price 10-15% premium if Iran-Israel escalates. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Gaza conflict could spread to broader regional conflagration. Oil markets will price 10-15% premium if Iran-Israel escalates. Final conviction: 82% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Retail Sentiment",
+            "final_position": "BULLISH",
+            "confidence": 87,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Oil stock seasonality strong heading into summer. Retail rotating into energy sector. Momentum trade still intact."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Shipping companies and airlines raising guidance. Retail noticing. Crowded long positioning in oil ETFs hitting 6-month highs. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Shipping companies and airlines raising guidance. Retail noticing. Crowded long positioning in oil ETFs hitting 6-month highs. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Shipping companies and airlines raising guidance. Retail noticing. Crowded long positioning in oil ETFs hitting 6-month highs. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Oil stock seasonality strong heading into summer. Retail rotating into energy sector. Momentum trade still intact. Final conviction: 87% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Contrarian",
+            "final_position": "BEARISH",
+            "confidence": 65,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Geopolitical risk premium gets repriced lower when conflict doesn't escalate. Bets on Middle East war are losing trades. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Geopolitical risk premium gets repriced lower when conflict doesn't escalate. Bets on Middle East war are losing trades. Final conviction: 65% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Quant",
+            "final_position": "BEARISH",
+            "confidence": 88,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Seasonal pattern: WTI averages +4.2% in April over 20Y history. Refinery turnaround season reducing crude demand \u2014 but gasoline crack spread expanding."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Seasonal pattern: WTI averages +4.2% in April over 20Y history. Refinery turnaround season reducing crude demand \u2014 but gasoline crack spread expanding."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Seasonal pattern: WTI averages +4.2% in April over 20Y history. Refinery turnaround season reducing crude demand \u2014 but gasoline crack spread expanding. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "WTI-Brent spread compression suggests US export pressure building. SPR at 40-year low limits government buffer. Supply-side statistical edge. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Seasonal pattern: WTI averages +4.2% in April over 20Y history. Refinery turnaround season reducing crude demand \u2014 but gasoline crack spread expanding. Final conviction: 88% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Risk Manager",
+            "final_position": "BULLISH",
+            "confidence": 80,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "OPEC+ compliance risk: Libya, Kazakhstan, Iraq historically over-produce. 20% probability of compliance failure adding 500K bbl/day supply overhang."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Demand destruction risk: if WTI sustains above $90, historical evidence shows airline/trucking demand contracts within 90 days. Self-limiting rally. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "OPEC+ compliance risk: Libya, Kazakhstan, Iraq historically over-produce. 20% probability of compliance failure adding 500K bbl/day supply overhang. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Contango structure building \u2014 suggests market sees near-term oversupply. Rolling costs erode long positions in futures. Prefer spot exposure if available. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "OPEC+ compliance risk: Libya, Kazakhstan, Iraq historically over-produce. 20% probability of compliance failure adding 500K bbl/day supply overhang. Final conviction: 80% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          }
+        ]
+      },
+      "SPX": {
+        "label": "S&P 500",
+        "consensus_bullish_pct": 40.0,
+        "agents_bullish": 3,
+        "agents_bearish": 4,
+        "agents_neutral": 0,
+        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
+        "skeptic_counter": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning....",
+        "sentiment_by_round": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0
+        ],
+        "agents": [
+          {
+            "name": "Macro Bull",
+            "final_position": "BEARISH",
+            "confidence": 66,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Valuation reset lower in 2024 created opportunity. Now you're paying 20x for 8% growth. Still cheap relative to bonds at 4% risk-free."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Earnings growth accelerating. Tech mega-caps showing operating leverage. 2026 PEG ratio justified given growth profile. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target. Final conviction: 66% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Technical Bear",
+            "final_position": "BULLISH",
+            "confidence": 65,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Overbought conditions on multiple timeframes. 5% pullback would be healthy. Any miss in earnings triggers 8-10% correction."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Breadth divergence screaming. Equal-weight index lagging by 600 bps. Only mega-cap 7 driving index. Fragile rally structure. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Distribution days accumulating. Chart pattern suggests pullback to 5,250-5,300 zone on any macro headline. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning. Final conviction: 65% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Geopolitical Analyst",
+            "final_position": "BEARISH",
+            "confidence": 71,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "China tensions simmering. Tech sector vulnerability to Taiwan escalation is asymmetric. Equity hedge warranted."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Rates market pricing zero recession risk. Any conflict shock could flip sentiment fast. Better to be defensive now."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Rates market pricing zero recession risk. Any conflict shock could flip sentiment fast. Better to be defensive now. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Sanctions regime hurting Tech supply chains but market ignoring. Semiconductor export restrictions becoming structural headwind. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Equity risk premium too low given geopolitical fragmentation. Taiwan, Ukraine, Middle East all elevated. Should be trading lower. Final conviction: 71% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Retail Sentiment",
+            "final_position": "BULLISH",
+            "confidence": 66,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "After two years of losses, retail finally bullish again. Capitulation bottom was in. New rally leg should attract more buyers. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Retail FOMO on mega-cap stocks reaching fever pitch. Everyone loaded up on NVDA, MSFT, TSLA. Breadth collapse reflects crowding. Final conviction: 66% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Contrarian",
+            "final_position": "BEARISH",
+            "confidence": 70,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "If earnings disappoint even slightly, multiple compression takes S&P 10-12% lower. Valuation assumes perfection. Risky near highs."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "If earnings disappoint even slightly, multiple compression takes S&P 10-12% lower. Valuation assumes perfection. Risky near highs."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Margin debt elevated again. Leverage will be forced to unwind on any volatility spike. Crash risk elevated. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Margin debt elevated again. Leverage will be forced to unwind on any volatility spike. Crash risk elevated. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Economic data has been slowing. Market not discounting recession risk properly. Mega-cap strength masking weakness. Final conviction: 70% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Quant",
+            "final_position": "BULLISH",
+            "confidence": 85,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Earnings revision breadth at -15%. Forward P/E at 21x \u2014 1 SD above 20Y mean. Rate-adjusted valuation (equity risk premium) at 15Y low."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Systematic positioning: CTA exposure near max long. Risk parity funds at high equity weight. Any vol spike triggers mechanical de-risking. This pullback presents opportunity."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Systematic positioning: CTA exposure near max long. Risk parity funds at high equity weight. Any vol spike triggers mechanical de-risking. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Put/call ratio collapsed to 0.65. Extreme complacency historically precedes 5-8% corrections within 30 days. Vol surface pricing in continued calm. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Put/call ratio collapsed to 0.65. Extreme complacency historically precedes 5-8% corrections within 30 days. Vol surface pricing in continued calm. Final conviction: 85% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Risk Manager",
+            "final_position": "BEARISH",
+            "confidence": 79,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Pension fund rebalancing: end-of-quarter equity trim estimated at $40-60B. Systematic selling pressure over next 5 trading days."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Credit spread early warning: HY spreads widening 50bps over 30 days historically precedes equity correction by 4-6 weeks. Monitor IG and HY spreads."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Pension fund rebalancing: end-of-quarter equity trim estimated at $40-60B. Systematic selling pressure over next 5 trading days. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Pension fund rebalancing: end-of-quarter equity trim estimated at $40-60B. Systematic selling pressure over next 5 trading days. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Liquidity risk: market depth in S&P futures at 40% of pre-2022 levels. Thin markets amplify moves. Gap risk elevated on macro surprises. Final conviction: 79% bearish. Key trade trigger: break of support."
+              }
+            ]
+          }
+        ]
+      },
+      "NASDAQ": {
+        "label": "NASDAQ",
+        "consensus_bullish_pct": 59.0,
+        "agents_bullish": 3,
+        "agents_bearish": 2,
+        "agents_neutral": 2,
+        "top_narrative": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premiu...",
+        "skeptic_counter": "QQQ options show dealer short build. Options market positioning typical of mean reversion. 5-7% pullback likely. Final c...",
+        "sentiment_by_round": [
+          59.0,
+          59.0,
+          59.0,
+          59.0,
+          59.0
+        ],
+        "agents": [
+          {
+            "name": "Macro Bull",
+            "final_position": "BULLISH",
+            "confidence": 79,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving Tech upside."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Fed pivot to cutting rates is Nasdaq tailor-made. Growth stocks outperform after rate cuts. 2026 could be a screamer."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premium warranted. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving Tech upside. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Valuations reflect genuine technology revolution. Software margins 40-50% higher than historical average. Quality premium warranted. Final conviction: 79% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Technical Bear",
+            "final_position": "BULLISH",
+            "confidence": 65,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Semiconductor index rolling over despite chip strength narrative. SOX index lagging Nasdaq significantly. Breadth deteriorating."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "QQQ options show dealer short build. Options market positioning typical of mean reversion. 5-7% pullback likely."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Nasdaq chart shows topping behavior. Lower highs on daily despite higher closes. Deteriorating momentum setup. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Resistance at 18,500 has failed twice. Next test likely to break down toward 17,800-18,000 support zone. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "QQQ options show dealer short build. Options market positioning typical of mean reversion. 5-7% pullback likely. Final conviction: 65% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Geopolitical Analyst",
+            "final_position": "BEARISH",
+            "confidence": 83,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Military tensions create secular Tech demand (defense spending). But short-term headline risk remains asymmetric to upside."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Chip export restrictions already baked in but could tighten further. Tech supply chains need diversification that takes years. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Cyber war risk elevated. Power grid attacks, data breaches could spike volatility. Tech hardware unaffected but sentiment fragile. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Military tensions create secular Tech demand (defense spending). But short-term headline risk remains asymmetric to upside. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Chip export restrictions already baked in but could tighten further. Tech supply chains need diversification that takes years. Final conviction: 83% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Retail Sentiment",
+            "final_position": "BULLISH",
+            "confidence": 85,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Options market showing retail buying call spreads. New retail enthusiasm for Tech could extend rally meaningfully."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Social media sentiment on meme stocks rebounding. Retail risk appetite returning. Could run to 19,000+ on momentum alone."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Social media sentiment on meme stocks rebounding. Retail risk appetite returning. Could run to 19,000+ on momentum alone. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Social media sentiment on meme stocks rebounding. Retail risk appetite returning. Could run to 19,000+ on momentum alone. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Options market showing retail buying call spreads. New retail enthusiasm for Tech could extend rally meaningfully. Final conviction: 85% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Contrarian",
+            "final_position": "BEARISH",
+            "confidence": 80,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Market ignoring valuation risk. Beta to duration\u2014when 10-year hits 5%, Tech faces headwind. Defensive positioning warranted."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Market ignoring valuation risk. Beta to duration\u2014when 10-year hits 5%, Tech faces headwind. Defensive positioning warranted. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Mega-cap Tech dominance leads to concentration risk. When rotation happens, it will be violent. Short Nasdaq, long small caps. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Tech valuations still expensive even after rally. Paying 30x earnings for 10% growth is not attractive at this rate of return. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "AI capex cycle unsustainable without proof of ROI. If mega-cap tech fails to monetize AI, 40% downside comes fast. Final conviction: 80% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Quant",
+            "final_position": "NEUTRAL",
+            "confidence": 68,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "NEUTRAL",
+                "argument": "NDX-SPX ratio at 1.8x \u2014 near 3Y high. Historically mean-reverts with NASDAQ underperforming. Rotation risk real."
+              },
+              {
+                "round": 2,
+                "position": "NEUTRAL",
+                "argument": "Semis (SOX) rolling over \u2014 historically leads NASDAQ by 6-8 weeks. AI capex cycle showing first signs of digestion in supply chain data."
+              },
+              {
+                "round": 3,
+                "position": "NEUTRAL",
+                "argument": "Options skew in QQQ: 25-delta put vol 4pts above call vol. Institutional hedge demand rising. Smart money protecting gains. Balanced view warranted here."
+              },
+              {
+                "round": 4,
+                "position": "NEUTRAL",
+                "argument": "Options skew in QQQ: 25-delta put vol 4pts above call vol. Institutional hedge demand rising. Smart money protecting gains. Stress test shows wide range of outcomes: -12% to +15% plausible."
+              },
+              {
+                "round": 5,
+                "position": "NEUTRAL",
+                "argument": "Options skew in QQQ: 25-delta put vol 4pts above call vol. Institutional hedge demand rising. Smart money protecting gains. Final conviction: 68% on balanced view. Monitor both directions."
+              }
+            ]
+          },
+          {
+            "name": "Risk Manager",
+            "final_position": "NEUTRAL",
+            "confidence": 50,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "NEUTRAL",
+                "argument": "Short interest at multi-year low: 1.2% of float on average. No short-covering fuel for further rally. Asymmetric risk to downside."
+              },
+              {
+                "round": 2,
+                "position": "NEUTRAL",
+                "argument": "AI capex cycle risk: hyperscaler CapEx totaling $350B in 2026. If ROI underwhelms by Q2 earnings, narrative shift could be violent. Concentration + sentiment = amplified downside."
+              },
+              {
+                "round": 3,
+                "position": "NEUTRAL",
+                "argument": "Single-stock concentration in top 5 holdings creates idiosyncratic risk. Any regulatory action against MSFT, GOOGL, or AAPL creates index-level impact. Balanced view warranted here."
+              },
+              {
+                "round": 4,
+                "position": "NEUTRAL",
+                "argument": "AI capex cycle risk: hyperscaler CapEx totaling $350B in 2026. If ROI underwhelms by Q2 earnings, narrative shift could be violent. Concentration + sentiment = amplified downside. Stress test shows wide range of outcomes: -12% to +15% plausible."
+              },
+              {
+                "round": 5,
+                "position": "NEUTRAL",
+                "argument": "Short interest at multi-year low: 1.2% of float on average. No short-covering fuel for further rally. Asymmetric risk to downside. Final conviction: 50% on balanced view. Monitor both directions."
+              }
+            ]
+          }
+        ]
+      },
+      "BTC": {
+        "label": "Bitcoin",
+        "consensus_bullish_pct": 41.0,
+        "agents_bullish": 2,
+        "agents_bearish": 3,
+        "agents_neutral": 2,
+        "top_narrative": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $10...",
+        "skeptic_counter": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bi...",
+        "sentiment_by_round": [
+          51.0,
+          41.0,
+          41.0,
+          41.0,
+          41.0
+        ],
+        "agents": [
+          {
+            "name": "Macro Bull",
+            "final_position": "NEUTRAL",
+            "confidence": 75,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $100k+ incoming."
+              },
+              {
+                "round": 2,
+                "position": "NEUTRAL",
+                "argument": "Inflation fears resurfacing. Bitcoin narrative as inflation hedge gaining traction. Store of value thesis intact despite recent macro calm."
+              },
+              {
+                "round": 3,
+                "position": "NEUTRAL",
+                "argument": "Inflation fears resurfacing. Bitcoin narrative as inflation hedge gaining traction. Store of value thesis intact despite recent macro calm. Balanced view warranted here."
+              },
+              {
+                "round": 4,
+                "position": "NEUTRAL",
+                "argument": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulating. Structural bid. Stress test shows wide range of outcomes: -12% to +15% plausible."
+              },
+              {
+                "round": 5,
+                "position": "NEUTRAL",
+                "argument": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $100k+ incoming. Final conviction: 75% on balanced view. Monitor both directions."
+              }
+            ]
+          },
+          {
+            "name": "Technical Bear",
+            "final_position": "BEARISH",
+            "confidence": 87,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "On-chain metrics show whale distribution. Large holders trimming positions. Dead cat bounce setup. Be careful here."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Resistance at $75k being tested but failing. Volume profile shows weak conviction. Sell-off could cascade to $50k support. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "On-chain metrics show whale distribution. Large holders trimming positions. Dead cat bounce setup. Be careful here. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bitcoin. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bitcoin. Final conviction: 87% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Geopolitical Analyst",
+            "final_position": "BULLISH",
+            "confidence": 85,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "Cyber warfare risk creates volatility. But Bitcoin as digital gold becomes more valuable in uncertain geopolitical environment."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "Cyber warfare risk creates volatility. But Bitcoin as digital gold becomes more valuable in uncertain geopolitical environment."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Regulatory risk in US still overhang. Any harsh crypto regulations could trigger 20-30% pullback. Watch SEC action carefully. Final conviction: 85% bullish. Key trade trigger: break of resistance."
+              }
+            ]
+          },
+          {
+            "name": "Retail Sentiment",
+            "final_position": "BEARISH",
+            "confidence": 70,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Tiktok creators pounding the table on Bitcoin. New retail entrants buying tops. Classic bubble warning signs present."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Bitcoin hype reaching fever pitch on social media. Every retail trader calling for six figures by year-end. FOMO massive. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Bitcoin hype reaching fever pitch on social media. Every retail trader calling for six figures by year-end. FOMO massive. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Tiktok creators pounding the table on Bitcoin. New retail entrants buying tops. Classic bubble warning signs present. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Retail losing money on leverage trades. Every pullback gets bought on dip. Retail conviction still strong but leverage risky. Final conviction: 70% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Contrarian",
+            "final_position": "BEARISH",
+            "confidence": 70,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BEARISH",
+                "argument": "Halving is priced in already. New ATH before halving is unusual. Dump likely after the 'sell the news' event. Target $50k."
+              },
+              {
+                "round": 2,
+                "position": "BEARISH",
+                "argument": "Halving is priced in already. New ATH before halving is unusual. Dump likely after the 'sell the news' event. Target $50k. However, near-term consolidation likely."
+              },
+              {
+                "round": 3,
+                "position": "BEARISH",
+                "argument": "Bitcoin utility case still unproven. Using Bitcoin to pay for coffee costs more in fees than it saves. Speculative asset only. Bearish thesis intact."
+              },
+              {
+                "round": 4,
+                "position": "BEARISH",
+                "argument": "Halving is priced in already. New ATH before halving is unusual. Dump likely after the 'sell the news' event. Target $50k. Stress test upside: if sentiment shift occurs, resistance at +8%."
+              },
+              {
+                "round": 5,
+                "position": "BEARISH",
+                "argument": "Halving is priced in already. New ATH before halving is unusual. Dump likely after the 'sell the news' event. Target $50k. Final conviction: 70% bearish. Key trade trigger: break of support."
+              }
+            ]
+          },
+          {
+            "name": "Quant",
+            "final_position": "BULLISH",
+            "confidence": 85,
+            "rounds": [
+              {
+                "round": 1,
+                "position": "BULLISH",
+                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0."
+              },
+              {
+                "round": 2,
+                "position": "BULLISH",
+                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0."
+              },
+              {
+                "round": 3,
+                "position": "BULLISH",
+                "argument": "Hash rate at ATH. Miner capitulation absent. SOPR above 1.0 \u2014 coins being spent at profit, no panic selling detected. Maintaining bullish conviction."
+              },
+              {
+                "round": 4,
+                "position": "BULLISH",
+                "argument": "Realized vol at 45% vs implied vol 52%. Elevated vol risk premium suggests market makers are hedging \u2014 historically a contra-indicator for further downside. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+              },
+              {
+                "round": 5,
+                "position": "BULLISH",
+                "argument": "Hash rate at ATH. Miner capitulation absent. SOPR above 1.0 \u2014 coins being spent at profit, no panic selling detected. Final conviction: 85% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
@@ -2496,996 +3462,28 @@
             "rounds": [
               {
                 "round": 1,
-                "position": "BEARISH",
-                "argument": "Correlation breakdown risk: gold-equity correlation has turned positive 3 times since 2000 during deleveraging events. Not a pure safe haven in crash scenarios."
-              },
-              {
-                "round": 2,
                 "position": "NEUTRAL",
-                "argument": "Correlation breakdown risk: gold-equity correlation has turned positive 3 times since 2000 during deleveraging events. Not a pure safe haven in crash scenarios. However, near-term consolidation likely."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Primary risk: unexpected Fed hawkishness. If CPI prints above 3.5% twice consecutively, gold faces $150-200 headwind. Stop discipline at $2,320 critical. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Correlation breakdown risk: gold-equity correlation has turned positive 3 times since 2000 during deleveraging events. Not a pure safe haven in crash scenarios. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Geopolitical risk premium currently $80-120/oz above fundamental value. Peace resolution would cause sharp unwinding. Risk-adjusted entry requires tight stops. Final conviction: 55% on balanced view. Monitor both directions."
-              }
-            ]
-          }
-        ]
-      },
-      "WTI": {
-        "label": "WTI Crude",
-        "consensus_bullish_pct": 39.0,
-        "agents_bullish": 3,
-        "agents_bearish": 4,
-        "agents_neutral": 0,
-        "top_narrative": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. F...",
-        "skeptic_counter": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 suppo...",
-        "sentiment_by_round": [
-          39.0,
-          39.0,
-          39.0,
-          39.0,
-          39.0
-        ],
-        "agents": [
-          {
-            "name": "Macro Bull",
-            "final_position": "BEARISH",
-            "confidence": 88,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Chinese economic reopening continuing to drive demand. PMI data improving steadily. Asian crude flows north drive WTI to $85."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "OPEC+ cuts holding strong. Supply tightness supports $80+ WTI through summer driving season and hurricane risk."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Geopolitical risk in Red Sea keeps shipping costs elevated and supply uncertain. This premium justifies $80+ baseline. Final conviction: 88% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Technical Bear",
-            "final_position": "BEARISH",
-            "confidence": 84,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Divergence between WTI and Brent widening. WTI technicals weakening while Brent holds firm. Mean reversion toward $76-$77 likely."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Volume declining into recent rallies. MACD rolling over on daily chart. Lower high setup\u2014pullback to $75 before continuation."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 support. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Volume declining into recent rallies. MACD rolling over on daily chart. Lower high setup\u2014pullback to $75 before continuation. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Resistance at $82.50 has become a ceiling. Three failed breaks in past four weeks. Breakdown below $78 targets $74 support. Final conviction: 84% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Geopolitical Analyst",
-            "final_position": "BULLISH",
-            "confidence": 85,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Russia production holding despite sanctions. Venezuelan output still capped. North Sea maintenance schedules support supply tightness."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Gaza conflict could spread to broader regional conflagration. Oil markets will price 10-15% premium if Iran-Israel escalates. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Gaza conflict could spread to broader regional conflagration. Oil markets will price 10-15% premium if Iran-Israel escalates. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Iran nuclear talks at impasse\u2014sanctions regime holding. Any breakthrough removes significant supply uncertainty. But status quo supports crude. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Houthi attacks remain unpredictable but periodic. Risk premium of $3-4/bbl justified until Red Sea stabilizes. Final conviction: 85% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Retail Sentiment",
-            "final_position": "BULLISH",
-            "confidence": 66,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Gasoline prices at pump ticking up. Consumer anxiety returning. Could trigger demand destruction if WTI stays $80+."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Gasoline prices at pump ticking up. Consumer anxiety returning. Could trigger demand destruction if WTI stays $80+. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Gasoline prices at pump ticking up. Consumer anxiety returning. Could trigger demand destruction if WTI stays $80+. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Shipping companies and airlines raising guidance. Retail noticing. Crowded long positioning in oil ETFs hitting 6-month highs. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Oil stock seasonality strong heading into summer. Retail rotating into energy sector. Momentum trade still intact. Final conviction: 66% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Contrarian",
-            "final_position": "BEARISH",
-            "confidence": 85,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Geopolitical risk premium gets repriced lower when conflict doesn't escalate. Bets on Middle East war are losing trades."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Everyone is bullish crude. OPEC cuts already priced in. Supply destruction from recession would hit demand anyway. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Demand destruction risk underestimated. If US recession hits, crude cracks to $60. Currently no buffer for bad macro data. Final conviction: 85% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Quant",
-            "final_position": "BULLISH",
-            "confidence": 70,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "WTI-Brent spread compression suggests US export pressure building. SPR at 40-year low limits government buffer. Supply-side statistical edge."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "EIA inventory draw of 3.8M bbls vs expectations of 1.2M. 3-week trend of beats. Statistical momentum building. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "EIA inventory draw of 3.8M bbls vs expectations of 1.2M. 3-week trend of beats. Statistical momentum building. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Seasonal pattern: WTI averages +4.2% in April over 20Y history. Refinery turnaround season reducing crude demand \u2014 but gasoline crack spread expanding. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "EIA inventory draw of 3.8M bbls vs expectations of 1.2M. 3-week trend of beats. Statistical momentum building. Final conviction: 70% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Risk Manager",
-            "final_position": "BEARISH",
-            "confidence": 77,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Demand destruction risk: if WTI sustains above $90, historical evidence shows airline/trucking demand contracts within 90 days. Self-limiting rally."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Contango structure building \u2014 suggests market sees near-term oversupply. Rolling costs erode long positions in futures. Prefer spot exposure if available."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Demand destruction risk: if WTI sustains above $90, historical evidence shows airline/trucking demand contracts within 90 days. Self-limiting rally. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Geopolitical risk premium double-edged: Hormuz closure scenario priced 40% in options. Resolution removes premium faster than escalation adds it. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "OPEC+ compliance risk: Libya, Kazakhstan, Iraq historically over-produce. 20% probability of compliance failure adding 500K bbl/day supply overhang. Final conviction: 77% bearish. Key trade trigger: break of support."
-              }
-            ]
-          }
-        ]
-      },
-      "SPX": {
-        "label": "S&P 500",
-        "consensus_bullish_pct": 44.0,
-        "agents_bullish": 3,
-        "agents_bearish": 3,
-        "agents_neutral": 1,
-        "top_narrative": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target...",
-        "skeptic_counter": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning....",
-        "sentiment_by_round": [
-          44.0,
-          44.0,
-          44.0,
-          44.0,
-          44.0
-        ],
-        "agents": [
-          {
-            "name": "Macro Bull",
-            "final_position": "BEARISH",
-            "confidence": 82,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Valuation reset lower in 2024 created opportunity. Now you're paying 20x for 8% growth. Still cheap relative to bonds at 4% risk-free."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Earnings growth accelerating. Tech mega-caps showing operating leverage. 2026 PEG ratio justified given growth profile."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Passive flows and buyback calendar strong through Q2. Corporate America still confident on growth. Bid under equities intact. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Earnings growth accelerating. Tech mega-caps showing operating leverage. 2026 PEG ratio justified given growth profile. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Soft landing scenario now the consensus. Fed will cut rates in Q3. Risk-off premium should decompress. S&P 5,500+ target. Final conviction: 82% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Technical Bear",
-            "final_position": "BULLISH",
-            "confidence": 84,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Overbought conditions on multiple timeframes. 5% pullback would be healthy. Any miss in earnings triggers 8-10% correction. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Breadth divergence screaming. Equal-weight index lagging by 600 bps. Only mega-cap 7 driving index. Fragile rally structure. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Breadth divergence screaming. Equal-weight index lagging by 600 bps. Only mega-cap 7 driving index. Fragile rally structure. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Resistance at 5,500 has been tested twice with no follow-through. VIX compression near 12 year lows\u2014complacency warning. Final conviction: 84% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Geopolitical Analyst",
-            "final_position": "NEUTRAL",
-            "confidence": 50,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "NEUTRAL",
-                "argument": "Rates market pricing zero recession risk. Any conflict shock could flip sentiment fast. Better to be defensive now."
-              },
-              {
-                "round": 2,
-                "position": "NEUTRAL",
-                "argument": "China tensions simmering. Tech sector vulnerability to Taiwan escalation is asymmetric. Equity hedge warranted."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Rates market pricing zero recession risk. Any conflict shock could flip sentiment fast. Better to be defensive now. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Equity risk premium too low given geopolitical fragmentation. Taiwan, Ukraine, Middle East all elevated. Should be trading lower. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Sanctions regime hurting Tech supply chains but market ignoring. Semiconductor export restrictions becoming structural headwind. Final conviction: 50% on balanced view. Monitor both directions."
-              }
-            ]
-          },
-          {
-            "name": "Retail Sentiment",
-            "final_position": "BEARISH",
-            "confidence": 80,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Retail FOMO on mega-cap stocks reaching fever pitch. Everyone loaded up on NVDA, MSFT, TSLA. Breadth collapse reflects crowding."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Retail FOMO on mega-cap stocks reaching fever pitch. Everyone loaded up on NVDA, MSFT, TSLA. Breadth collapse reflects crowding. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Financial influencers pounding the table on Tech AI narrative. Retail momentum trade overdone. Correction coming. Final conviction: 80% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Contrarian",
-            "final_position": "BEARISH",
-            "confidence": 66,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "If earnings disappoint even slightly, multiple compression takes S&P 10-12% lower. Valuation assumes perfection. Risky near highs."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Margin debt elevated again. Leverage will be forced to unwind on any volatility spike. Crash risk elevated."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "If earnings disappoint even slightly, multiple compression takes S&P 10-12% lower. Valuation assumes perfection. Risky near highs. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Sentiment indicators suggest fade. Put/call ratios at extremes. Everyone bullish. Classic reversal setup. S&P 5,200 target. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Margin debt elevated again. Leverage will be forced to unwind on any volatility spike. Crash risk elevated. Final conviction: 66% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Quant",
-            "final_position": "BULLISH",
-            "confidence": 77,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Breadth deteriorating: only 38% of S&P 500 components above 50-day MA. Historical analog: when breadth falls below 40% mid-bull, index corrects 8-12% before resuming."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Systematic positioning: CTA exposure near max long. Risk parity funds at high equity weight. Any vol spike triggers mechanical de-risking. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Earnings revision breadth at -15%. Forward P/E at 21x \u2014 1 SD above 20Y mean. Rate-adjusted valuation (equity risk premium) at 15Y low. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Earnings revision breadth at -15%. Forward P/E at 21x \u2014 1 SD above 20Y mean. Rate-adjusted valuation (equity risk premium) at 15Y low. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Systematic positioning: CTA exposure near max long. Risk parity funds at high equity weight. Any vol spike triggers mechanical de-risking. Final conviction: 77% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Risk Manager",
-            "final_position": "BULLISH",
-            "confidence": 84,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Liquidity risk: market depth in S&P futures at 40% of pre-2022 levels. Thin markets amplify moves. Gap risk elevated on macro surprises."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Concentration risk: top 10 names = 35% of index. If any 2-3 miss earnings, index impact outsized vs historical norms. Earnings season binary risk. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Credit spread early warning: HY spreads widening 50bps over 30 days historically precedes equity correction by 4-6 weeks. Monitor IG and HY spreads. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Concentration risk: top 10 names = 35% of index. If any 2-3 miss earnings, index impact outsized vs historical norms. Earnings season binary risk. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Pension fund rebalancing: end-of-quarter equity trim estimated at $40-60B. Systematic selling pressure over next 5 trading days. Final conviction: 84% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          }
-        ]
-      },
-      "NASDAQ": {
-        "label": "NASDAQ",
-        "consensus_bullish_pct": 40.0,
-        "agents_bullish": 2,
-        "agents_bearish": 3,
-        "agents_neutral": 2,
-        "top_narrative": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving ...",
-        "skeptic_counter": "Resistance at 18,500 has failed twice. Next test likely to break down toward 17,800-18,000 support zone. Final convictio...",
-        "sentiment_by_round": [
-          31.0,
-          40.0,
-          40.0,
-          40.0,
-          40.0
-        ],
-        "agents": [
-          {
-            "name": "Macro Bull",
-            "final_position": "BEARISH",
-            "confidence": 76,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "AI adoption accelerating. Cloud capex cycles supporting mega-cap Tech profitability. Next 3-5 years look strong."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "AI adoption accelerating. Cloud capex cycles supporting mega-cap Tech profitability. Next 3-5 years look strong."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving Tech upside. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "AI adoption accelerating. Cloud capex cycles supporting mega-cap Tech profitability. Next 3-5 years look strong. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving Tech upside. Final conviction: 76% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Technical Bear",
-            "final_position": "NEUTRAL",
-            "confidence": 66,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "QQQ options show dealer short build. Options market positioning typical of mean reversion. 5-7% pullback likely."
-              },
-              {
-                "round": 2,
-                "position": "NEUTRAL",
-                "argument": "Nasdaq chart shows topping behavior. Lower highs on daily despite higher closes. Deteriorating momentum setup."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Nasdaq chart shows topping behavior. Lower highs on daily despite higher closes. Deteriorating momentum setup. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Semiconductor index rolling over despite chip strength narrative. SOX index lagging Nasdaq significantly. Breadth deteriorating. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Resistance at 18,500 has failed twice. Next test likely to break down toward 17,800-18,000 support zone. Final conviction: 66% on balanced view. Monitor both directions."
-              }
-            ]
-          },
-          {
-            "name": "Geopolitical Analyst",
-            "final_position": "BULLISH",
-            "confidence": 79,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Taiwan is 92% of advanced chip supply. Any China escalation creates supply catastrophe. Nasdaq vulnerable to single headline."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Military tensions create secular Tech demand (defense spending). But short-term headline risk remains asymmetric to upside. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Military tensions create secular Tech demand (defense spending). But short-term headline risk remains asymmetric to upside. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Military tensions create secular Tech demand (defense spending). But short-term headline risk remains asymmetric to upside. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Chip export restrictions already baked in but could tighten further. Tech supply chains need diversification that takes years. Final conviction: 79% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Retail Sentiment",
-            "final_position": "BEARISH",
-            "confidence": 74,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Options market showing retail buying call spreads. New retail enthusiasm for Tech could extend rally meaningfully."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "AI hype driving retail into Tech again after the losses of 2022. Everyone believes Nvidia, Tesla, Broadcom are going to 10x."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Social media sentiment on meme stocks rebounding. Retail risk appetite returning. Could run to 19,000+ on momentum alone. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Options market showing retail buying call spreads. New retail enthusiasm for Tech could extend rally meaningfully. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Social media sentiment on meme stocks rebounding. Retail risk appetite returning. Could run to 19,000+ on momentum alone. Final conviction: 74% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Contrarian",
-            "final_position": "BEARISH",
-            "confidence": 82,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Market ignoring valuation risk. Beta to duration\u2014when 10-year hits 5%, Tech faces headwind. Defensive positioning warranted."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Market ignoring valuation risk. Beta to duration\u2014when 10-year hits 5%, Tech faces headwind. Defensive positioning warranted."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Tech valuations still expensive even after rally. Paying 30x earnings for 10% growth is not attractive at this rate of return. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Mega-cap Tech dominance leads to concentration risk. When rotation happens, it will be violent. Short Nasdaq, long small caps. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "AI capex cycle unsustainable without proof of ROI. If mega-cap tech fails to monetize AI, 40% downside comes fast. Final conviction: 82% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Quant",
-            "final_position": "BULLISH",
-            "confidence": 82,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Options skew in QQQ: 25-delta put vol 4pts above call vol. Institutional hedge demand rising. Smart money protecting gains."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "NDX-SPX ratio at 1.8x \u2014 near 3Y high. Historically mean-reverts with NASDAQ underperforming. Rotation risk real. This pullback presents opportunity."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "NDX-SPX ratio at 1.8x \u2014 near 3Y high. Historically mean-reverts with NASDAQ underperforming. Rotation risk real. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Mag-7 concentration at 33% of index weight. Historical analog: when top-7 concentration exceeds 30%, subsequent 12-month returns average +3% vs +14% for equal-weight. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Semis (SOX) rolling over \u2014 historically leads NASDAQ by 6-8 weeks. AI capex cycle showing first signs of digestion in supply chain data. Final conviction: 82% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Risk Manager",
-            "final_position": "NEUTRAL",
-            "confidence": 69,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "NEUTRAL",
-                "argument": "Short interest at multi-year low: 1.2% of float on average. No short-covering fuel for further rally. Asymmetric risk to downside."
-              },
-              {
-                "round": 2,
-                "position": "NEUTRAL",
-                "argument": "Single-stock concentration in top 5 holdings creates idiosyncratic risk. Any regulatory action against MSFT, GOOGL, or AAPL creates index-level impact."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Single-stock concentration in top 5 holdings creates idiosyncratic risk. Any regulatory action against MSFT, GOOGL, or AAPL creates index-level impact. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Single-stock concentration in top 5 holdings creates idiosyncratic risk. Any regulatory action against MSFT, GOOGL, or AAPL creates index-level impact. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "AI capex cycle risk: hyperscaler CapEx totaling $350B in 2026. If ROI underwhelms by Q2 earnings, narrative shift could be violent. Concentration + sentiment = amplified downside. Final conviction: 69% on balanced view. Monitor both directions."
-              }
-            ]
-          }
-        ]
-      },
-      "BTC": {
-        "label": "Bitcoin",
-        "consensus_bullish_pct": 66.0,
-        "agents_bullish": 4,
-        "agents_bearish": 1,
-        "agents_neutral": 2,
-        "top_narrative": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulatin...",
-        "skeptic_counter": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bi...",
-        "sentiment_by_round": [
-          66.0,
-          66.0,
-          66.0,
-          66.0,
-          66.0
-        ],
-        "agents": [
-          {
-            "name": "Macro Bull",
-            "final_position": "NEUTRAL",
-            "confidence": 51,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "NEUTRAL",
-                "argument": "Inflation fears resurfacing. Bitcoin narrative as inflation hedge gaining traction. Store of value thesis intact despite recent macro calm."
-              },
-              {
-                "round": 2,
-                "position": "NEUTRAL",
-                "argument": "Inflation fears resurfacing. Bitcoin narrative as inflation hedge gaining traction. Store of value thesis intact despite recent macro calm."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $100k+ incoming. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Bitcoin halving in April removes 50% of miner inflation. Historical data shows 10-12 month lag to price recognition. $100k+ incoming. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Institutional adoption accelerating. Spot ETF approval proved institutional demand. MicroStrategy, Blackrock accumulating. Structural bid. Final conviction: 51% on balanced view. Monitor both directions."
-              }
-            ]
-          },
-          {
-            "name": "Technical Bear",
-            "final_position": "BULLISH",
-            "confidence": 67,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Resistance at $75k being tested but failing. Volume profile shows weak conviction. Sell-off could cascade to $50k support."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "On-chain metrics show whale distribution. Large holders trimming positions. Dead cat bounce setup. Be careful here."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "On-chain metrics show whale distribution. Large holders trimming positions. Dead cat bounce setup. Be careful here. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Resistance at $75k being tested but failing. Volume profile shows weak conviction. Sell-off could cascade to $50k support. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Bitcoin dominance declining. Altcoin strength suggests Bitcoin weakness coming. Rotation into altcoins = risk-off for Bitcoin. Final conviction: 67% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Geopolitical Analyst",
-            "final_position": "NEUTRAL",
-            "confidence": 54,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "NEUTRAL",
-                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable."
-              },
-              {
-                "round": 2,
-                "position": "NEUTRAL",
-                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable."
-              },
-              {
-                "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Regulatory risk in US still overhang. Any harsh crypto regulations could trigger 20-30% pullback. Watch SEC action carefully. Balanced view warranted here."
-              },
-              {
-                "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable. Stress test shows wide range of outcomes: -12% to +15% plausible."
-              },
-              {
-                "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Sanctions regime driving BRICS nations into crypto. Bitcoin as reserve asset narrative gaining credibility. $80k+ achievable. Final conviction: 54% on balanced view. Monitor both directions."
-              }
-            ]
-          },
-          {
-            "name": "Retail Sentiment",
-            "final_position": "BULLISH",
-            "confidence": 72,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Tiktok creators pounding the table on Bitcoin. New retail entrants buying tops. Classic bubble warning signs present."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "Bitcoin hype reaching fever pitch on social media. Every retail trader calling for six figures by year-end. FOMO massive."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "Tiktok creators pounding the table on Bitcoin. New retail entrants buying tops. Classic bubble warning signs present. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "Tiktok creators pounding the table on Bitcoin. New retail entrants buying tops. Classic bubble warning signs present. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Retail call buying at highs. Options markets show extreme bullish sentiment. Risk/reward asymmetric to downside at these levels. Final conviction: 72% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Contrarian",
-            "final_position": "BEARISH",
-            "confidence": 88,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BEARISH",
-                "argument": "Valuation detached from fundamentals. $72k Bitcoin requires $8 trillion+ market cap narrative. Unrealistic in current macro."
-              },
-              {
-                "round": 2,
-                "position": "BEARISH",
-                "argument": "Bitcoin utility case still unproven. Using Bitcoin to pay for coffee costs more in fees than it saves. Speculative asset only. However, near-term consolidation likely."
-              },
-              {
-                "round": 3,
-                "position": "BEARISH",
-                "argument": "Bitcoin utility case still unproven. Using Bitcoin to pay for coffee costs more in fees than it saves. Speculative asset only. Bearish thesis intact."
-              },
-              {
-                "round": 4,
-                "position": "BEARISH",
-                "argument": "Regulatory crackdown still possible. If US bans crypto, Bitcoin crashes. Risk/reward terrible at these levels. Fade the rally. Stress test upside: if sentiment shift occurs, resistance at +8%."
-              },
-              {
-                "round": 5,
-                "position": "BEARISH",
-                "argument": "Halving is priced in already. New ATH before halving is unusual. Dump likely after the 'sell the news' event. Target $50k. Final conviction: 88% bearish. Key trade trigger: break of support."
-              }
-            ]
-          },
-          {
-            "name": "Quant",
-            "final_position": "BULLISH",
-            "confidence": 73,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
-                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0."
-              },
-              {
-                "round": 3,
-                "position": "BULLISH",
-                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0. Maintaining bullish conviction."
-              },
-              {
-                "round": 4,
-                "position": "BULLISH",
-                "argument": "On-chain: exchange outflows at 6-month high. Historically precedes 15-25% rallies. MVRV ratio at 1.8 \u2014 below overheated territory of 3.0. But stress test worst-case: if macro deteriorates 50%, support at -10%."
-              },
-              {
-                "round": 5,
-                "position": "BULLISH",
-                "argument": "Realized vol at 45% vs implied vol 52%. Elevated vol risk premium suggests market makers are hedging \u2014 historically a contra-indicator for further downside. Final conviction: 73% bullish. Key trade trigger: break of resistance."
-              }
-            ]
-          },
-          {
-            "name": "Risk Manager",
-            "final_position": "BULLISH",
-            "confidence": 73,
-            "rounds": [
-              {
-                "round": 1,
-                "position": "BULLISH",
-                "argument": "Regulatory tail risk elevated: SEC and DOJ actions pending against 3 major exchanges. Binary event risk \u2014 could gap down 20-30% on adverse ruling."
-              },
-              {
-                "round": 2,
-                "position": "BULLISH",
                 "argument": "ETF outflow risk: if spot ETFs see sustained daily outflows >$500M, forced selling creates cascading pressure. Monitor daily flow data."
               },
               {
+                "round": 2,
+                "position": "NEUTRAL",
+                "argument": "Exchange solvency risk: concentration of BTC on top-3 exchanges creates systemic exposure. Cold storage allocation recommended for core positions."
+              },
+              {
                 "round": 3,
-                "position": "BULLISH",
-                "argument": "ETF outflow risk: if spot ETFs see sustained daily outflows >$500M, forced selling creates cascading pressure. Monitor daily flow data. Maintaining bullish conviction."
+                "position": "NEUTRAL",
+                "argument": "ETF outflow risk: if spot ETFs see sustained daily outflows >$500M, forced selling creates cascading pressure. Monitor daily flow data. Balanced view warranted here."
               },
               {
                 "round": 4,
-                "position": "BULLISH",
-                "argument": "Mt. Gox repayment overhang: 140K BTC to be distributed. Large holders may sell. Flow risk real over next 60 days. Position sizing critical. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "position": "NEUTRAL",
+                "argument": "Mt. Gox repayment overhang: 140K BTC to be distributed. Large holders may sell. Flow risk real over next 60 days. Position sizing critical. Stress test shows wide range of outcomes: -12% to +15% plausible."
               },
               {
                 "round": 5,
-                "position": "BULLISH",
-                "argument": "ETF outflow risk: if spot ETFs see sustained daily outflows >$500M, forced selling creates cascading pressure. Monitor daily flow data. Final conviction: 73% bullish. Key trade trigger: break of resistance."
+                "position": "NEUTRAL",
+                "argument": "Regulatory tail risk elevated: SEC and DOJ actions pending against 3 major exchanges. Binary event risk \u2014 could gap down 20-30% on adverse ruling. Final conviction: 55% on balanced view. Monitor both directions."
               }
             ]
           }
@@ -3493,61 +3491,61 @@
       },
       "ETH": {
         "label": "Ethereum",
-        "consensus_bullish_pct": 84.0,
-        "agents_bullish": 5,
-        "agents_bearish": 0,
+        "consensus_bullish_pct": 68.0,
+        "agents_bullish": 4,
+        "agents_bearish": 1,
         "agents_neutral": 2,
-        "top_narrative": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own th...",
-        "skeptic_counter": "Options market showing dealer short positioning. Typical reversal setup. Pullback to $2,200 before next run. Final convi...",
+        "top_narrative": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation r...",
+        "skeptic_counter": "Volume declining into recent strength. MACD rolling over. Setup suggests 15-20% pullback. Shorter-term downtrend intact....",
         "sentiment_by_round": [
-          76.0,
-          84.0,
-          84.0,
-          84.0,
-          84.0
+          57.0,
+          68.0,
+          68.0,
+          68.0,
+          68.0
         ],
         "agents": [
           {
             "name": "Macro Bull",
-            "final_position": "BULLISH",
-            "confidence": 73,
+            "final_position": "BEARISH",
+            "confidence": 85,
             "rounds": [
               {
                 "round": 1,
-                "position": "BULLISH",
-                "argument": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation rerating happening."
+                "position": "BEARISH",
+                "argument": "Staking yield providing 3-4% returns. Institutional treasury management considering ETH. Structural demand building."
               },
               {
                 "round": 2,
-                "position": "BULLISH",
-                "argument": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own thesis."
+                "position": "BEARISH",
+                "argument": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own thesis. However, near-term consolidation likely."
               },
               {
                 "round": 3,
-                "position": "BULLISH",
-                "argument": "Shanghai upgrade proved staking works. Ethereum becoming more like a bond. Yield appeal extends buyer base beyond speculators. Maintaining bullish conviction."
+                "position": "BEARISH",
+                "argument": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation rerating happening. Bearish thesis intact."
               },
               {
                 "round": 4,
-                "position": "BULLISH",
-                "argument": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation rerating happening. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "position": "BEARISH",
+                "argument": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own thesis. Stress test upside: if sentiment shift occurs, resistance at +8%."
               },
               {
                 "round": 5,
-                "position": "BULLISH",
-                "argument": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own thesis. Final conviction: 73% bullish. Key trade trigger: break of resistance."
+                "position": "BEARISH",
+                "argument": "Ethereum as settlement layer gaining institutional adoption. Layer 2 scaling solutions driving real utility. Valuation rerating happening. Final conviction: 85% bearish. Key trade trigger: break of support."
               }
             ]
           },
           {
             "name": "Technical Bear",
             "final_position": "BULLISH",
-            "confidence": 90,
+            "confidence": 84,
             "rounds": [
               {
                 "round": 1,
                 "position": "BULLISH",
-                "argument": "Ethereum lagging Bitcoin despite fundamentals. Relative weakness suggests institutional preference for Bitcoin. $2,200 support test likely."
+                "argument": "Options market showing dealer short positioning. Typical reversal setup. Pullback to $2,200 before next run."
               },
               {
                 "round": 2,
@@ -3557,56 +3555,56 @@
               {
                 "round": 3,
                 "position": "BULLISH",
-                "argument": "Volume declining into recent strength. MACD rolling over. Setup suggests 15-20% pullback. Shorter-term downtrend intact. Maintaining bullish conviction."
+                "argument": "Options market showing dealer short positioning. Typical reversal setup. Pullback to $2,200 before next run. Maintaining bullish conviction."
               },
               {
                 "round": 4,
                 "position": "BULLISH",
-                "argument": "Divergence between ETH and BTC widening. Chart shows lower highs. Breakout failed at $3,500. Retest of $2,500 coming. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "argument": "Ethereum lagging Bitcoin despite fundamentals. Relative weakness suggests institutional preference for Bitcoin. $2,200 support test likely. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Options market showing dealer short positioning. Typical reversal setup. Pullback to $2,200 before next run. Final conviction: 90% bullish. Key trade trigger: break of resistance."
+                "argument": "Volume declining into recent strength. MACD rolling over. Setup suggests 15-20% pullback. Shorter-term downtrend intact. Final conviction: 84% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Geopolitical Analyst",
-            "final_position": "NEUTRAL",
-            "confidence": 62,
+            "final_position": "BULLISH",
+            "confidence": 75,
             "rounds": [
               {
                 "round": 1,
-                "position": "NEUTRAL",
-                "argument": "Cryptocurrency regulation in G7 nations could hurt Ethereum adoption. But global crypto adoption continuing regardless."
+                "position": "BULLISH",
+                "argument": "Cyber attacks on Ethereum network are ongoing risk. But security improving. Long-term fundamentals intact despite headline risk."
               },
               {
                 "round": 2,
-                "position": "NEUTRAL",
+                "position": "BULLISH",
                 "argument": "Cryptocurrency regulation in G7 nations could hurt Ethereum adoption. But global crypto adoption continuing regardless."
               },
               {
                 "round": 3,
-                "position": "NEUTRAL",
-                "argument": "Ethereum faces regulatory risk if classified as security. SEC action could crater Ethereum worse than Bitcoin. Balanced view warranted here."
+                "position": "BULLISH",
+                "argument": "Cryptocurrency regulation in G7 nations could hurt Ethereum adoption. But global crypto adoption continuing regardless. Maintaining bullish conviction."
               },
               {
                 "round": 4,
-                "position": "NEUTRAL",
-                "argument": "Cyber attacks on Ethereum network are ongoing risk. But security improving. Long-term fundamentals intact despite headline risk. Stress test shows wide range of outcomes: -12% to +15% plausible."
+                "position": "BULLISH",
+                "argument": "Ethereum faces regulatory risk if classified as security. SEC action could crater Ethereum worse than Bitcoin. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
-                "position": "NEUTRAL",
-                "argument": "Cryptocurrency regulation in G7 nations could hurt Ethereum adoption. But global crypto adoption continuing regardless. Final conviction: 62% on balanced view. Monitor both directions."
+                "position": "BULLISH",
+                "argument": "Ethereum faces regulatory risk if classified as security. SEC action could crater Ethereum worse than Bitcoin. Final conviction: 75% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Retail Sentiment",
             "final_position": "BULLISH",
-            "confidence": 79,
+            "confidence": 76,
             "rounds": [
               {
                 "round": 1,
@@ -3616,29 +3614,29 @@
               {
                 "round": 2,
                 "position": "BULLISH",
-                "argument": "Options buying suggests retail bullish. Call spreads at all-time highs. Retail trying to own more leverage with less capital."
+                "argument": "Retail FOMO on Ethereum after Bitcoin rally. Everyone loading up on ETH for leverage exposure to crypto. Momentum strong."
               },
               {
                 "round": 3,
                 "position": "BULLISH",
-                "argument": "Options buying suggests retail bullish. Call spreads at all-time highs. Retail trying to own more leverage with less capital. Maintaining bullish conviction."
+                "argument": "Social media Ethereum sentiment hitting 2-year highs. Retail convinced of yield thesis. New money flowing in. Maintaining bullish conviction."
               },
               {
                 "round": 4,
                 "position": "BULLISH",
-                "argument": "Ethereum cult growing on crypto Twitter. Religious fervor for Ethereum 2.0 narrative. Momentum extends a while longer likely. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "argument": "Retail FOMO on Ethereum after Bitcoin rally. Everyone loading up on ETH for leverage exposure to crypto. Momentum strong. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Retail FOMO on Ethereum after Bitcoin rally. Everyone loading up on ETH for leverage exposure to crypto. Momentum strong. Final conviction: 79% bullish. Key trade trigger: break of resistance."
+                "argument": "Ethereum cult growing on crypto Twitter. Religious fervor for Ethereum 2.0 narrative. Momentum extends a while longer likely. Final conviction: 76% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Contrarian",
             "final_position": "NEUTRAL",
-            "confidence": 64,
+            "confidence": 63,
             "rounds": [
               {
                 "round": 1,
@@ -3648,29 +3646,29 @@
               {
                 "round": 2,
                 "position": "NEUTRAL",
-                "argument": "Bitcoin dominance thesis suggests Ethereum underperforms. Own Bitcoin, not Ethereum. Liquidity could evaporate in risk-off. However, near-term consolidation likely."
+                "argument": "Ethereum utility case still weak. Token velocity declining. Overvalued relative to actual usage metrics. $1,500-$2,000 is fair value. However, near-term consolidation likely."
               },
               {
                 "round": 3,
                 "position": "NEUTRAL",
-                "argument": "Regulatory overhang worse for Ethereum than Bitcoin. If SEC wins lawsuit, Ethereum tanks. Binary risk/reward unacceptable. Balanced view warranted here."
+                "argument": "Ethereum utility case still weak. Token velocity declining. Overvalued relative to actual usage metrics. $1,500-$2,000 is fair value. Balanced view warranted here."
               },
               {
                 "round": 4,
                 "position": "NEUTRAL",
-                "argument": "Bitcoin dominance thesis suggests Ethereum underperforms. Own Bitcoin, not Ethereum. Liquidity could evaporate in risk-off. Stress test shows wide range of outcomes: -12% to +15% plausible."
+                "argument": "Ethereum utility case still weak. Token velocity declining. Overvalued relative to actual usage metrics. $1,500-$2,000 is fair value. Stress test shows wide range of outcomes: -12% to +15% plausible."
               },
               {
                 "round": 5,
                 "position": "NEUTRAL",
-                "argument": "Staking yield is negative real return. If inflation reaccelerates, yield becomes 0 in real terms. Bond substitute doesn't work. Final conviction: 64% on balanced view. Monitor both directions."
+                "argument": "Staking yield is negative real return. If inflation reaccelerates, yield becomes 0 in real terms. Bond substitute doesn't work. Final conviction: 63% on balanced view. Monitor both directions."
               }
             ]
           },
           {
             "name": "Quant",
             "final_position": "BULLISH",
-            "confidence": 88,
+            "confidence": 77,
             "rounds": [
               {
                 "round": 1,
@@ -3685,49 +3683,49 @@
               {
                 "round": 3,
                 "position": "BULLISH",
-                "argument": "ETH futures basis (3-month annualized) at 8%. Healthy positive basis = organic demand, not leverage. Constructive for sustained rally. Maintaining bullish conviction."
+                "argument": "Gas fees declining \u2014 reduced network utilization. On-chain DEX volume down 35% from peak. Fundamental activity not supporting current price. Maintaining bullish conviction."
               },
               {
                 "round": 4,
                 "position": "BULLISH",
-                "argument": "Staking yield at 3.8% creates floor of institutional demand. Net supply deflationary since Merge. Long-term supply dynamics favorable. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "argument": "Gas fees declining \u2014 reduced network utilization. On-chain DEX volume down 35% from peak. Fundamental activity not supporting current price. But stress test worst-case: if macro deteriorates 50%, support at -10%."
               },
               {
                 "round": 5,
                 "position": "BULLISH",
-                "argument": "Gas fees declining \u2014 reduced network utilization. On-chain DEX volume down 35% from peak. Fundamental activity not supporting current price. Final conviction: 88% bullish. Key trade trigger: break of resistance."
+                "argument": "ETH futures basis (3-month annualized) at 8%. Healthy positive basis = organic demand, not leverage. Constructive for sustained rally. Final conviction: 77% bullish. Key trade trigger: break of resistance."
               }
             ]
           },
           {
             "name": "Risk Manager",
-            "final_position": "BULLISH",
-            "confidence": 70,
+            "final_position": "NEUTRAL",
+            "confidence": 66,
             "rounds": [
               {
                 "round": 1,
-                "position": "BULLISH",
-                "argument": "Smart contract exploit risk: $8B locked in DeFi protocols. Historical rate: 2-3 major exploits per year causing 15-30% ETH selloffs."
+                "position": "BEARISH",
+                "argument": "Bridge hack risk: cross-chain bridges hold $15B in ETH. Bridge exploits have historically caused 10-20% corrections within 48 hours."
               },
               {
                 "round": 2,
-                "position": "BULLISH",
-                "argument": "Staking concentration: top 3 validators control 35% of staked ETH. Centralization risk increasing. Potential regulatory target."
+                "position": "NEUTRAL",
+                "argument": "Bridge hack risk: cross-chain bridges hold $15B in ETH. Bridge exploits have historically caused 10-20% corrections within 48 hours. However, near-term consolidation likely."
               },
               {
                 "round": 3,
-                "position": "BULLISH",
-                "argument": "Regulatory classification risk: SEC's ETH security classification case unresolved. Adverse ruling would trigger exchange delistings and institutional exit. Maintaining bullish conviction."
+                "position": "NEUTRAL",
+                "argument": "Regulatory classification risk: SEC's ETH security classification case unresolved. Adverse ruling would trigger exchange delistings and institutional exit. Balanced view warranted here."
               },
               {
                 "round": 4,
-                "position": "BULLISH",
-                "argument": "Staking concentration: top 3 validators control 35% of staked ETH. Centralization risk increasing. Potential regulatory target. But stress test worst-case: if macro deteriorates 50%, support at -10%."
+                "position": "NEUTRAL",
+                "argument": "Bridge hack risk: cross-chain bridges hold $15B in ETH. Bridge exploits have historically caused 10-20% corrections within 48 hours. Stress test shows wide range of outcomes: -12% to +15% plausible."
               },
               {
                 "round": 5,
-                "position": "BULLISH",
-                "argument": "Regulatory classification risk: SEC's ETH security classification case unresolved. Adverse ruling would trigger exchange delistings and institutional exit. Final conviction: 70% bullish. Key trade trigger: break of resistance."
+                "position": "NEUTRAL",
+                "argument": "Regulatory classification risk: SEC's ETH security classification case unresolved. Adverse ruling would trigger exchange delistings and institutional exit. Final conviction: 66% on balanced view. Monitor both directions."
               }
             ]
           }
