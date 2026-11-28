@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-28T05:39:26.491811+00:00",
-  "fetchedDisplay": "2026-11-28 05:39 UTC",
+  "fetchedAt": "2026-11-28T14:47:39.769854+00:00",
+  "fetchedDisplay": "2026-11-28 14:47 UTC",
   "prices": {
     "XAUUSD": {
       "name": "XAUUSD",
@@ -49,7 +49,7 @@
           "close": 3639.6001
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:21.808403+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.280952+00:00"
     },
     "WTI": {
       "name": "WTI",
@@ -98,7 +98,7 @@
           "close": 83.08
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:21.900308+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.329660+00:00"
     },
     "SPX": {
       "name": "SPX",
@@ -155,7 +155,7 @@
           "close": 7297.4902
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:21.955850+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.392798+00:00"
     },
     "NASDAQ": {
       "name": "NASDAQ",
@@ -212,24 +212,25 @@
           "close": 24129.5
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.040120+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.452785+00:00"
     },
     "BTC": {
       "name": "BTC",
       "symbol": "BTC-USD",
-      "price": 59674.07,
+      "price": 59162.46,
       "prev_close": 59747.766,
-      "day_change": -73.696,
-      "day_change_pct": -0.12,
+      "day_change": -585.306,
+      "day_change_pct": -0.98,
       "high_52w": 97860.6,
       "low_52w": 55149.566,
       "intraday_high": 60164.19,
-      "intraday_low": 59694.703,
+      "intraday_low": 58906.445,
       "closes_5d": [
         59747.7656,
         60378.1992,
         60494.7109,
-        59674.0703
+        59866.3711,
+        59162.4609
       ],
       "ohlc_5d": [
         {
@@ -254,31 +255,39 @@
           "close": 60494.7109
         },
         {
+          "time": 1795737600,
+          "open": 60494.7109,
+          "high": 62104.9023,
+          "low": 58759.4688,
+          "close": 59866.3711
+        },
+        {
           "time": 1795824000,
           "open": 59866.0664,
           "high": 60164.1914,
-          "low": 59694.7031,
-          "close": 59674.0703
+          "low": 58906.4453,
+          "close": 59162.4609
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.091475+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.511140+00:00"
     },
     "ETH": {
       "name": "ETH",
       "symbol": "ETH-USD",
-      "price": 1653.94,
+      "price": 1642.9,
       "prev_close": 1677.6948,
-      "day_change": -23.7548,
-      "day_change_pct": -1.42,
+      "day_change": -34.7948,
+      "day_change_pct": -2.07,
       "high_52w": 3446.6228,
       "low_52w": 1506.5057,
       "intraday_high": 1669.1559,
-      "intraday_low": 1654.4918,
+      "intraday_low": 1634.4005,
       "closes_5d": [
         1677.6948,
         1690.769,
         1687.7418,
-        1653.9399
+        1661.0833,
+        1642.9
       ],
       "ohlc_5d": [
         {
@@ -303,14 +312,21 @@
           "close": 1687.7418
         },
         {
+          "time": 1795737600,
+          "open": 1687.7418,
+          "high": 1750.4845,
+          "low": 1633.462,
+          "close": 1661.0833
+        },
+        {
           "time": 1795824000,
           "open": 1661.0398,
           "high": 1669.1559,
-          "low": 1654.4918,
-          "close": 1653.9399
+          "low": 1634.4005,
+          "close": 1642.9
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.143891+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.571981+00:00"
     },
     "DXY": {
       "name": "DXY",
@@ -359,7 +375,7 @@
           "close": 104.01
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.198264+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.603994+00:00"
     },
     "VIX": {
       "name": "VIX",
@@ -416,7 +432,7 @@
           "close": 23.81
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.251970+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.663635+00:00"
     },
     "10Y": {
       "name": "10Y",
@@ -426,9 +442,9 @@
       "day_change": 0.024,
       "day_change_pct": 0.49,
       "high_52w": 5.364,
-      "low_52w": 3.956,
-      "intraday_high": 4.939,
-      "intraday_low": 4.884,
+      "low_52w": null,
+      "intraday_high": null,
+      "intraday_low": null,
       "closes_5d": [
         4.912,
         4.918,
@@ -473,7 +489,7 @@
           "close": 4.936
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.308084+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.713489+00:00"
     },
     "DOW": {
       "name": "DOW",
@@ -530,7 +546,7 @@
           "close": 50774.9414
         }
       ],
-      "fetchedAt": "2026-11-28T05:39:22.364591+00:00"
+      "fetchedAt": "2026-11-28T14:47:34.763887+00:00"
     }
   },
   "gold_spot": {
@@ -616,11 +632,11 @@
         "No"
       ],
       "prices": [
-        0.0345,
-        0.9655
+        0.033,
+        0.967
       ],
-      "volume": 1089045.773516,
-      "liquidity": 16785.30403,
+      "volume": 1089458.093516,
+      "liquidity": 18630.88244,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by"
     },
@@ -701,11 +717,11 @@
         "No"
       ],
       "prices": [
-        0.019,
-        0.981
+        0.0185,
+        0.9815
       ],
-      "volume": 561444.059631,
-      "liquidity": 55802.60246,
+      "volume": 561444.0596309999,
+      "liquidity": 69652.44446,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025"
     },
@@ -718,11 +734,11 @@
         "No"
       ],
       "prices": [
-        0.0145,
-        0.9855
+        0.0155,
+        0.9845
       ],
-      "volume": 420319.995686,
-      "liquidity": 35588.142,
+      "volume": 421444.99568600004,
+      "liquidity": 34936.76515,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -807,7 +823,7 @@
         0.978
       ],
       "volume": 244255.842177,
-      "liquidity": 9461.29163,
+      "liquidity": 9371.07839,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-held-in-2025"
     },
@@ -823,8 +839,8 @@
         0.0305,
         0.9695
       ],
-      "volume": 236928.119284,
-      "liquidity": 11286.10116,
+      "volume": 236928.11928400001,
+      "liquidity": 11631.88709,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31"
     },
@@ -888,11 +904,11 @@
         "No"
       ],
       "prices": [
-        0.0365,
-        0.9635
+        0.023,
+        0.977
       ],
-      "volume": 161446.74355400002,
-      "liquidity": 23663.13051,
+      "volume": 161446.743554,
+      "liquidity": 42892.42849,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025"
     },
@@ -925,8 +941,8 @@
         0.0165,
         0.9835
       ],
-      "volume": 116957.27713500001,
-      "liquidity": 7773.51652,
+      "volume": 116969.42001000002,
+      "liquidity": 8253.32323,
       "endDate": "2027-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     },
@@ -1041,11 +1057,11 @@
         "No"
       ],
       "prices": [
-        0.011,
-        0.989
+        0.0085,
+        0.9915
       ],
       "volume": 35459.998125,
-      "liquidity": 1604.07674,
+      "liquidity": 1826.43337,
       "endDate": "2027-01-01T05:00:00Z",
       "url": "https://polymarket.com/event/trump-eliminates-capital-gains-tax-on-crypto-in-2025"
     },
@@ -1062,7 +1078,7 @@
         0.69
       ],
       "volume": 12080.885697,
-      "liquidity": 3834.9415,
+      "liquidity": 3140.8321,
       "endDate": "2027-07-01T03:59:00Z",
       "url": "https://polymarket.com/event/uk-election-called-by"
     },
@@ -1079,7 +1095,7 @@
         0.916
       ],
       "volume": 6672.047292,
-      "liquidity": 15908.73053,
+      "liquidity": 17553.10248,
       "endDate": "2028-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -1095,8 +1111,8 @@
         0.0245,
         0.9755
       ],
-      "volume": 6378.325254,
-      "liquidity": 20806.15421,
+      "volume": 6432.6252540000005,
+      "liquidity": 21455.54018,
       "endDate": "2027-07-01T03:59:00Z",
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025"
     },
@@ -1130,7 +1146,7 @@
         0.64
       ],
       "volume": 1116.159514,
-      "liquidity": 2594.2153,
+      "liquidity": 2587.1453,
       "endDate": "2028-01-01T04:59:00Z",
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025"
     }
@@ -1245,18 +1261,6 @@
       ]
     },
     {
-      "source": "Al Jazeera",
-      "title": "OpenAI countersues Apple over trade secrets as AI race heats up",
-      "desc": "Tensions between the two tech companies have escalated as intensifying race to develop AI products fuels competition.",
-      "link": "https://www.aljazeera.com/economy/2026/11/27/openai-countersues-apple-over-trade-secrets-as-ai-race-heats-up?traffic_source=rss",
-      "pubDate": "Fri, 27 Nov 2026 20:40:51 +0000",
-      "pubISO": "2026-11-27T20:40:51+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "NASDAQ"
-      ]
-    },
-    {
       "source": "BBC World",
       "title": "Behind China's spectacular rise, voices who defied it say they are being drowned out",
       "desc": "China's immense clout now also has the flex of soft power. Critics and dissidents say their voices are being drowned out.",
@@ -1266,18 +1270,6 @@
       "sentiment": "neutral",
       "instruments": [
         "ETH"
-      ]
-    },
-    {
-      "source": "MarketWatch",
-      "title": "I hate that Jensen Huang is back at Nvidia, but I love what it\u2019s done for my 401(k). Am I a hypocrite?",
-      "desc": "Doing nothing and maintaining an even temperament is often the work of gods.",
-      "link": "https://www.marketwatch.com/story/i-hate-that-jensen-huang-is-back-at-nvidia-but-i-love-what-its-done-for-my-401-k-am-i-a-hypocrite-f63c0303?mod=mw_rss_topstories",
-      "pubDate": "Fri, 27 Nov 2026 23:30:00 GMT",
-      "pubISO": "2026-11-27T23:30:00+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "NASDAQ"
       ]
     },
     {
@@ -1326,6 +1318,66 @@
       "sentiment": "neutral",
       "instruments": [
         "SPX"
+      ]
+    },
+    {
+      "source": "BBC World",
+      "title": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+      "desc": "The ChatGPT-maker alleges that tech giant Apple stole trade secrets through a former employee.",
+      "link": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo?at_medium=RSS&at_campaign=rss",
+      "pubDate": "Sat, 28 Nov 2026 11:35:34 GMT",
+      "pubISO": "2026-11-28T11:35:34+00:00",
+      "sentiment": "bullish",
+      "instruments": [
+        "NASDAQ"
+      ]
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Manchester United vs Brentford LIVE: Premier League",
+      "desc": "Follow updates with build-up and team news coverage from our live text commentary stream as Bruno Fernandes headlines.",
+      "link": "https://www.aljazeera.com/sports/liveblog/2026/11/28/manchester-united-vs-brentford-live-premier-league?traffic_source=rss",
+      "pubDate": "Sat, 28 Nov 2026 12:06:46 +0000",
+      "pubISO": "2026-11-28T12:06:46+00:00",
+      "sentiment": "neutral",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "MarketWatch",
+      "title": "These tech stocks may let you play defense without giving up on AI",
+      "desc": "Amphenol, CDW, Sensata Technologies and TE Connectivity stood out when an Evercore analyst did a stress test of the hardware-related stocks he covers.",
+      "link": "https://www.marketwatch.com/story/these-tech-stocks-may-let-you-play-defense-without-giving-up-on-ai-523ce26d?mod=mw_rss_topstories",
+      "pubDate": "Sat, 28 Nov 2026 12:30:00 GMT",
+      "pubISO": "2026-11-28T12:30:00+00:00",
+      "sentiment": "bearish",
+      "instruments": [
+        "NASDAQ"
+      ]
+    },
+    {
+      "source": "Al Jazeera",
+      "title": "Norse Atlantic ends flights: How Iran war continues to batter aviation",
+      "desc": "The Norwegian budget carrier is the latest airline to fold under fuel costs driven by the Strait of Hormuz crisis.",
+      "link": "https://www.aljazeera.com/news/2026/11/28/norse-atlantic-ends-flights-how-iran-war-continues-to-batter-aviation?traffic_source=rss",
+      "pubDate": "Sat, 28 Nov 2026 12:56:53 +0000",
+      "pubISO": "2026-11-28T12:56:53+00:00",
+      "sentiment": "bearish",
+      "instruments": [
+        "WTI"
+      ]
+    },
+    {
+      "source": "MarketWatch",
+      "title": "I hate that Jensen Huang is back at Nvidia, but I love what it\u2019s done for my 401(k). Am I a hypocrite?",
+      "desc": "Doing nothing and maintaining an even temperament is often the work of gods.",
+      "link": "https://www.marketwatch.com/story/i-hate-that-jensen-huang-is-back-at-nvidia-but-i-love-what-its-done-for-my-401-k-am-i-a-hypocrite-f63c0303?mod=mw_rss_topstories",
+      "pubDate": "Sat, 28 Nov 2026 13:30:00 GMT",
+      "pubISO": "2026-11-28T13:30:00+00:00",
+      "sentiment": "neutral",
+      "instruments": [
+        "NASDAQ"
       ]
     },
     {
@@ -1460,43 +1512,6 @@
       "instruments": [
         "10Y"
       ]
-    },
-    {
-      "source": "CNBC Markets",
-      "title": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings",
-      "desc": "Nvidia options are pricing in a bigger move than usual.",
-      "link": "https://www.cnbc.com/2026/11/17/nvidia-has-lost-2-trillion-in-value-heres-what-options-traders-expect-from-earnings.html",
-      "pubDate": "Tue, 17 Nov 2026 13:16:43 GMT",
-      "pubISO": "2026-11-17T13:16:43+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "SPX",
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "CNBC Markets",
-      "title": "AI debt markets shudder as Nvidia's top 'banker' returns",
-      "desc": "Fears about some companies' AI debt ramped higher Tuesday, a day after Jensen Huang's return as Nvidia CEO.",
-      "link": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-ai-credit-markets.html",
-      "pubDate": "Tue, 24 Nov 2026 21:52:05 GMT",
-      "pubISO": "2026-11-24T21:52:05+00:00",
-      "sentiment": "neutral",
-      "instruments": [
-        "NASDAQ"
-      ]
-    },
-    {
-      "source": "CNBC Economy",
-      "title": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments",
-      "desc": "Semiconductor shipments spiked almost 50% year on year.",
-      "link": "https://www.cnbc.com/2026/11/18/japan-exports-october-imports-chips.html",
-      "pubDate": "Wed, 18 Nov 2026 00:35:31 GMT",
-      "pubISO": "2026-11-18T00:35:31+00:00",
-      "sentiment": "bullish",
-      "instruments": [
-        "NASDAQ"
-      ]
     }
   ],
   "tradingSignals": [
@@ -1513,7 +1528,7 @@
         "News sentiment bullish (1B/0S)",
         "Momentum +1.70% today"
       ],
-      "news_count": 11,
+      "news_count": 10,
       "bull_headlines": 1,
       "bear_headlines": 0,
       "polymarket_prob": null,
@@ -1534,55 +1549,56 @@
           67.0,
           67.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
       "day_change_pct": 1.7,
-      "timestamp": "2026-11-28T05:39:26.491053+00:00"
+      "timestamp": "2026-11-28T14:47:39.769030+00:00"
     },
     {
-      "instrument": "NASDAQ",
-      "label": "NASDAQ",
-      "direction": "BUY",
+      "instrument": "WTI",
+      "label": "WTI Crude",
+      "direction": "SELL",
       "confidence": "MEDIUM",
-      "entry": 24129.5,
-      "expected_move_pct": 1.35,
-      "volatility": "LOW",
-      "score": 0.3,
+      "entry": 83.08,
+      "expected_move_pct": -1.8,
+      "volatility": "MEDIUM",
+      "score": -0.24,
       "reasons": [
-        "News sentiment bullish (1B/0S)"
+        "News sentiment bearish (0B/1S)",
+        "Momentum +3.63% today"
       ],
-      "news_count": 16,
-      "bull_headlines": 1,
-      "bear_headlines": 0,
+      "news_count": 4,
+      "bull_headlines": 0,
+      "bear_headlines": 1,
       "polymarket_prob": null,
       "polymarket_url": null,
       "polymarket_question": null,
-      "mirofish_base": 70.0,
+      "mirofish_base": 81.0,
       "mirofish_debate": {
-        "consensus_pct": 70.0,
-        "agents_bullish": 4,
+        "consensus_pct": 81.0,
+        "agents_bullish": 5,
         "agents_bearish": 1,
-        "agents_neutral": 2,
-        "top_narrative": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving ...",
-        "skeptic_counter": "Semiconductor index rolling over despite chip strength narrative. SOX index lagging Nasdaq significantly. Breadth deteri...",
+        "agents_neutral": 1,
+        "top_narrative": "OPEC+ cuts holding strong. Supply tightness supports $80+ WTI through summer driving season and hurricane risk. Final co...",
+        "skeptic_counter": "Divergence between WTI and Brent widening. WTI technicals weakening while Brent holds firm. Mean reversion toward $76-$7...",
         "sentiment_by_round": [
-          62.0,
-          70.0,
-          70.0,
-          70.0,
-          70.0
+          81.0,
+          81.0,
+          81.0,
+          81.0,
+          81.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
-      "day_change_pct": 1.05,
-      "timestamp": "2026-11-28T05:39:26.491124+00:00"
+      "day_change_pct": 3.63,
+      "timestamp": "2026-11-28T14:47:39.768964+00:00"
     },
     {
       "instrument": "BTC",
       "label": "Bitcoin",
       "direction": "SELL",
       "confidence": "MEDIUM",
-      "entry": 59674.07,
+      "entry": 59162.46,
       "expected_move_pct": -2.37,
       "volatility": "HIGH",
       "score": -0.237,
@@ -1610,48 +1626,48 @@
           79.0,
           79.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
-      "day_change_pct": -0.12,
-      "timestamp": "2026-11-28T05:39:26.491174+00:00"
+      "day_change_pct": -0.98,
+      "timestamp": "2026-11-28T14:47:39.769147+00:00"
     },
     {
-      "instrument": "WTI",
-      "label": "WTI Crude",
+      "instrument": "ETH",
+      "label": "Ethereum",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 83.08,
-      "expected_move_pct": 0.45,
-      "volatility": "MEDIUM",
-      "score": 0.06,
+      "entry": 1642.9,
+      "expected_move_pct": 0.75,
+      "volatility": "HIGH",
+      "score": -0.06,
       "reasons": [
-        "Momentum +3.63% today"
+        "Momentum -2.07% today"
       ],
-      "news_count": 2,
+      "news_count": 1,
       "bull_headlines": 0,
       "bear_headlines": 0,
       "polymarket_prob": null,
       "polymarket_url": null,
       "polymarket_question": null,
-      "mirofish_base": 81.0,
+      "mirofish_base": 64.0,
       "mirofish_debate": {
-        "consensus_pct": 81.0,
-        "agents_bullish": 5,
+        "consensus_pct": 64.0,
+        "agents_bullish": 4,
         "agents_bearish": 1,
-        "agents_neutral": 1,
-        "top_narrative": "OPEC+ cuts holding strong. Supply tightness supports $80+ WTI through summer driving season and hurricane risk. Final co...",
-        "skeptic_counter": "Divergence between WTI and Brent widening. WTI technicals weakening while Brent holds firm. Mean reversion toward $76-$7...",
+        "agents_neutral": 2,
+        "top_narrative": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own th...",
+        "skeptic_counter": "Divergence between ETH and BTC widening. Chart shows lower highs. Breakout failed at $3,500. Retest of $2,500 coming. Fi...",
         "sentiment_by_round": [
-          81.0,
-          81.0,
-          81.0,
-          81.0,
-          81.0
+          48.0,
+          64.0,
+          64.0,
+          64.0,
+          64.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
-      "day_change_pct": 3.63,
-      "timestamp": "2026-11-28T05:39:26.490964+00:00"
+      "day_change_pct": -2.07,
+      "timestamp": "2026-11-28T14:47:39.769197+00:00"
     },
     {
       "instrument": "XAUUSD",
@@ -1686,48 +1702,48 @@
           92.0,
           92.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
       "day_change_pct": 0.47,
-      "timestamp": "2026-11-28T05:39:26.490885+00:00"
+      "timestamp": "2026-11-28T14:47:39.768873+00:00"
     },
     {
-      "instrument": "ETH",
-      "label": "Ethereum",
+      "instrument": "NASDAQ",
+      "label": "NASDAQ",
       "direction": "NEUTRAL",
       "confidence": "LOW",
-      "entry": 1653.94,
+      "entry": 24129.5,
       "expected_move_pct": 0.0,
-      "volatility": "HIGH",
+      "volatility": "LOW",
       "score": 0.0,
       "reasons": [
         "No strong directional catalyst"
       ],
-      "news_count": 1,
-      "bull_headlines": 0,
-      "bear_headlines": 0,
+      "news_count": 14,
+      "bull_headlines": 1,
+      "bear_headlines": 1,
       "polymarket_prob": null,
       "polymarket_url": null,
       "polymarket_question": null,
-      "mirofish_base": 64.0,
+      "mirofish_base": 70.0,
       "mirofish_debate": {
-        "consensus_pct": 64.0,
+        "consensus_pct": 70.0,
         "agents_bullish": 4,
         "agents_bearish": 1,
         "agents_neutral": 2,
-        "top_narrative": "DeFi ecosystem growing exponentially. Ethereum network value increasing. Correlation to BTC declining\u2014ETH has its own th...",
-        "skeptic_counter": "Divergence between ETH and BTC widening. Chart shows lower highs. Breakout failed at $3,500. Retest of $2,500 coming. Fi...",
+        "top_narrative": "Energy transition and EV ramps creating secular tailwinds. Battery tech, semiconductors, autonomous driving\u2014all driving ...",
+        "skeptic_counter": "Semiconductor index rolling over despite chip strength narrative. SOX index lagging Nasdaq significantly. Breadth deteri...",
         "sentiment_by_round": [
-          48.0,
-          64.0,
-          64.0,
-          64.0,
-          64.0
+          62.0,
+          70.0,
+          70.0,
+          70.0,
+          70.0
         ],
-        "timestamp": "2026-11-28T05:39:21.482933Z"
+        "timestamp": "2026-11-28T14:47:34.046907Z"
       },
-      "day_change_pct": -1.42,
-      "timestamp": "2026-11-28T05:39:26.491221+00:00"
+      "day_change_pct": 1.05,
+      "timestamp": "2026-11-28T14:47:39.769096+00:00"
     }
   ],
   "polySignals": [
@@ -1877,12 +1893,12 @@
     },
     {
       "question": "US x Russia military clash by December 31, 2026?",
-      "polymarket_prob": 3.5,
+      "polymarket_prob": 3.3,
       "mirofish_prob": 62.0,
-      "divergence": 58.6,
+      "divergence": 58.7,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 1089045.773516,
+      "volume": 1089458.093516,
       "url": "https://polymarket.com/event/us-x-russia-military-clash-by",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1894,7 +1910,7 @@
       "divergence": 58.4,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 116957.27713500001,
+      "volume": 116969.42001000002,
       "url": "https://polymarket.com/event/ukraine-election-called-in-2025",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1913,12 +1929,12 @@
     },
     {
       "question": "NATO/EU troops fighting in Ukraine by December 31, 2026?",
-      "polymarket_prob": 3.6,
+      "polymarket_prob": 2.3,
       "mirofish_prob": 60.0,
-      "divergence": 56.4,
+      "divergence": 57.7,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 161446.74355400002,
+      "volume": 161446.743554,
       "url": "https://polymarket.com/event/natoeu-troops-fighting-in-ukraine-in-2025",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1973,12 +1989,12 @@
     },
     {
       "question": "Will any country leave NATO by December 31, 2026?",
-      "polymarket_prob": 1.5,
+      "polymarket_prob": 1.6,
       "mirofish_prob": 50.0,
-      "divergence": 48.5,
+      "divergence": 48.4,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 420319.995686,
+      "volume": 421444.99568600004,
       "url": "https://polymarket.com/event/will-any-country-leave-nato-in-2025",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -1990,7 +2006,7 @@
       "divergence": 47.0,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 236928.119284,
+      "volume": 236928.11928400001,
       "url": "https://polymarket.com/event/china-x-india-military-clash-by-december-31",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -2021,12 +2037,12 @@
     },
     {
       "question": "Will Russia invade a NATO country by December 31, 2026?",
-      "polymarket_prob": 1.9,
+      "polymarket_prob": 1.8,
       "mirofish_prob": 30.0,
       "divergence": 28.1,
       "direction": "YES likely",
       "confidence": "HIGH",
-      "volume": 561444.059631,
+      "volume": 561444.0596309999,
       "url": "https://polymarket.com/event/will-russia-invade-a-nato-country-in-2025",
       "endDate": "2027-01-01T04:59:00Z",
       "mirofish_debate": null
@@ -2142,16 +2158,17 @@
         "name": "BTC",
         "label": "Bitcoin",
         "symbol": "BTC-USD",
-        "price": 59674.07,
-        "day_change": -73.696,
-        "day_change_pct": -0.12,
+        "price": 59162.46,
+        "day_change": -585.306,
+        "day_change_pct": -0.98,
         "high_52w": 97860.6,
         "low_52w": 55149.566,
         "closes_5d": [
           59747.7656,
           60378.1992,
           60494.7109,
-          59674.0703
+          59866.3711,
+          59162.4609
         ],
         "tradable": true,
         "barometer": false
@@ -2160,16 +2177,17 @@
         "name": "ETH",
         "label": "Ethereum",
         "symbol": "ETH-USD",
-        "price": 1653.94,
-        "day_change": -23.7548,
-        "day_change_pct": -1.42,
+        "price": 1642.9,
+        "day_change": -34.7948,
+        "day_change_pct": -2.07,
         "high_52w": 3446.6228,
         "low_52w": 1506.5057,
         "closes_5d": [
           1677.6948,
           1690.769,
           1687.7418,
-          1653.9399
+          1661.0833,
+          1642.9
         ],
         "tradable": true,
         "barometer": false
@@ -2219,7 +2237,7 @@
         "day_change": 0.024,
         "day_change_pct": 0.49,
         "high_52w": 5.364,
-        "low_52w": 3.956,
+        "low_52w": null,
         "closes_5d": [
           4.912,
           4.918,
@@ -2252,7 +2270,7 @@
     ]
   },
   "mirofishDebates": {
-    "timestamp": "2026-11-28T05:39:21.482933Z",
+    "timestamp": "2026-11-28T14:47:34.046907Z",
     "sim_metadata": {
       "version": "2.0",
       "agents_per_instrument": 7,
